@@ -1,0 +1,11 @@
+# Build results
+build/
+.gradle/
+out/
+
+# IDE settings
+.idea/
+*.iml
+
+# OS files
+.DS_Store
