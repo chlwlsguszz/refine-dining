@@ -1,35 +1,46 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import axios from 'axios'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [keyword, setKeyword] = useState('');
+    const [foods, setFoods] = useState([]);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const handleSearch = async () => {
+        try {
+            // 스프링 부트 API 호출
+            const response = await axios.get(`http://localhost:8080/api/food/search`, {
+                params: { name: keyword }
+            });
+            setFoods(response.data); // 받아온 데이터를 상태에 저장
+        } catch (error) {
+            console.error("데이터를 가져오는데 실패했습니다:", error);
+            alert("백엔드 서버가 켜져 있는지 확인하세요!");
+        }
+    };
+
+    return (
+        <div style={{ padding: '20px' }}>
+            <h1>식품 영양 성분 검색</h1>
+            <input
+                type="text"
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+                placeholder="식품 이름을 입력하세요"
+            />
+            <button onClick={handleSearch}>검색</button>
+
+            <hr />
+
+            <ul>
+                {foods.map((food) => (
+                    <li key={food.id}>
+                        <strong>{food.foodNm}</strong> - 에너기: {food.energies}kcal, 단백질: {food.protein}g
+                    </li>
+                ))}
+            </ul>
+            {foods.length === 0 && <p>검색 결과가 없습니다.</p>}
+        </div>
+    )
 }
 
 export default App
