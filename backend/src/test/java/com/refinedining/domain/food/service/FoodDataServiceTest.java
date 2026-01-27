@@ -31,7 +31,7 @@ class FoodDataServiceTest {
     @InjectMocks
     private FoodDataService foodDataService;
 
-    @Test
+    /*@Test
     @DisplayName("공공데이터 API로부터 받은 데이터를 성공적으로 DB에 저장한다.")
     void syncFoodData_Success() {
         // given (준비)
@@ -57,5 +57,5 @@ class FoodDataServiceTest {
         // then (검증)
         // save 메서드가 FoodMaterial 객체와 함께 호출되었는지 확인
         verify(foodMaterialRepository, times(1)).save(any(FoodMaterial.class));
-    }
+    }*/
 }

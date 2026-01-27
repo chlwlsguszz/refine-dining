@@ -1,5 +1,6 @@
 package com.refinedining.domain.food.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Builder
+@Builder(toBuilder = true)
 public class FoodMaterial {
 
     @Id
@@ -36,6 +37,9 @@ public class FoodMaterial {
 
     private String srcNm;
     private String crtrYmd;
+    private String foodLv4Nm; // 대표식품명
+    private String foodLv5Nm; // 식품중분류
+
 
 
     // 계층형 구조 및 검색 최적화 필드
@@ -50,6 +54,7 @@ public class FoodMaterial {
 
     // "생것"(원재료) 데이터인지 식별
     @Builder.Default
+    @Setter
     @Column(name = "is_master")
     private boolean isMaster = false;
 
@@ -65,6 +70,7 @@ public class FoodMaterial {
 
     // 3. 부모-자식 관계 (Self-Reference)
     // 조리된 데이터(자식)는 원본 데이터(부모)의 ID를 가짐
+    @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private FoodMaterial parent;

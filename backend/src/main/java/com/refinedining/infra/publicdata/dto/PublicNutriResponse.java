@@ -20,6 +20,8 @@ public record PublicNutriResponse(Response response) {
             @JsonProperty("sugar") String sugar,
             @JsonProperty("nat") String nat,
             @JsonProperty("srcNm") String srcNm,
-            @JsonProperty("crtrYmd") String crtrYmd
+            @JsonProperty("crtrYmd") String crtrYmd,
+            @JsonProperty("foodLv4Nm") String foodLv4Nm, // 대표식품명
+            @JsonProperty("foodLv5Nm") String foodLv5Nm // 식품중분류
     ) {}
 }
