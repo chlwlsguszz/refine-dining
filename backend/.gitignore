@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Spring Boot local / test config
+application-local.yml
+application-test.yml
