@@ -1,89 +1,92 @@
 package com.refinedining.domain.food.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
-@Builder(toBuilder = true)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Builder
+@Table(name = "food_materials", indexes = {
+        @Index(name = "idx_food_cd", columnList = "foodCd"),
+        @Index(name = "idx_food_nm", columnList = "foodNm")
+})
 public class FoodMaterial {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // 공공데이터의 고유 식별자 (모든 행이 각자의 코드를 가짐)
-    @Column(unique = true, nullable = false)
-    private String foodCd;
-
-    @Column(nullable = false)
-    private String foodNm;
-
-    private String foodLv3Nm;
-    private String nutConSrtrQua;
-
-    // --- 주요 영양 성분 ---
-    private Double enerc;
-    private Double prot;
-    private Double fatce;
-    private Double chocdf;
-    private Double sugar;
-    private Double nat;
-
-    private String srcNm;
-    private String crtrYmd;
-    private String foodLv4Nm; // 대표식품명
-    private String foodLv5Nm; // 식품중분류
-
-
-
-    // 계층형 구조 및 검색 최적화 필드
     // ==========================================
+    // 1. 기본 식별 정보
+    // ==========================================
+    @Column(unique = true, nullable = false, length = 50)
+    private String foodCd;             // 식품코드
 
-    // 1. 조리 방식 구분 (필수)
-    // 예: "생것", "굽기", "튀기기", "삶기" 등의 값이 들어감
     @Column(nullable = false)
-    private String cookingMethod;
+    private String foodNm;             // 식품명
 
-    // 2. 검색 최적화 플래그 (Search Optimization)
+    private String dataCd;             // 데이터구분코드
+    private String typeNm;             // 데이터구분명
+    private String foodOriginCd;       // 식품기원코드
+    private String foodOriginNm;       // 식품기원명
 
-    // "생것"(원재료) 데이터인지 식별
-    @Builder.Default
-    @Setter
-    @Column(name = "is_master")
-    private boolean isMaster = false;
+    // ==========================================
+    // 2. 식품 분류 정보 (Lv3 ~ Lv7)
+    // ==========================================
+    private String foodLv3Cd; private String foodLv3Nm;
+    private String foodLv4Cd; private String foodLv4Nm;
+    private String foodLv5Cd; private String foodLv5Nm;
+    private String foodLv6Cd; private String foodLv6Nm;
+    private String foodLv7Cd; private String foodLv7Nm;
 
-    // 사용자 검색 노출 여부
-    // (조건: isMaster == true이면서, 자식(조리된 데이터)이 1개 이상 있을 때 true)
-    @Builder.Default
-    @Column(name = "is_searchable")
-    private boolean isSearchable = false;
+    // ==========================================
+    // 3. 영양성분 정보 (25종 + 기준량)
+    // ==========================================
+    private String nutConSrtrQua;      // 영양성분함량기준량
 
-    // 조리법 요약 (프론트엔드 라디오 버튼 생성용)
-    // 예: "굽기,튀기기,삶기"
-    private String availableMethods;
+    private Double enerc;   // 에너지(kcal)
+    private Double water;   // 수분(g)
+    private Double prot;    // 단백질(g)
+    private Double fatce;   // 지방(g)
+    private Double ash;     // 회분(g)
+    private Double chocdf;  // 탄수화물(g)
+    private Double sugar;   // 당류(g)
+    private Double fibtg;   // 식이섬유(g)
+    private Double ca;      // 칼슘(mg)
+    private Double fe;      // 철(mg)
+    private Double p;       // 인(mg)
+    private Double k;       // 칼륨(mg)
+    private Double nat;     // 나트륨(mg)
+    private Double vitaRae; // 비타민 A(μg RAE)
+    private Double retol;   // 레티놀(μg)
+    private Double cartb;   // 베타카로틴(μg)
+    private Double thia;    // 티아민(mg)
+    private Double ribf;    // 리보플라빈(mg)
+    private Double nia;     // 니아신(mg)
+    private Double vitc;    // 비타민 C(mg)
+    private Double vitd;    // 비타민 D(μg)
+    private Double chole;   // 콜레스테롤(mg)
+    private Double fasat;   // 포화지방산(g)
+    private Double fatrn;   // 트랜스지방산(g)
 
-    // 3. 부모-자식 관계 (Self-Reference)
-    // 조리된 데이터(자식)는 원본 데이터(부모)의 ID를 가짐
-    @Setter
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "parent_id")
-    private FoodMaterial parent;
+    // ==========================================
+    // 4. 메타데이터 및 출처 정보
+    // ==========================================
+    private String refuse;          // 폐기율(%)
+    private String srcCd;           // 출처코드
+    private String srcNm;           // 출처명
+    private String cooCd;           // 원산지국코드
+    private String cooNm;           // 원산지국명
+    private String foodCooRgnNm;    // 원산지역명
+    private String imptYn;          // 수입여부
+    private String dataProdCd;      // 데이터생성방법코드
+    private String dataProdNm;      // 데이터생성방법명
+    private String crtYmd;          // 데이터생성일자
+    private String prdCollCapMon;   // 생산·채취·포획월
+    private String crtrYmd;         // 데이터기준일자
+    private String insttCode;       // 제공기관코드
+    private String insttNm;         // 제공기관기관명
 
-    // (선택사항) 부모 입장에서 자식들을 조회할 일이 있다면 추가 (양방향 매핑)
-    // 검색 속도를 위해 보통은 availableMethods만 쓰고, 이건 생략하기도 함
-    @Builder.Default
-    @OneToMany(mappedBy = "parent", fetch = FetchType.LAZY)
-    private List<FoodMaterial> children = new ArrayList<>();
-
-    // --- 비즈니스 로직 메서드 (데이터 정제 시 사용) ---
-    public void updateSearchInfo(boolean isSearchable, String availableMethods) {
-        this.isSearchable = isSearchable;
-        this.availableMethods = availableMethods;
-    }
 }

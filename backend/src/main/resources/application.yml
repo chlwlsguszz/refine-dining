@@ -1,0 +1,46 @@
+# =========================================================
+# Application Configuration
+# =========================================================
+spring:
+  application:
+    name: refine-dining
+
+# =======local dev environment, need to change this===========
+  profiles:
+    active: local
+
+  # =========================================================
+  # Database Configuration (MySQL)
+  # =========================================================
+  datasource:
+    url: jdbc:mysql://localhost:3306/refine_dining?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # =========================================================
+  # JPA & Hibernate Configuration
+  # =========================================================
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+# =========================================================
+# Public Data API Configuration
+# =========================================================
+public-data:
+  api-key: ${PUBLIC_DATA_API_KEY}
+  base-url: http://api.data.go.kr/openapi/tn_pubr_public_nutri_material_info_api
+
+# =========================================================
+# Logging Configuration
+# =========================================================
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    com.refinedining: INFO
