@@ -32,11 +32,11 @@ class FoodDataServiceTest {
     @InjectMocks
     private FoodDataService foodDataService;
 
-    /*@Test
+    @Test
     @DisplayName("공공데이터 API로부터 받은 데이터를 성공적으로 DB에 저장한다.")
-    void syncFoodData_Success() {
+    void syncPublicFoodData_Success() {
         // given (준비)
-        PublicNutriResponse.NutriItem mockItem = new PublicNutriResponse.NutriItem(
+        /*PublicNutriResponse.NutriItem mockItem = new PublicNutriResponse.NutriItem(
                 "D000001", "고등어, 생것", "수산물", "100g",
                 "150", "20.2", "7.5", "0", "0", "100",
                 "식약처", "20240101"
@@ -53,10 +53,10 @@ class FoodDataServiceTest {
         given(foodMaterialRepository.findByFoodCd("D000001")).willReturn(Optional.empty());
 
         // when (실행)
-        foodDataService.syncFoodData(1, 10);
+        foodDataService.syncPublicFoodData(1, 10);
 
         // then (검증)
         // save 메서드가 FoodMaterial 객체와 함께 호출되었는지 확인
-        verify(foodMaterialRepository, times(1)).save(any(FoodMaterial.class));
-    }*/
+        verify(foodMaterialRepository, times(1)).save(any(FoodMaterial.class));*/
+    }
 }

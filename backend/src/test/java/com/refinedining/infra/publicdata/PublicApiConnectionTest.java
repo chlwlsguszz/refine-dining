@@ -1,10 +1,12 @@
 package com.refinedining.infra.publicdata;
 
+import com.refinedining.domain.food.repository.FoodMaterialRepository;
 import com.refinedining.infra.publicdata.dto.PublicNutriResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 
 
@@ -21,6 +23,9 @@ public class PublicApiConnectionTest {
 
     @Autowired
     private PublicDataClient publicDataClient;
+
+    @MockBean
+    private FoodMaterialRepository foodMaterialRepository;
 
     @Test
     @DisplayName("📡 API 연결 확인: 공공데이터 전체 개수 조회")
