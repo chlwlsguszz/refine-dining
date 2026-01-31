@@ -1,9 +1,8 @@
-package com.refinedining.domain.admin;
+package com.refinedining.api.admin;
 
-import com.refinedining.domain.food.service.FoodDataService;
+import com.refinedining.domain.food.raw.service.RawFoodDataService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/admin/food-data") // /admin 경로를 추가하여 구분
 public class AdminFoodDataController {
 
-    private final FoodDataService foodDataService;
+    private final RawFoodDataService rawFoodDataService;
 
     /**
      * [관리자 전용] 공공데이터 전체 동기화 실행
@@ -21,7 +20,7 @@ public class AdminFoodDataController {
      */
     @PostMapping("/sync")
     public ResponseEntity<Void> syncAllData() {
-        foodDataService.syncAllPublicFoodData();
+        rawFoodDataService.syncAllPublicFoodData();
         return ResponseEntity.accepted().build(); // 202 Accepted: 요청 수락됨
     }
 }

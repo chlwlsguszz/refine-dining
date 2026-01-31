@@ -1,9 +1,8 @@
 package com.refinedining.domain.food.service;
 
-import com.refinedining.domain.food.entity.FoodMaterial;
-import com.refinedining.domain.food.repository.FoodMaterialRepository;
+import com.refinedining.domain.food.raw.repository.RawFoodMaterialRepository;
+import com.refinedining.domain.food.raw.service.RawFoodDataService;
 import com.refinedining.infra.publicdata.PublicDataClient;
-import com.refinedining.infra.publicdata.dto.PublicNutriResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -11,26 +10,20 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
-import java.util.Optional;
-
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.times;
 
 
 @ExtendWith(MockitoExtension.class)
-class FoodDataServiceTest {
+class RawFoodDataServiceTest {
 
     @Mock
     private PublicDataClient publicDataClient;
 
     @Mock
-    private FoodMaterialRepository foodMaterialRepository;
+    private RawFoodMaterialRepository rawFoodMaterialRepository;
 
     @InjectMocks
-    private FoodDataService foodDataService;
+    private RawFoodDataService foodDataService;
 
     @Test
     @DisplayName("공공데이터 API로부터 받은 데이터를 성공적으로 DB에 저장한다.")

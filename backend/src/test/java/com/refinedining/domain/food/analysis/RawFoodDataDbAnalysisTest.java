@@ -1,7 +1,7 @@
 package com.refinedining.domain.food.analysis;
 
-import com.refinedining.domain.food.entity.FoodMaterial;
-import com.refinedining.domain.food.repository.FoodMaterialRepository;
+import com.refinedining.domain.food.raw.entity.RawFoodMaterial;
+import com.refinedining.domain.food.raw.repository.RawFoodMaterialRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,16 +17,16 @@ import java.util.*;
 @SpringBootTest
 @ActiveProfiles("test")
 
-public class FoodDataDbAnalysisTest {
+public class RawFoodDataDbAnalysisTest {
 
     @Autowired
-    private FoodMaterialRepository foodMaterialRepository;
+    private RawFoodMaterialRepository rawFoodMaterialRepository;
 
     @Test
     @DisplayName("DB 데이터 분석: 출처별 분류 레벨 보유 현황")
     void analyzeCategoryLevelsBySource() {
         // 1. DB 조회
-        List<FoodMaterial> allItems = foodMaterialRepository.findAll();
+        List<RawFoodMaterial> allItems = rawFoodMaterialRepository.findAll();
         System.out.println("=== DB 데이터 로드 완료: " + allItems.size() + "건 ===");
 
         if (allItems.isEmpty()) {
@@ -37,7 +37,7 @@ public class FoodDataDbAnalysisTest {
         // 2. 집계
         Map<String, CategoryBucket> result = new LinkedHashMap<>();
 
-        for (FoodMaterial item : allItems) {
+        for (RawFoodMaterial item : allItems) {
             String sourceKey = safe(item.getSrcNm());
             CategoryBucket bucket = result.computeIfAbsent(sourceKey, k -> new CategoryBucket());
 
@@ -62,11 +62,11 @@ public class FoodDataDbAnalysisTest {
     @Test
     @DisplayName("DB 데이터 분석: 세분류코드 매핑 CSV 내보내기")
     void exportLv7MappingToCsv() {
-        List<FoodMaterial> allItems = foodMaterialRepository.findAll();
+        List<RawFoodMaterial> allItems = rawFoodMaterialRepository.findAll();
         if (allItems.isEmpty()) return;
 
         Map<String, String> codeMap = new TreeMap<>();
-        for (FoodMaterial item : allItems) {
+        for (RawFoodMaterial item : allItems) {
             String code = item.getFoodLv7Cd();
             String name = item.getFoodLv7Nm();
             if (code != null && !code.isBlank() && !code.equals("-")) {

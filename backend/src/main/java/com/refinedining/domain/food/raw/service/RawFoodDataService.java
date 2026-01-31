@@ -1,7 +1,7 @@
-package com.refinedining.domain.food.service;
+package com.refinedining.domain.food.raw.service;
 
-import com.refinedining.domain.food.entity.FoodMaterial;
-import com.refinedining.domain.food.repository.FoodMaterialRepository;
+import com.refinedining.domain.food.raw.entity.RawFoodMaterial;
+import com.refinedining.domain.food.raw.repository.RawFoodMaterialRepository;
 import com.refinedining.infra.publicdata.PublicDataClient;
 import com.refinedining.infra.publicdata.dto.PublicNutriResponse;
 import lombok.RequiredArgsConstructor;
@@ -14,10 +14,10 @@ import java.util.List;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class FoodDataService {
+public class RawFoodDataService {
 
     private final PublicDataClient publicDataClient;
-    private final FoodMaterialRepository foodMaterialRepository;
+    private final RawFoodMaterialRepository rawFoodMaterialRepository;
 
     /**
      * 공공데이터를 가져와서 DB에 동기화합니다.
@@ -41,7 +41,7 @@ public class FoodDataService {
     }
 
     private void saveOrUpdate(PublicNutriResponse.NutriItem item) {
-        foodMaterialRepository.findByFoodCd(item.foodCd())
+        rawFoodMaterialRepository.findByFoodCd(item.foodCd())
                 .ifPresentOrElse(
                         existingFood -> {
                             // 기존 데이터가 있으면 업데이트 (Dirty Checking)
@@ -50,8 +50,8 @@ public class FoodDataService {
                         },
                         () -> {
                             // 없으면 신규 생성
-                            FoodMaterial newFood = convertToEntity(item);
-                            foodMaterialRepository.save(newFood);
+                            RawFoodMaterial newFood = convertToEntity(item);
+                            rawFoodMaterialRepository.save(newFood);
                         }
                 );
     }
@@ -59,8 +59,8 @@ public class FoodDataService {
     /**
      * DTO -> Entity 변환 (Service 계층 처리)
      */
-    private FoodMaterial convertToEntity(PublicNutriResponse.NutriItem item) {
-        return FoodMaterial.builder()
+    private RawFoodMaterial convertToEntity(PublicNutriResponse.NutriItem item) {
+        return RawFoodMaterial.builder()
                 .foodCd(item.foodCd())
                 .foodNm(item.foodNm())
                 .dataCd(item.dataCd())

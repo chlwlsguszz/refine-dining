@@ -1,6 +1,6 @@
 package com.refinedining.infra.publicdata;
 
-import com.refinedining.domain.food.repository.FoodMaterialRepository;
+import com.refinedining.domain.food.raw.repository.RawFoodMaterialRepository;
 import com.refinedining.infra.publicdata.dto.PublicNutriResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -25,7 +25,7 @@ public class PublicApiConnectionTest {
     private PublicDataClient publicDataClient;
 
     @MockBean
-    private FoodMaterialRepository foodMaterialRepository;
+    private RawFoodMaterialRepository rawFoodMaterialRepository;
 
     @Test
     @DisplayName("📡 API 연결 확인: 공공데이터 전체 개수 조회")

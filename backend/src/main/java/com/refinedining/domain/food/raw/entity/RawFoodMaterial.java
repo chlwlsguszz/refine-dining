@@ -1,4 +1,4 @@
-package com.refinedining.domain.food.entity;
+package com.refinedining.domain.food.raw.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,11 +8,10 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
-@Table(name = "food_materials", indexes = {
-        @Index(name = "idx_food_cd", columnList = "foodCd"),
-        @Index(name = "idx_food_nm", columnList = "foodNm")
+@Table(name = "raw_food_materials", indexes = {
+        @Index(name = "idx_raw_food_cd", columnList = "foodCd")
 })
-public class FoodMaterial {
+public class RawFoodMaterial {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
