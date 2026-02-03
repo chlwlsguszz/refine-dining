@@ -89,11 +89,9 @@ public class FoodRefineService {
 
         // 자식이 존재할 때만 부모 엔티티 생성 및 저장 프로세스 진행
         FoodMaterial parentEntity = convertToEntity(parentRaw, true);
-        parentEntity.updateSearchability(true); // 자식이 있음이 보장되므로 true
 
         for (FoodMaterial child : childEntities) {
             parentEntity.addChild(child);
-            child.updateSearchability(true); // 가공 완료된 데이터이므로 검색 가능
         }
 
         refinedRepository.save(parentEntity);
@@ -109,7 +107,6 @@ public class FoodRefineService {
                 .foodLv7Cd(method != null ? method.getCode() : raw.getFoodLv7Cd())
                 .cookingMethod(method != null ? method.getDescription() : "기타")
                 .isParent(isParent)
-                .isSearchable(false) // 기본값, 위 로직에서 최종 결정
                 .calories(raw.getEnerc())
                 .protein(raw.getProt())
                 .fat(raw.getFatce())

@@ -38,7 +38,6 @@ public class FoodMaterial {
 
     // --- 상태 및 분류 ---
     private boolean isParent;      // foodLv7Cd == "01" 여부
-    private boolean isSearchable;  // 검색 노출 여부
 
     private String foodLv6Cd;      // 그룹핑 기준 코드
     private String foodLv7Cd;        // 가공 코드 원본 (01, 50 등)
@@ -60,9 +59,5 @@ public class FoodMaterial {
 
     private void setParent(FoodMaterial parent) {
         this.parent = parent;
-    }
-
-    public void updateSearchability(boolean searchable) {
-        this.isSearchable = searchable;
     }
 }
