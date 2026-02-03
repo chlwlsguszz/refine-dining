@@ -44,8 +44,10 @@ public class RawFoodDataService {
         rawFoodMaterialRepository.findByFoodCd(item.foodCd())
                 .ifPresentOrElse(
                         existingFood -> {
-                            // 기존 데이터가 있으면 업데이트 (Dirty Checking)
-                            // 엔티티에 정의한 updateAllFields 메서드 활용 (또는 필요한 필드만)
+                            // 1. 새로운 데이터를 임시 엔티티로 변환
+                            RawFoodMaterial updatedData = convertToEntity(item);
+                            // 2. 기존 엔티티의 필드 업데이트 (Dirty Checking 발생)
+                            existingFood.updateAllFields(updatedData);
                             log.debug("Existing data update: {}", item.foodNm());
                         },
                         () -> {

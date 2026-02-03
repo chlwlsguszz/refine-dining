@@ -88,4 +88,69 @@ public class RawFoodMaterial {
     private String insttCode;       // 제공기관코드
     private String insttNm;         // 제공기관기관명
 
+
+    public void updateAllFields(RawFoodMaterial updated) {
+        // 1. 기본 식별 정보 (식품코드는 고유값이므로 업데이트에서 제외하거나 필요시 포함)
+        this.foodNm = updated.getFoodNm();
+        this.dataCd = updated.getDataCd();
+        this.typeNm = updated.getTypeNm();
+        this.foodOriginCd = updated.getFoodOriginCd();
+        this.foodOriginNm = updated.getFoodOriginNm();
+
+        // 2. 식품 분류 정보
+        this.foodLv3Cd = updated.getFoodLv3Cd();
+        this.foodLv3Nm = updated.getFoodLv3Nm();
+        this.foodLv4Cd = updated.getFoodLv4Cd();
+        this.foodLv4Nm = updated.getFoodLv4Nm();
+        this.foodLv5Cd = updated.getFoodLv5Cd();
+        this.foodLv5Nm = updated.getFoodLv5Nm();
+        this.foodLv6Cd = updated.getFoodLv6Cd();
+        this.foodLv6Nm = updated.getFoodLv6Nm();
+        this.foodLv7Cd = updated.getFoodLv7Cd();
+        this.foodLv7Nm = updated.getFoodLv7Nm();
+
+        // 3. 영양성분 정보
+        this.nutConSrtrQua = updated.getNutConSrtrQua();
+        this.enerc = updated.getEnerc();
+        this.water = updated.getWater();
+        this.prot = updated.getProt();
+        this.fatce = updated.getFatce();
+        this.ash = updated.getAsh();
+        this.chocdf = updated.getChocdf();
+        this.sugar = updated.getSugar();
+        this.fibtg = updated.getFibtg();
+        this.ca = updated.getCa();
+        this.fe = updated.getFe();
+        this.p = updated.getP();
+        this.k = updated.getK();
+        this.nat = updated.getNat();
+        this.vitaRae = updated.getVitaRae();
+        this.retol = updated.getRetol();
+        this.cartb = updated.getCartb();
+        this.thia = updated.getThia();
+        this.ribf = updated.getRibf();
+        this.nia = updated.getNia();
+        this.vitc = updated.getVitc();
+        this.vitd = updated.getVitd();
+        this.chole = updated.getChole();
+        this.fasat = updated.getFasat();
+        this.fatrn = updated.getFatrn();
+
+        // 4. 메타데이터 및 출처 정보
+        this.refuse = updated.getRefuse();
+        this.srcCd = updated.getSrcCd();
+        this.srcNm = updated.getSrcNm();
+        this.cooCd = updated.getCooCd();
+        this.cooNm = updated.getCooNm();
+        this.foodCooRgnNm = updated.getFoodCooRgnNm();
+        this.imptYn = updated.getImptYn();
+        this.dataProdCd = updated.getDataProdCd();
+        this.dataProdNm = updated.getDataProdNm();
+        this.crtYmd = updated.getCrtYmd();
+        this.prdCollCapMon = updated.getPrdCollCapMon();
+        this.crtrYmd = updated.getCrtrYmd();
+        this.insttCode = updated.getInsttCode();
+        this.insttNm = updated.getInsttNm();
+    }
+
 }

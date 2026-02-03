@@ -1,6 +1,4 @@
 package com.refinedining.domain.food.refined.entity;
-
-import com.refinedining.domain.food.raw.entity.RawFoodMaterial;
 import jakarta.persistence.*;
 import lombok.*;
 
