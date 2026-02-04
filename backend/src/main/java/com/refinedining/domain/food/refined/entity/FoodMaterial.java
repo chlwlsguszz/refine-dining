@@ -37,8 +37,6 @@ public class FoodMaterial {
     private List<FoodMaterial> children = new ArrayList<>();
 
     // --- 상태 및 분류 ---
-    private boolean isParent;      // foodLv7Cd == "01" 여부
-
     private String foodLv6Cd;      // 그룹핑 기준 코드
     private String foodLv7Cd;        // 가공 코드 원본 (01, 50 등)
     private String cookingMethod; // 매핑된 한글명 (구운것, 튀긴것 등)

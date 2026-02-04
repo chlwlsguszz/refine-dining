@@ -79,7 +79,7 @@ public class FoodRefineService {
         List<FoodMaterial> childEntities = groupItems.stream()
                 .filter(raw -> !"01".equals(raw.getFoodLv7Cd()))
                 .filter(raw -> CookingMethod.findByCode(raw.getFoodLv7Cd()) != null)
-                .map(raw -> convertToEntity(raw, false))
+                .map(raw -> convertToEntity(raw))
                 .collect(Collectors.toList());
 
         // 로직 변경: 자식이 하나도 없으면 부모도 저장하지 않고 종료
@@ -88,7 +88,7 @@ public class FoodRefineService {
         }
 
         // 자식이 존재할 때만 부모 엔티티 생성 및 저장 프로세스 진행
-        FoodMaterial parentEntity = convertToEntity(parentRaw, true);
+        FoodMaterial parentEntity = convertToEntity(parentRaw);
 
         for (FoodMaterial child : childEntities) {
             parentEntity.addChild(child);
@@ -97,7 +97,7 @@ public class FoodRefineService {
         refinedRepository.save(parentEntity);
     }
 
-    private FoodMaterial convertToEntity(RawFoodMaterial raw, boolean isParent) {
+    private FoodMaterial convertToEntity(RawFoodMaterial raw) {
         CookingMethod method = CookingMethod.findByCode(raw.getFoodLv7Cd());
 
         return FoodMaterial.builder()
@@ -106,7 +106,6 @@ public class FoodRefineService {
                 .foodLv6Cd(raw.getFoodLv6Cd())
                 .foodLv7Cd(method != null ? method.getCode() : raw.getFoodLv7Cd())
                 .cookingMethod(method != null ? method.getDescription() : "기타")
-                .isParent(isParent)
                 .calories(raw.getEnerc())
                 .protein(raw.getProt())
                 .fat(raw.getFatce())
