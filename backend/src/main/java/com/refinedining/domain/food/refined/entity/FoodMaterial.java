@@ -15,7 +15,10 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
-@Table(name = "food_materials")
+@Table(name = "food_materials", indexes = {
+        @Index(name = "idx_parent_id", columnList = "parent_id"),
+        @Index(name = "idx_food_name", columnList = "name")
+})
 public class FoodMaterial {
 
     @Id
@@ -32,6 +35,7 @@ public class FoodMaterial {
     @JoinColumn(name = "parent_id")
     private FoodMaterial parent;
 
+    // N+1에 주의
     @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL)
     @Builder.Default
     private List<FoodMaterial> children = new ArrayList<>();

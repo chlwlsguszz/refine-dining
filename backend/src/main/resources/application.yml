@@ -24,10 +24,12 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
+        highlight_sql: true
+        use_sql_comments: true # 쿼리 상단에 어떤 로직에서 왔는지 주석 표시
         dialect: org.hibernate.dialect.MySQLDialect
 
 # =========================================================

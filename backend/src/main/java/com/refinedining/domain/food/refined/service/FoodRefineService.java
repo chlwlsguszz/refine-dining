@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class FoodRefineService {
 
-    private final RawFoodMaterialRepository rawRepository;
-    private final FoodMaterialRepository refinedRepository;
+    private final RawFoodMaterialRepository rawFoodRepository;
+    private final FoodMaterialRepository foodMaterialRepository;
 
     @PersistenceContext
     private EntityManager em;
@@ -36,7 +36,7 @@ public class FoodRefineService {
         em.createNativeQuery("SET FOREIGN_KEY_CHECKS = 1").executeUpdate();
         log.info("기존 정제 데이터를 모두 삭제하고 ID 카운터를 초기화했습니다.");
 
-        List<RawFoodMaterial> allRaw = rawRepository.findAll();
+        List<RawFoodMaterial> allRaw = rawFoodRepository.findAll();
 
         // 1. 수산물 및 기초 필터링
         List<RawFoodMaterial> filteredRaw = allRaw.stream()
@@ -94,7 +94,7 @@ public class FoodRefineService {
             parentEntity.addChild(child);
         }
 
-        refinedRepository.save(parentEntity);
+        foodMaterialRepository.save(parentEntity);
     }
 
     private FoodMaterial convertToEntity(RawFoodMaterial raw) {
