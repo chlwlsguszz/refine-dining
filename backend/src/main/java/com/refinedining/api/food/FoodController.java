@@ -19,7 +19,10 @@ public class FoodController {
     private final FoodSearchService foodSearchService;
 
     @GetMapping("/search")
-    public ResponseEntity<List<FoodSearchResponse>> search(@RequestParam String name) {
-        return ResponseEntity.ok(foodSearchService.searchFood(name));
+    public ResponseEntity<List<FoodSearchResponse>> search(@RequestParam String name,
+                                                           @RequestParam(defaultValue = "0") int page,
+                                                           @RequestParam(defaultValue = "10") int size) {
+
+        return ResponseEntity.ok(foodSearchService.searchFood(name, page, size));
     }
 }
