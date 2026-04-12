@@ -2,6 +2,8 @@ import { useState } from 'react';
 import axios from 'axios';
 import {useNavigate} from "react-router-dom";
 
+import { commonStyles } from '../styles/commonStyles';
+
 function SearchPage() {
     const [keyword, setKeyword] = useState('');
     const [foods, setFoods] = useState([]);
@@ -58,11 +60,10 @@ function SearchPage() {
         <div style={styles.container}>
             <div style={styles.contentCard}>
                 <header style={styles.header}>
-                    <h1 style={styles.title}>🥗 Refine Dining</h1>
-                    <p style={styles.subtitle}>정제된 식품 영양 성분 데이터를 확인하세요</p>
+                    <h1 style={styles.title}>Refine Dining</h1>
+                    <p style={styles.subtitle}>식품을 검색하고 조리 방법별 영양소를 비교해보세요</p>
                 </header>
 
-                {/* 검색 섹션 */}
                 <div style={styles.searchBox}>
                     <input
                         type="text"
@@ -70,12 +71,11 @@ function SearchPage() {
                         onChange={(e) => setKeyword(e.target.value)}
                         onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                         style={styles.input}
-                        placeholder="식품 이름을 입력하세요 (예: 감자)"
+                        placeholder="식품 이름 검색 (예: 감자, 삼겹살)"
                     />
                     <button onClick={() => handleSearch(true)} style={styles.button}>검색</button>
                 </div>
 
-                {/* 결과 리스트 */}
                 <div style={styles.listContainer}>
                     {foods.length > 0 ? (
                         foods.map((food) => (
@@ -83,7 +83,7 @@ function SearchPage() {
                                 <div onClick={() => toggleExpand(food.id)} style={styles.parentRow}>
                                     <span style={styles.foodName}>{food.name}</span>
                                     <div style={styles.parentRight}>
-                                        <span style={styles.mainKcal}>{food.calories || 0} <small>kcal</small></span>
+                                        <span style={styles.mainKcal}>{food.calories || 0} kcal</span>
                                         <span style={styles.arrow}>{expandedId === food.id ? '▲' : '▼'}</span>
                                     </div>
                                 </div>
@@ -94,19 +94,20 @@ function SearchPage() {
                                             food.cookingMethods.map(child => (
                                                 <div
                                                     key={child.id}
-                                                    style={{...styles.childItem, cursor: 'pointer'}}
-                                                    onClick={() => goToCompare(food, child)} // 클릭 이벤트 연결
+                                                    style={styles.childItem}
+                                                    onClick={() => goToCompare(food, child)}
                                                 >
                                                     <span style={styles.methodTag}>{child.cookingMethod || '일반'}</span>
                                                     <div style={styles.nutritionGrid}>
-                                                        <span>🔥 {child.calories}kcal</span>
+                                                        <span>🔥 {child.calories} kcal</span>
                                                         <span>💪 {child.protein}g</span>
-                                                        <span>🧂 {child.sodium}mg</span>
+                                                        <span>🥑 {child.fat}g</span>
                                                     </div>
+                                                    <span style={styles.compareHint}>비교하기 →</span>
                                                 </div>
                                             ))
                                         ) : (
-                                            <p style={styles.noData}>상세 조리법 정보가 없습니다.</p>
+                                            <p style={styles.noData}>조리 방법 정보가 없습니다.</p>
                                         )}
                                     </div>
                                 )}
@@ -114,183 +115,169 @@ function SearchPage() {
                         ))
                     ) : (
                         <div style={styles.emptyState}>
-                            {keyword ? "검색 결과가 없습니다." : "무엇을 먹을지 검색해보세요!"}
+                            <p style={styles.emptyText}>
+                                {keyword ? "검색 결과가 없습니다." : "식품 이름을 검색해보세요"}
+                            </p>
+                            <p style={styles.emptyHint}>
+                                {!keyword && "감자, 삼겹살, 닭가슴살 등을 입력해보세요"}
+                            </p>
                         </div>
                     )}
 
-                    {/* 더 보기 버튼 */}
                     {foods.length > 0 && hasMore && (
-                        <button
-                            onClick={() => handleSearch(false)}
-                            style={styles.loadMoreButton}
-                        >
-                            결과 더 보기 (10개)
+                        <button onClick={() => handleSearch(false)} style={styles.loadMoreButton}>
+                            더 보기
                         </button>
                     )}
 
                     {foods.length > 0 && !hasMore && (
-                        <p style={styles.noMoreText}>모든 결과를 불러왔습니다.</p>
+                        <p style={styles.noMoreText}>모든 결과를 불러왔습니다</p>
                     )}
-
                 </div>
             </div>
         </div>
     );
 }
 
-// 스타일 객체 분리 (가독성을 위해)
 const styles = {
     container: {
-        backgroundColor: '#121212',
-        minHeight: '100vh',
-        width: '100vw', // 화면 전체 너비
-        display: 'flex',
-        flexDirection: 'column', // 위에서 아래로 정렬
-        alignItems: 'center',    // 가로축 중앙 정렬
-        padding: '60px 20px',    // 상단 여유 공간
-        fontFamily: "'Pretendard', -apple-system, sans-serif",
-        boxSizing: 'border-box'
+        ...commonStyles.fullContainer,
+        backgroundColor: '#f8f6f3',
+        color: '#2d2a26',
     },
     contentCard: {
         width: '100%',
-        maxWidth: '600px', // 너무 넓어지지 않게 제한
+        maxWidth: '560px',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
-    header: {
-        textAlign: 'center',
-        marginBottom: '50px' // 타이틀과 검색창 사이 간격
-    },
+    header: { textAlign: 'center', marginBottom: '36px' },
     title: {
-        fontSize: '2.5rem',
-        color: '#ffffff',
-        marginBottom: '10px'
+        fontSize: '1.8rem',
+        fontWeight: 700,
+        color: '#2d2a26',
+        marginBottom: '8px',
+        letterSpacing: '-0.03em',
     },
     subtitle: {
-        color: '#888',
-        fontSize: '1rem'
+        color: '#8a857c',
+        fontSize: '0.95rem',
     },
     searchBox: {
         display: 'flex',
         gap: '12px',
-        width: '100%',     // 부모 너비에 맞춤
-        marginBottom: '40px',
-        justifyContent: 'center' // 검색창 내부 요소들 중앙 정렬
+        width: '100%',
+        marginBottom: '32px',
     },
     input: {
         flex: 1,
-        padding: '12px 16px',
-        borderRadius: '12px',
-        border: '1px solid #333',
-        backgroundColor: '#1e1e1e',
-        color: '#fff',
-        fontSize: '16px',
+        padding: '14px 18px',
+        borderRadius: '14px',
+        border: '1px solid #e5e2dc',
+        backgroundColor: '#fff',
+        color: '#2d2a26',
+        fontSize: '1rem',
         outline: 'none',
-        transition: 'border 0.2s',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.04)',
     },
     button: {
-        padding: '12px 24px',
-        borderRadius: '12px',
+        padding: '14px 28px',
+        borderRadius: '14px',
         border: 'none',
-        backgroundColor: '#4daafc',
+        backgroundColor: '#6b9b6e',
         color: '#fff',
-        fontWeight: 'bold',
+        fontWeight: 600,
         cursor: 'pointer',
-        transition: 'transform 0.1s',
+        fontSize: '0.95rem',
+        boxShadow: '0 2px 8px rgba(107,155,110,0.3)',
+        transition: 'opacity 0.2s',
     },
-    listContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '15px'
-    },
+    listContainer: { display: 'flex', flexDirection: 'column', gap: '12px' },
     foodItem: {
-        backgroundColor: '#1e1e1e',
+        backgroundColor: '#fff',
         borderRadius: '16px',
+        border: 'none',
+        boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
         overflow: 'hidden',
-        border: '1px solid #2d2d2d'
     },
     parentRow: {
-        padding: '20px',
+        padding: '18px 20px',
         cursor: 'pointer',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         transition: 'background 0.2s',
     },
-    foodName: {
-        fontSize: '1.1rem',
-        fontWeight: '600',
-        color: '#e0e0e0'
-    },
-    parentRight: {
-        display: 'flex',
-        alignItems: 'center',
-        gap: '15px'
-    },
-    mainKcal: {
-        color: '#4daafc',
-        fontWeight: '700'
-    },
-    arrow: {
-        color: '#555',
-        fontSize: '0.8rem'
-    },
+    foodName: { fontSize: '1.1rem', fontWeight: 600, color: '#2d2a26' },
+    parentRight: { display: 'flex', alignItems: 'center', gap: '16px' },
+    mainKcal: { color: '#6b9b6e', fontWeight: 700, fontSize: '0.95rem' },
+    arrow: { color: '#b8b2a8', fontSize: '0.75rem' },
     childContainer: {
-        backgroundColor: '#262626',
-        padding: '15px',
-        borderTop: '1px solid #333',
+        backgroundColor: '#faf9f7',
+        padding: '16px',
+        borderTop: '1px solid #f0ede8',
         display: 'flex',
         flexDirection: 'column',
-        gap: '10px'
+        gap: '10px',
     },
     childItem: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '10px',
-        backgroundColor: '#2d2d2d',
-        borderRadius: '10px'
+        padding: '14px 16px',
+        backgroundColor: '#fff',
+        borderRadius: '12px',
+        border: '1px solid #f0ede8',
+        cursor: 'pointer',
+        transition: 'all 0.2s',
     },
     methodTag: {
-        backgroundColor: '#ffcc0022',
-        color: '#ffcc00',
-        padding: '4px 8px',
-        borderRadius: '6px',
+        backgroundColor: '#fdf3e6',
+        color: '#c4895a',
+        padding: '5px 10px',
+        borderRadius: '8px',
         fontSize: '0.8rem',
-        fontWeight: 'bold'
+        fontWeight: 600,
     },
     nutritionGrid: {
         display: 'flex',
-        gap: '12px',
-        fontSize: '0.85rem',
-        color: '#bbb'
+        gap: '16px',
+        fontSize: '0.9rem',
+        color: '#5c574f',
     },
-    noData: {
-        textAlign: 'center',
-        color: '#666',
-        fontSize: '0.9rem'
+    compareHint: {
+        fontSize: '0.8rem',
+        color: '#d4a574',
+        fontWeight: 600,
     },
+    noData: { textAlign: 'center', color: '#8a857c', fontSize: '0.9rem' },
     emptyState: {
         textAlign: 'center',
-        marginTop: '50px',
-        color: '#555'
+        padding: '60px 24px',
+        backgroundColor: '#fff',
+        borderRadius: '16px',
+        boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
     },
+    emptyText: { fontSize: '1rem', color: '#5c574f', margin: '0 0 8px' },
+    emptyHint: { fontSize: '0.9rem', color: '#b8b2a8', margin: 0 },
     loadMoreButton: {
-        marginTop: '20px',
-        padding: '12px',
+        marginTop: '16px',
+        padding: '12px 20px',
         backgroundColor: 'transparent',
-        border: '1px solid #4daafc',
-        color: '#4daafc',
+        border: '1px solid #d4a574',
+        color: '#c4895a',
         borderRadius: '12px',
         cursor: 'pointer',
-        fontWeight: 'bold'
+        fontWeight: 600,
+        fontSize: '0.9rem',
+        transition: 'all 0.2s',
     },
     noMoreText: {
         textAlign: 'center',
-        color: '#555',
-        marginTop: '20px',
-        fontSize: '0.9rem'
-    }
+        color: '#8a857c',
+        marginTop: '16px',
+        fontSize: '0.9rem',
+    },
 };
 
 export default SearchPage;

@@ -12,10 +12,17 @@ public class RestTemplateConfig {
 
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
-        // 커넥션 타임아웃과 읽기 타임아웃을 설정하여 무한 대기를 방지합니다.
         return builder
                 .setConnectTimeout(Duration.ofSeconds(5))
                 .setReadTimeout(Duration.ofSeconds(5))
+                .build();
+    }
+
+    @Bean("aiRestTemplate")
+    public RestTemplate aiRestTemplate(RestTemplateBuilder builder) {
+        return builder
+                .setConnectTimeout(Duration.ofSeconds(5))
+                .setReadTimeout(Duration.ofSeconds(15))
                 .build();
     }
 }

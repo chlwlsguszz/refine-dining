@@ -1,14 +1,18 @@
 import { useState } from 'react';
+import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { commonStyles } from '../styles/commonStyles';
 
 function ComparePage() {
     const location = useLocation();
     const navigate = useNavigate();
     const { parentData, childData } = location.state || {};
 
-    // 중량 상태 (기본값 100g)
     const [leftWeight, setLeftWeight] = useState(100);
     const [rightWeight, setRightWeight] = useState(100);
+    const [aiLoading, setAiLoading] = useState(false);
+    const [aiError, setAiError] = useState(null);
+    const [aiPrediction, setAiPrediction] = useState(null);
 
     if (!parentData || !childData) return <div style={styles.container}>데이터 없음</div>;
 
@@ -41,66 +45,94 @@ function ComparePage() {
         if (!isNaN(num)) setRightWeight(num);
     };
 
+    const cookingVerbMap = {
+        '구운것': '구우면', '삶은것': '삶으면', '튀긴것': '튀기면', '찐것': '쪄면',
+        '데친것': '데치면', '볶은것': '볶으면', '조린것': '조리면',
+        '전자레인지로 가열한것': '전자레인지로 가열하면', '생것': '그대로 두면',
+    };
+    const getCookingVerb = () => cookingVerbMap[childData?.cookingMethod] || '조리하면';
+
+    const handleAiRecommend = async () => {
+        if (!parentData?.name || leftWeight === '' || leftWeight <= 0) return;
+        setAiError(null);
+        setAiPrediction(null);
+        setAiLoading(true);
+        try {
+            const res = await axios.post('http://localhost:8080/api/weight/predict', {
+                foodName: parentData.name,
+                cookingMethod: childData?.cookingMethod ?? null,
+                baseWeight: Number(leftWeight),
+            });
+            const predicted = Math.round(res.data.predictedWeight * 10) / 10;
+            setAiPrediction({ foodName: parentData.name, baseWeight: leftWeight, predicted, cookingVerb: getCookingVerb() });
+        } catch (err) {
+            setAiError(err.response?.data?.message || err.message || 'AI 예측에 실패했습니다.');
+        } finally {
+            setAiLoading(false);
+        }
+    };
+
     return (
         <div style={styles.container}>
             <header style={styles.header}>
                 <button onClick={() => navigate(-1)} style={styles.backButton}>← 이전</button>
-                <h1 style={styles.mainTitle}>중량별 영양소 비교</h1>
+                <h1 style={styles.mainTitle}>영양소 비교</h1>
             </header>
 
             <div style={styles.comparisonWrapper}>
-                {/* 왼쪽 카드: 부모 */}
-                <div style={styles.card}>
+                <div style={{...styles.card, ...styles.cardLeft}}>
+                    <span style={styles.cardLabel}>원재료</span>
+                    <h2 style={styles.foodTitle}>{parentData.name}</h2>
                     <div style={styles.weightControl}>
-                        <label>중량 설정 (g)</label>
+                        <label style={styles.weightControlLabel}>중량 (g)</label>
                         <input
                             type="number"
                             value={leftWeight}
                             onChange={(e) => handleLeftWeightChange(e.target.value)}
-                            onBlur={() => { if (leftWeight === '') setLeftWeight(0); }} // 포커스가 나갈 때 비어있으면 0으로 채워주는 안전장치
+                            onBlur={() => { if (leftWeight === '') setLeftWeight(0); }}
                             style={styles.weightInput}
                         />
                     </div>
-                    <h2 style={styles.foodTitle}>{parentData.name}</h2>
                     <div style={styles.nutrientList}>
                         {nutrients.map(n => (
                             <div key={n.key} style={styles.nutrientRow}>
-                                <span>{n.label}</span>
+                                <span style={styles.nutrientLabel}>{n.label}</span>
                                 <strong>{calculate(parentData[n.key], leftWeight)} {n.unit}</strong>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div style={styles.vs}>VS</div>
+                <div style={styles.connector}>
+                    <span style={styles.connectorArrow}>→</span>
+                </div>
 
-                {/* 오른쪽 카드: 자식 */}
-                <div style={{...styles.card, borderColor: '#4daafc'}}>
+                <div style={{...styles.card, ...styles.cardRight}}>
+                    <span style={styles.cardLabel}>조리 후</span>
+                    <h2 style={styles.foodTitle}>{childData.name}</h2>
                     <div style={styles.weightControl}>
-                        <label>중량 설정 (g)</label>
+                        <label style={styles.weightControlLabel}>중량 (g)</label>
                         <input
                             type="number"
                             value={rightWeight}
-                            onChange={(e) => handleRightWeightChange(e.target.value)} // 오른쪽 핸들러 연결
+                            onChange={(e) => handleRightWeightChange(e.target.value)}
                             onBlur={() => { if (rightWeight === '') setRightWeight(0); }}
                             style={styles.weightInput}
                         />
                     </div>
-                    <h2 style={styles.foodTitle}>{childData.name}</h2>
                     <div style={styles.nutrientList}>
                         {nutrients.map(n => {
                             const leftVal = calculate(parentData[n.key], leftWeight);
                             const rightVal = calculate(childData[n.key], rightWeight);
                             const diff = (rightVal - leftVal).toFixed(1);
                             const isPlus = diff > 0;
-
                             return (
                                 <div key={n.key} style={styles.nutrientRow}>
-                                    <span>{n.label}</span>
-                                    <div>
-                                        <strong style={{color: '#4daafc'}}>{rightVal} {n.unit}</strong>
-                                        <span style={{...styles.diff, color: isPlus ? '#ff4d4d' : '#4dfc8f'}}>
-                                            ({isPlus ? '+' : ''}{diff})
+                                    <span style={styles.nutrientLabel}>{n.label}</span>
+                                    <div style={styles.nutrientValue}>
+                                        <strong>{rightVal} {n.unit}</strong>
+                                        <span style={{...styles.diff, color: isPlus ? '#c45c4a' : '#6b9b6e'}}>
+                                            {isPlus ? '+' : ''}{diff}
                                         </span>
                                     </div>
                                 </div>
@@ -109,64 +141,171 @@ function ComparePage() {
                     </div>
                 </div>
             </div>
+
+            <div style={styles.aiSection}>
+                <button
+                    type="button"
+                    style={{...styles.aiButton, ...(aiLoading ? styles.aiButtonDisabled : {})}}
+                    onClick={handleAiRecommend}
+                    disabled={aiLoading}
+                >
+                    {aiLoading ? '예측 중...' : '조리 후 예상 중량 알려주기'}
+                </button>
+                {aiPrediction && (
+                    <div style={styles.aiPredictionCard}>
+                        {aiPrediction.foodName} {aiPrediction.baseWeight}g을(를) {aiPrediction.cookingVerb} 약 <strong>{aiPrediction.predicted}g</strong>이 될 것으로 예상됩니다.
+                    </div>
+                )}
+                {aiError && <div style={styles.aiError}>{aiError}</div>}
+            </div>
         </div>
     );
 }
 
 const styles = {
-    container: { backgroundColor: '#121212', minHeight: '100vh', padding: '40px', color: '#fff' },
-    header: { maxWidth: '1000px', margin: '0 auto 40px', display: 'flex', alignItems: 'center', gap: '20px' },
-    backButton: { backgroundColor: '#333', color: '#fff', border: 'none', padding: '10px 20px', borderRadius: '8px', cursor: 'pointer' },
-    mainTitle: { fontSize: '1.5rem', margin: 0 },
+    container: {
+        ...commonStyles.fullContainer,
+        padding: '40px 24px 60px',
+        backgroundColor: '#f8f6f3',
+        color: '#2d2a26',
+    },
+    header: { width: '100%', maxWidth: '1000px', margin: '0 auto 32px', display: 'flex', alignItems: 'center', gap: '16px' },
+    backButton: {
+        backgroundColor: '#fff',
+        color: '#5c574f',
+        border: '1px solid #e5e2dc',
+        padding: '10px 18px',
+        borderRadius: '12px',
+        cursor: 'pointer',
+        fontSize: '0.95rem',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+        transition: 'all 0.2s',
+    },
+    mainTitle: { fontSize: '1.4rem', fontWeight: 600, margin: 0, letterSpacing: '-0.02em', color: '#2d2a26' },
     comparisonWrapper: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'flex-start',
+        alignItems: 'stretch',
         gap: '20px',
-        maxWidth: '1200px',
-        margin: '0 auto'
+        maxWidth: '900px',
+        margin: '0 auto',
     },
     card: {
         flex: 1,
-        backgroundColor: '#1e1e1e',
+        padding: '28px 24px',
+        position: 'relative',
         borderRadius: '20px',
-        padding: '30px',
-        border: '2px solid #333',
-        position: 'relative'
+        backgroundColor: '#fff',
+        border: 'none',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04)',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '340px',
     },
-    badge: {
-        position: 'absolute', top: '-12px', left: '20px',
-        backgroundColor: '#555', padding: '4px 12px', borderRadius: '20px', fontSize: '0.8rem'
+    cardLeft: { borderTop: '4px solid #6b9b6e' },
+    cardRight: { borderTop: '4px solid #d4a574' },
+    cardLabel: {
+        fontSize: '0.7rem',
+        fontWeight: 600,
+        letterSpacing: '0.1em',
+        color: '#8a857c',
+        marginBottom: '12px',
+        textTransform: 'uppercase',
     },
-    foodTitle: { fontSize: '1.8rem', marginBottom: '30px', textAlign: 'center' },
-    vs: { fontSize: '2rem', fontWeight: 'bold', color: '#444', alignSelf: 'center' },
-    nutrientList: { display: 'flex', flexDirection: 'column', gap: '20px' },
-    nutrientRow: {
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        paddingBottom: '10px', borderBottom: '1px solid #2d2d2d'
-    },
-    diff: { fontSize: '0.85rem', marginLeft: '8px', fontWeight: 'bold' } ,
-    weightControl: {
+    foodTitle: {
+        fontSize: '1.5rem',
+        fontWeight: 600,
         marginBottom: '20px',
+        textAlign: 'left',
+        minHeight: '2.4em',
+        lineHeight: 1.35,
+        display: '-webkit-box',
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: 'vertical',
+        overflow: 'hidden',
+        letterSpacing: '-0.02em',
+        color: '#2d2a26',
+    },
+    connector: {
+        width: '48px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexShrink: 0,
+    },
+    connectorArrow: {
+        fontSize: '1.5rem',
+        color: '#b8b2a8',
+        fontWeight: 300,
+    },
+    nutrientList: { display: 'flex', flexDirection: 'column', gap: '10px', marginTop: 'auto' },
+    nutrientRow: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '12px 14px',
+        backgroundColor: '#faf9f7',
+        borderRadius: '12px',
+        border: '1px solid #f0ede8',
+    },
+    nutrientLabel: { fontSize: '0.9rem', color: '#5c574f' },
+    nutrientValue: { display: 'flex', alignItems: 'center', gap: '10px' },
+    diff: { fontSize: '0.8rem', fontWeight: 600 },
+    weightControl: {
         display: 'flex',
         flexDirection: 'column',
         gap: '8px',
-        alignItems: 'center',
-        padding: '15px',
-        backgroundColor: '#262626',
-        borderRadius: '12px'
+        marginBottom: '20px',
+    },
+    weightControlLabel: {
+        fontSize: '0.8rem',
+        color: '#8a857c',
     },
     weightInput: {
-        width: '80px',
-        padding: '8px',
-        borderRadius: '8px',
-        border: '1px solid #444',
-        backgroundColor: '#121212',
-        color: '#fff',
+        width: '88px',
+        padding: '10px 12px',
+        borderRadius: '12px',
+        border: '1px solid #e5e2dc',
+        backgroundColor: '#faf9f7',
+        color: '#2d2a26',
         textAlign: 'center',
         fontSize: '1.1rem',
-        fontWeight: 'bold',
-        outline: 'none'
+        fontWeight: 600,
+        outline: 'none',
+    },
+    aiSection: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginTop: '40px',
+        gap: '12px',
+    },
+    aiButton: {
+        padding: '12px 24px',
+        borderRadius: '14px',
+        border: 'none',
+        backgroundColor: '#d4a574',
+        color: '#fff',
+        cursor: 'pointer',
+        fontSize: '0.95rem',
+        fontWeight: 600,
+        boxShadow: '0 2px 8px rgba(212,165,116,0.35)',
+        transition: 'all 0.2s',
+    },
+    aiButtonDisabled: { opacity: 0.7, cursor: 'not-allowed' },
+    aiPredictionCard: {
+        padding: '16px 24px',
+        backgroundColor: '#fdf8f2',
+        border: '1px solid #eeddc9',
+        borderRadius: '14px',
+        color: '#5c574f',
+        fontSize: '0.95rem',
+        maxWidth: '480px',
+        textAlign: 'center',
+    },
+    aiError: {
+        color: '#c45c4a',
+        fontSize: '0.9rem',
     },
 };
 

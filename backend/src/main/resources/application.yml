@@ -40,6 +40,14 @@ public-data:
   base-url: http://api.data.go.kr/openapi/tn_pubr_public_nutri_material_info_api
 
 # =========================================================
+# Gemini AI Configuration (for weight prediction)
+# =========================================================
+gemini:
+  api-key: ${GEMINI_API_KEY:}
+  base-url: https://generativelanguage.googleapis.com/v1beta
+  model: gemini-2.5-flash
+
+# =========================================================
 # Logging Configuration
 # =========================================================
 logging:
