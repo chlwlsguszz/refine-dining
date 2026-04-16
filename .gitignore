@@ -9,6 +9,7 @@ out/
 
 # OS files
 .DS_Store
+.env
 
 # Frontend 관련 제외 설정
 frontend/node_modules/

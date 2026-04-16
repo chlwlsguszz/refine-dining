@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import { commonStyles } from '../styles/commonStyles';
 
 function SearchPage() {
+    const apiBase = import.meta.env.VITE_API_BASE ?? '';
     const [keyword, setKeyword] = useState('');
     const [foods, setFoods] = useState([]);
     const [page, setPage] = useState(0);
@@ -26,7 +27,7 @@ function SearchPage() {
         const currentPage = isNewSearch ? 0 : page;
 
         try {
-            const response = await axios.get(`http://localhost:8080/api/food/search`, {
+            const response = await axios.get(`${apiBase}/api/food/search`, {
                 params: {
                     name: keyword.trim(),
                     page: currentPage,

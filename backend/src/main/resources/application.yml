@@ -13,9 +13,9 @@ spring:
   # Database Configuration (MySQL)
   # =========================================================
   datasource:
-    url: jdbc:mysql://localhost:3306/refine_dining?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: root
-    password: ${DB_PASSWORD}
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:refine_dining}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   # =========================================================
@@ -37,7 +37,7 @@ spring:
 # =========================================================
 public-data:
   api-key: ${PUBLIC_DATA_API_KEY}
-  base-url: http://api.data.go.kr/openapi/tn_pubr_public_nutri_material_info_api
+  base-url: https://api.data.go.kr/openapi/tn_pubr_public_nutri_material_info_api
 
 # =========================================================
 # Gemini AI Configuration (for weight prediction)

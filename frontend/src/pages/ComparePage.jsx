@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { commonStyles } from '../styles/commonStyles';
 
 function ComparePage() {
+    const apiBase = import.meta.env.VITE_API_BASE ?? '';
     const location = useLocation();
     const navigate = useNavigate();
     const { parentData, childData } = location.state || {};
@@ -58,7 +59,7 @@ function ComparePage() {
         setAiPrediction(null);
         setAiLoading(true);
         try {
-            const res = await axios.post('http://localhost:8080/api/weight/predict', {
+            const res = await axios.post(`${apiBase}/api/weight/predict`, {
                 foodName: parentData.name,
                 cookingMethod: childData?.cookingMethod ?? null,
                 baseWeight: Number(leftWeight),
