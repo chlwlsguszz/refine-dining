@@ -1,4 +1,6 @@
 # Refine Dining
+<img width="800" height="949" alt="Image" src="https://github.com/user-attachments/assets/42f0e93f-d0f5-485b-a71a-3ba15d4cd63c" />
+<img width="800" height="766" alt="Image" src="https://github.com/user-attachments/assets/9f0e5a22-cb73-4908-8581-0c422eb0cef3" />
 
 공공데이터 식품 영양 정보를 수집/정제하여 검색하고, 조리 방법별 영양소를 비교할 수 있는 웹 서비스입니다.
 
