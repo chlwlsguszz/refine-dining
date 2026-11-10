@@ -1,0 +1,33 @@
+{
+  "developmentReportSha256": "3c57612a5fd9a45ab18f1d289c74e6b4dbca95588486ad7140acf4a851d32ac4",
+  "testedOn": "2026-11-10",
+  "serverBuild": "b11206-2b129ccfa",
+  "modelSha256": "068bae163faa96ad48032daf4e071a6a28fe67d8dcc95367609c2ff165e52738",
+  "startup": {
+    "smokeOutputTokens": 15,
+    "firstKoreanSmokeMs": 675,
+    "modelLoadedSeconds": 3.97,
+    "smokeInputTokens": 37
+  },
+  "memorySampleAfterDevelopment": {
+    "serverPeakWorkingSetBytes": 14473764864,
+    "serverGpuDedicatedBytes": 6953422848,
+    "deviceUsedMiBIncludingOtherProcesses": 8120,
+    "serverPrivateBytes": 16040448000,
+    "source": "Win32_PerfFormattedData_GPUPerformanceCounters_GPUProcessMemory; Get-Process; nvidia-smi",
+    "hardware": "NVIDIA GeForce RTX 4070 SUPER",
+    "deviceCapacityMiB": 12282,
+    "serverWorkingSetBytes": 14140530688
+  },
+  "replay": {
+    "cached": 77,
+    "maxCacheLoadMs": 2.019,
+    "changedResponses": 0,
+    "rows": 77,
+    "medianCacheLoadMs": 0.679,
+    "localModelRequests": 0
+  },
+  "developmentColdMedianMs": 1771.917,
+  "inferenceRouting": "verified source rows + official definitions for proposals, model explanations research-only",
+  "modelPassageCitationCount": 0
+}
