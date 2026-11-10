@@ -1,0 +1,16 @@
+{
+  "protocol": "food-retrieval-v1",
+  "snapshotId": "sha256:cc6de9d66cbfc1c3e71efd886a01483133932e5ab6ff1efd9db6ba1275b20484",
+  "method": "family3_global",
+  "k": 5,
+  "familySlots": 3,
+  "model": "Xenova/multilingual-e5-small",
+  "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+  "modelSha256": "f80102d3f2a1229f387d3c81909990d8945513e347b0eab049f7de3c6f98c193",
+  "tokenizerSha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+  "embeddingProtocol": "e5-name-only-mean-pool-v1",
+  "tieTolerance": 1e-06,
+  "denseTiebreak": "food_cd",
+  "familyField": "food_lv4cd",
+  "sql": "same source/family, same middle first, food_cd"
+}

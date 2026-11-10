@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "family": "인삼",
+      "processed": "홍삼",
+      "state": "말린것",
+      "rawIngredient": "수삼",
+      "title": "국가법령정보센터 · 인삼산업법 제2조 제2호·제3호",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025789929",
+      "effectiveDate": "2026-09-17",
+      "checkedOn": "2026-11-10",
+      "summary": "홍삼의 원료는 수삼이며 제조 과정에는 찌기와 건조가 포함됩니다."
+    },
+    {
+      "family": "인삼",
+      "processed": "백삼",
+      "state": "말린것",
+      "rawIngredient": "수삼",
+      "title": "국가법령정보센터 · 인삼산업법 제2조 제2호·제5호",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025789929",
+      "effectiveDate": "2026-09-17",
+      "checkedOn": "2026-11-10",
+      "summary": "백삼은 수삼을 익히지 않고 건조해 만든 인삼류입니다."
+    }
+  ]
+}
