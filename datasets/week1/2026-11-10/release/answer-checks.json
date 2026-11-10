@@ -1,0 +1,234 @@
+{
+  "snapshotId": "sha256:cc6de9d66cbfc1c3e71efd886a01483133932e5ab6ff1efd9db6ba1275b20484",
+  "catalogVersion": "sha256:eadb5bedff2e6629202ca97cac425a65de4dbf823566c7984d32561d02ad934a",
+  "tests": [
+    {
+      "question": "귀리_겉귀리_도정_생것 150g 단백질",
+      "status": "ANSWER",
+      "sourceCodes": [
+        "R101-001010101-0000"
+      ],
+      "answerMs": 174.49,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "prot",
+          "label": "단백질",
+          "unit": "g",
+          "status": "observed",
+          "target": 14.82,
+          "candidate": null,
+          "delta": null,
+          "candidateStatus": null
+        }
+      ],
+      "explanationSource": null
+    },
+    {
+      "question": "인삼_홍삼_말린것 150g 단백질 비교",
+      "status": "HELD",
+      "sourceCodes": [
+        "R120-021030002-0000"
+      ],
+      "answerMs": 17.19,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "prot",
+          "label": "단백질",
+          "unit": "g",
+          "status": "observed",
+          "target": 19.53,
+          "candidate": null,
+          "delta": null,
+          "candidateStatus": null
+        }
+      ],
+      "explanationSource": null
+    },
+    {
+      "question": "인삼_홍삼_말린것 150g 단백질 비교",
+      "status": "ANSWER",
+      "sourceCodes": [
+        "R120-021030002-0000",
+        "R120-021020001-0000"
+      ],
+      "answerMs": 15.09,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "prot",
+          "label": "단백질",
+          "unit": "g",
+          "status": "observed",
+          "target": 19.53,
+          "candidate": 6.18,
+          "delta": 13.35,
+          "candidateStatus": "observed"
+        }
+      ],
+      "explanationSource": null
+    },
+    {
+      "question": "인삼_홍삼_말린것 150g 단백질 비교 이유",
+      "status": "ANSWER",
+      "sourceCodes": [
+        "R120-021030002-0000",
+        "R120-021020001-0000"
+      ],
+      "answerMs": 1218.9,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "prot",
+          "label": "단백질",
+          "unit": "g",
+          "status": "observed",
+          "target": 19.53,
+          "candidate": 6.18,
+          "delta": 13.35,
+          "candidateStatus": "observed"
+        }
+      ],
+      "explanationSource": "local-model:match"
+    },
+    {
+      "question": "인삼_홍삼_추출 100mL 단백질 비교",
+      "status": "HELD",
+      "sourceCodes": [
+        "R120-021030024-0000"
+      ],
+      "answerMs": 8.06,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "prot",
+          "label": "단백질",
+          "unit": "g",
+          "status": "observed",
+          "target": 0.33,
+          "candidate": null,
+          "delta": null,
+          "candidateStatus": null
+        }
+      ],
+      "explanationSource": null
+    },
+    {
+      "question": "인삼_홍삼_추출 100g 단백질",
+      "status": "NEED_UNIT",
+      "sourceCodes": [
+        "R120-021030024-0000"
+      ],
+      "answerMs": 17.58,
+      "checkedCells": 0,
+      "values": [],
+      "explanationSource": null
+    },
+    {
+      "question": "홍삼 100g 단백질",
+      "status": "CHOOSE_FOOD",
+      "sourceCodes": [],
+      "answerMs": 15.58,
+      "checkedCells": 0,
+      "values": [],
+      "explanationSource": null
+    },
+    {
+      "question": "홍삼 100g 단백질",
+      "status": "ANSWER",
+      "sourceCodes": [
+        "R120-021030002-0000"
+      ],
+      "answerMs": 3.01,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "prot",
+          "label": "단백질",
+          "unit": "g",
+          "status": "observed",
+          "target": 13.02,
+          "candidate": null,
+          "delta": null,
+          "candidateStatus": null
+        }
+      ],
+      "explanationSource": null
+    },
+    {
+      "question": "수삼 150g을 조리한 뒤 총량",
+      "status": "NEED_YIELD",
+      "sourceCodes": [],
+      "answerMs": 2.85,
+      "checkedCells": 0,
+      "values": [],
+      "explanationSource": null
+    },
+    {
+      "question": "귀리 2컵 영양",
+      "status": "NEED_UNIT",
+      "sourceCodes": [],
+      "answerMs": 2.58,
+      "checkedCells": 0,
+      "values": [],
+      "explanationSource": null
+    },
+    {
+      "question": "존재하지않는식품xyz 100g 단백질",
+      "status": "NO_MATCH",
+      "sourceCodes": [],
+      "answerMs": 16.49,
+      "checkedCells": 0,
+      "values": [],
+      "explanationSource": null
+    },
+    {
+      "question": "당류",
+      "status": "ANSWER",
+      "sourceCodes": [
+        "R101-003000101-0000"
+      ],
+      "answerMs": 3.6,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "sugar",
+          "label": "당류",
+          "unit": "g",
+          "status": "missing",
+          "target": null,
+          "candidate": null,
+          "delta": null,
+          "candidateStatus": null
+        }
+      ],
+      "explanationSource": null
+    },
+    {
+      "question": "당류",
+      "status": "ANSWER",
+      "sourceCodes": [
+        "R101-005000001-0000"
+      ],
+      "answerMs": 9.02,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "sugar",
+          "label": "당류",
+          "unit": "g",
+          "status": "observed",
+          "target": 0,
+          "candidate": null,
+          "delta": null,
+          "candidateStatus": null
+        }
+      ],
+      "explanationSource": null
+    }
+  ],
+  "approvedOnlyInIsolatedTestDb": true,
+  "cases": 13,
+  "checkedNutrientRows": 8
+}

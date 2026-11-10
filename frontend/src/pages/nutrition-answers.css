@@ -1,0 +1,16 @@
+.rd-answer-wrap { max-width: 920px; }
+.rd-answer { margin-top: 18px; }
+.rd-question-actions { display: flex; justify-content: space-between; align-items: end; gap: 14px; flex-wrap: wrap; }
+.rd-example-group { display: flex; gap: 6px; flex-wrap: wrap; }
+.rd-example-group button { font-size: .8rem; }
+.rd-choices { max-height: 300px; }
+.rd-table-scroll { overflow-x: auto; }
+.rd-values { width: 100%; border-collapse: collapse; text-align: left; }
+.rd-values th, .rd-values td { border-bottom: 1px solid #465151; padding: 9px 8px; min-width: 75px; }
+.rd-values thead { color: #bee5fa; }
+.rd-values td { font-variant-numeric: tabular-nums; }
+.rd-source { border-bottom: 1px solid #465151; padding: 10px 0; }
+.rd-source summary { cursor: pointer; }
+.rd-source summary small { color: #bac6c8; }
+.rd-source-values { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.rd-source-values dd { margin: 0; color: #c1e5fa; }
