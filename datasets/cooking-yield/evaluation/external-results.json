@@ -1,0 +1,228 @@
+{
+  "observationsSha256": "e0647c82090175078c286a112b12feb5c5d3282cde5e4911a285cc9b77da0192",
+  "engine": "POST /api/weight/predict",
+  "comparisonLevel": "External, broad cooking-method groups; individual errors unavailable.",
+  "allGroups": 13,
+  "estimatedGroupsAfterEvidenceSelection": 5,
+  "cohorts": [
+    {
+      "id": "florida-patties-1974",
+      "measure": "cookedMeanGrams",
+      "groups": 4,
+      "estimatedGroups": 2,
+      "notEstimatedGroups": 2,
+      "meanAbsoluteError": 3.15,
+      "fixed70PercentMaeOnIdenticalGroups": 2.1,
+      "rows": [
+        {
+          "id": "broil",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "브로일",
+            "baseWeight": 107.5
+          },
+          "observed": 73.1,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": "usda-r2-23573",
+          "predicted": 74.2,
+          "absoluteError": 1.1,
+          "outcome": "ESTIMATED",
+          "referencePercent": 69.0,
+          "referenceVersion": "Release 2 (2014)",
+          "referenceRow": "Sheet1!A27:L27"
+        },
+        {
+          "id": "griddle",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "팬구이",
+            "baseWeight": 107.5
+          },
+          "observed": 73.3,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": "usda-r2-23574",
+          "predicted": 78.5,
+          "absoluteError": 5.2,
+          "outcome": "ESTIMATED",
+          "referencePercent": 73.0,
+          "referenceVersion": "Release 2 (2014)",
+          "referenceRow": "Sheet1!A28:L28"
+        },
+        {
+          "id": "microwave",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "전자레인지 조리",
+            "baseWeight": 107.5
+          },
+          "observed": 64.6,
+          "initialStatus": "NO_MATCH",
+          "confirmedEvidenceId": null,
+          "predicted": null,
+          "absoluteError": null,
+          "outcome": "NO_MATCH"
+        },
+        {
+          "id": "broil-freeze-microwave",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "브로일 후 냉동 및 전자레인지 재가열",
+            "baseWeight": 107.5
+          },
+          "observed": 59.8,
+          "initialStatus": "NO_MATCH",
+          "confirmedEvidenceId": null,
+          "predicted": null,
+          "absoluteError": null,
+          "outcome": "NO_MATCH"
+        }
+      ]
+    },
+    {
+      "id": "texas-retail-patties-2022",
+      "measure": "yieldPercent",
+      "groups": 9,
+      "estimatedGroups": 3,
+      "notEstimatedGroups": 6,
+      "meanAbsoluteError": 6.06,
+      "fixed70PercentMaeOnIdenticalGroups": 3.06,
+      "rows": [
+        {
+          "id": "chub-70-79-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 57.29,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": null,
+          "predicted": null,
+          "absoluteError": null,
+          "outcome": "NEED_CONDITIONS"
+        },
+        {
+          "id": "chub-80-89-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 63.62,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": null,
+          "predicted": null,
+          "absoluteError": null,
+          "outcome": "NEED_CONDITIONS"
+        },
+        {
+          "id": "chub-90-99-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 64.92,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": "usda-r2-23563",
+          "predicted": 73.0,
+          "absoluteError": 8.08,
+          "outcome": "ESTIMATED",
+          "referencePercent": 73.0,
+          "referenceVersion": "Release 2 (2014)",
+          "referenceRow": "Sheet1!A23:L23"
+        },
+        {
+          "id": "pvc-70-79-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 64.85,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": null,
+          "predicted": null,
+          "absoluteError": null,
+          "outcome": "NEED_CONDITIONS"
+        },
+        {
+          "id": "pvc-80-89-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 65.49,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": null,
+          "predicted": null,
+          "absoluteError": null,
+          "outcome": "NEED_CONDITIONS"
+        },
+        {
+          "id": "pvc-90-99-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 68.62,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": "usda-r2-23563",
+          "predicted": 73.0,
+          "absoluteError": 4.38,
+          "outcome": "ESTIMATED",
+          "referencePercent": 73.0,
+          "referenceVersion": "Release 2 (2014)",
+          "referenceRow": "Sheet1!A23:L23"
+        },
+        {
+          "id": "vpb-70-79-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 62.46,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": null,
+          "predicted": null,
+          "absoluteError": null,
+          "outcome": "NEED_CONDITIONS"
+        },
+        {
+          "id": "vpb-80-89-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 65.98,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": null,
+          "predicted": null,
+          "absoluteError": null,
+          "outcome": "NEED_CONDITIONS"
+        },
+        {
+          "id": "vpb-90-99-lean",
+          "query": {
+            "foodName": "소고기 패티",
+            "cookingMethod": "그릴구이",
+            "baseWeight": 100.0
+          },
+          "observed": 67.29,
+          "initialStatus": "NEED_CONDITIONS",
+          "confirmedEvidenceId": "usda-r2-23563",
+          "predicted": 73.0,
+          "absoluteError": 5.71,
+          "outcome": "ESTIMATED",
+          "referencePercent": 73.0,
+          "referenceVersion": "Release 2 (2014)",
+          "referenceRow": "Sheet1!A23:L23"
+        }
+      ]
+    }
+  ]
+}

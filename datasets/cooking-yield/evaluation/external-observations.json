@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "cohorts": [
+    {
+      "id": "florida-patties-1974",
+      "citation": "L. J. Janicki and H. Appledorf (1974), Journal of Food Science 39, 715–717. Methods and Table 2 (p. 716).",
+      "sourceUrl": "https://doi.org/10.1111/j.1365-2621.1974.tb17964.x",
+      "tableUrl": "https://lib3.dss.go.th/fulltext/scan_ebook/j.food_sci_1974_v39_n4.pdf",
+      "measure": "cookedMeanGrams",
+      "measurement": "Four cooking treatments, 12 patties per treatment. Use the single published raw-group mean of 107.5 g and the cooked-group mean of each treatment. Individual paired starting weights and cooked observations are not published. Raw crude fat 18.1 g / 107.5 g = 16.84% sets the medium-fat class independently of cooked outcomes.",
+      "baseWeight": 107.5,
+      "cases": [
+        {"id": "broil", "method": "broil", "condition": "usda-r2-23573", "observed": 73.1},
+        {"id": "griddle", "method": "griddle", "condition": "usda-r2-23574", "observed": 73.3},
+        {"id": "microwave", "method": "microwave", "condition": null, "observed": 64.6},
+        {"id": "broil-freeze-microwave", "method": "reheat", "condition": null, "observed": 59.8}
+      ]
+    },
+    {
+      "id": "texas-retail-patties-2022",
+      "citation": "E. P. Williams (2022), National Ground Beef Survey–2021, Texas A&M University. Methods §3.1 and Table 11, sensory panel cook yields.",
+      "sourceUrl": "https://oaktrust.library.tamu.edu/server/api/core/bitstreams/792aee83-4583-47f0-83e5-24a36592e8a5/content",
+      "measure": "yieldPercent",
+      "measurement": "All nine packaging x package-lean-percentage strata in the sensory cook-yield section. Observations are published least-squares means of measured cooked/raw yields in percent. A 100 g input normalizes the endpoint; the study formed 151.2 g patties and does not report corresponding stratum mean cooked weights in grams. nPackages counts packages, not repeated independent observations for scoring.",
+      "baseWeight": 100,
+      "cases": [
+        {"id": "chub-70-79-lean", "method": "grill", "condition": null, "observed": 57.29, "nPackages": 7},
+        {"id": "chub-80-89-lean", "method": "grill", "condition": null, "observed": 63.62, "nPackages": 8},
+        {"id": "chub-90-99-lean", "method": "grill", "condition": "usda-r2-23563", "observed": 64.92, "nPackages": 12},
+        {"id": "pvc-70-79-lean", "method": "grill", "condition": null, "observed": 64.85, "nPackages": 4},
+        {"id": "pvc-80-89-lean", "method": "grill", "condition": null, "observed": 65.49, "nPackages": 53},
+        {"id": "pvc-90-99-lean", "method": "grill", "condition": "usda-r2-23563", "observed": 68.62, "nPackages": 47},
+        {"id": "vpb-70-79-lean", "method": "grill", "condition": null, "observed": 62.46, "nPackages": 3},
+        {"id": "vpb-80-89-lean", "method": "grill", "condition": null, "observed": 65.98, "nPackages": 27},
+        {"id": "vpb-90-99-lean", "method": "grill", "condition": "usda-r2-23563", "observed": 67.29, "nPackages": 17}
+      ]
+    }
+  ]
+}

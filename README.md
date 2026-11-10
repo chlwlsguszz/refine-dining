@@ -13,6 +13,12 @@
 
 새 체크아웃에서 인덱스를 다시 만들고 77건을 생성했을 때 검색 순위·선택 코드·판정·인용은 일치했습니다. GPU에서 다시 생성한 응답 5건은 설명에 표시할 차이 항목이 달랐습니다. 캐시를 사용한 재실행에서는 77건의 응답이 일치했습니다. [새 체크아웃 재현 기록](datasets/week1/2026-11-10/release/reproduction.json)
 
+### 조리 후 중량 계산
+
+비교 화면의 **실측 수율 조회** 또는 [중량 계산기](http://127.0.0.1:18082/weight)에서 생중량, 부위, 조리법을 입력합니다. USDA 실험 28개에서 조건을 선택하면 서버가 생중량에 평균 수율을 곱합니다. 예를 들어 껍질 포함 닭 넓적다리 오븐구이의 평균 수율은 69%입니다. 200g을 넣으면 예상 중량 138g, 관측 최저·최고 수율로 계산한 범위 116~158g과 원표 위치가 표시됩니다. 실제 자신의 재료와 조건이 다르면 조리 후 무게를 직접 입력할 수 있습니다. [실측 자료와 도입 범위](datasets/cooking-yield/README.md)
+
+외부 패티 연구의 조리군 13개 중 지방 구간과 조리법을 대응시킨 5개에서 값을 얻었습니다. 중량을 보고한 두 조리군의 평균 절대오차는 3.15g, 같은 두 건에 고정 70% 수율을 쓴 오차는 2.10g이었습니다. 다른 세 집단에는 수율만 있어 오차를 별도로 평가했습니다. [평가 입력·결과와 한계](datasets/cooking-yield/evaluation/README.md)
+
 ### 로컬에서 데모 열기
 
 저장소 루트의 PowerShell에서 실행합니다. Python 3.12, JDK 17, Node 24를 사용했습니다. 저장된 스냅샷과 개발 제안으로 H2 데모를 실행할 수 있습니다. 첫 설치 때 Gradle과 npm 의존성을 준비합니다.
@@ -84,13 +90,13 @@ llama-server --model $gguf --alias refine-qwen3 --host 127.0.0.1 --port 18081 --
 - Backend: Spring Boot, JPA, MySQL
 - Frontend: React + Vite
 - Infra: Docker, Nginx, Docker Compose
-- AI: Gemini API 기반 조리 후 예상 중량 추천
+- 조리 중량 데이터: USDA 육류·가금류 실측 수율
 
 ## 주요 기능
 
 - 식품명 검색 및 페이지네이션
 - 대표 식품(원재료)과 조리 방법별 식품 영양소 비교
-- 조리 후 예상 중량 AI 추천
+- 부위와 조리법별 실측 수율로 예상 중량 계산
 - 관리자 배치 API
   - 공공데이터 원본 동기화
   - 정제 데이터 생성/계층화
@@ -100,7 +106,7 @@ llama-server --model $gguf --alias refine-qwen3 --host 127.0.0.1 --port 18081 --
 1. `sync-raw`로 공공데이터 API 원본을 `raw_food_materials`에 저장
 2. `refine`로 서비스용 정제 데이터(`food_materials`) 생성
 3. 검색 API가 정제 데이터를 조회
-4. 비교 화면에서 AI 예측 API 호출 시 Gemini 기반 예상 중량 반환
+4. 비교 화면에서 실측 수율의 적용 조건을 확인하고 조리 후 예상 중량을 반영
 
 ## 프로젝트 구조
 
@@ -120,7 +126,6 @@ refine-dining
 
 - `DB_PASSWORD`
 - `PUBLIC_DATA_API_KEY`
-- `GEMINI_API_KEY`
 
 실행:
 
@@ -150,7 +155,6 @@ DB_USERNAME=refine_user
 DB_PASSWORD=change_me
 MYSQL_ROOT_PASSWORD=change_me_root
 PUBLIC_DATA_API_KEY=your_public_data_api_key
-GEMINI_API_KEY=your_gemini_api_key
 ```
 
 실행:
@@ -183,17 +187,12 @@ docker compose down -v
 GET /api/food/search?name=감자&page=0&size=10
 ```
 
-### AI 중량 예측
+### 실측 조리 수율
 
-```http
-POST /api/weight/predict
-Content-Type: application/json
+`GET /api/weight/options`로 지원하는 조건과 출처를 조회합니다. `POST /api/weight/predict`에는 `foodName` 또는 검증된 원본 `foodCd`, `cookingMethod`, g 단위의 `baseWeight`를 전달합니다. 첫 응답이 `NEED_CONDITIONS`이면 현물과 일치하는 후보 행을 확인하고 그 `id`를 `evidenceId`로 보내 계산합니다. `NO_MATCH`에는 예상 중량이 없습니다.
 
-{
-  "foodName": "삼겹살",
-  "cookingMethod": "구운것",
-  "baseWeight": 100
-}
+```json
+{"foodName":"닭 넓적다리","cookingMethod":"오븐구이","baseWeight":200,"evidenceId":"usda-r2-05094"}
 ```
 
 ### 관리자 배치
