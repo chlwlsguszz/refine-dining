@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 @Profile("rag-demo")
 public class NutritionPages {
-    @GetMapping({"/nutrition", "/nutrition/review"})
+    @GetMapping({"/nutrition", "/nutrition/review", "/weight"})
     public String page() { return "forward:/index.html"; }
 }

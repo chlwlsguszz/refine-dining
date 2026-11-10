@@ -63,6 +63,7 @@ function Answer({ result, onChoose, busy }) {
     return <section className="rd-panel rd-answer" aria-label="질문 결과">
         <h2>{status === 'CHOOSE_FOOD' ? '식품 선택' : '답변'}</h2>
         <p role="status">{message}</p>
+        {status === 'NEED_YIELD' && <p><Link to="/weight">실측 수율로 조리 후 중량 계산</Link></p>}
         {choices.length > 0 && <div className="rd-list rd-choices">{choices.map(food =>
             <button type="button" key={food.foodCd} disabled={busy} onClick={() => onChoose(food.foodCd)}>
                 {food.foodNm}<small>{food.foodCd}</small>
@@ -124,7 +125,8 @@ export default function NutritionAnswers() {
     }
 
     return <main className="rd-workspace"><div className="rd-wrap rd-answer-wrap">
-        <header className="rd-header"><Link to="/">Refine Dining</Link><h1>영양 질의응답</h1></header>
+        <header className="rd-header"><nav className="rd-actions"><Link to="/">Refine Dining</Link>
+            <Link to="/weight">조리 후 중량 계산</Link></nav><h1>영양 질의응답</h1></header>
         <form className="rd-panel rd-form" onSubmit={e => { e.preventDefault(); ask(question); }}>
             <label htmlFor="nutrition-question">어떤 식품과 양이 궁금한가요?</label>
             <textarea id="nutrition-question" rows={2} required maxLength={300} value={question}

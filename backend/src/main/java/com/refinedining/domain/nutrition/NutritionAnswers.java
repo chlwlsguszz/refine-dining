@@ -18,7 +18,7 @@ public class NutritionAnswers {
     private static final Pattern WEIGHT = Pattern.compile("(?i)([-+]?\\d+(?:\\.\\d+)?)\\s*(밀리리터|킬로그램|그램|리터|kg|ml|g|l)(?![a-z])");
     private static final Pattern CODE = Pattern.compile("R\\d{3}-\\d{9}-\\d{4}");
     private static final Pattern UNSUPPORTED = Pattern.compile("(?i)\\d\\s*(개|컵|인분|숟갈|스푼|온스|oz|lb|근|mg|mcg|μg|밀리그램)");
-    private static final Pattern YIELD = Pattern.compile("수율|조리하면|조리했을|조리한\\s*뒤|조리\\s*후\\s*(실제|총량|무게|중량)|익힌\\s*(뒤|후)\\s*총");
+    private static final Pattern YIELD = Pattern.compile("(?i)수율|조리하면|조리했을|조리한\\s*뒤|조리\\s*후\\s*(실제|총량|무게|중량)|익힌\\s*(뒤|후)\\s*총|(?:구우면|삶으면|볶으면|튀기면|찌면)\\s*(?:몇\\s*(?:g|그램)|무게|중량)");
     private static final Pattern INTENT = Pattern.compile("비교|차이|전후|대비|차이점");
     private static final List<Nutrient> BASIC = List.of(Nutrient.enerc,Nutrient.prot,Nutrient.fatce,Nutrient.chocdf,Nutrient.sugar,Nutrient.nat);
     private final NutritionCatalog catalog;
@@ -70,7 +70,7 @@ public class NutritionAnswers {
         String text = request.question().trim();
         var result = json.createObjectNode();
         result.putArray("choices"); result.putArray("foods"); result.putArray("rows"); result.putNull("relation");
-        if (YIELD.matcher(text).find()) return status(result,"NEED_YIELD","실제 조리 후 총량에는 조리 후 중량이나 해당 표본의 수율이 필요합니다.");
+        if (YIELD.matcher(text).find()) return status(result,"NEED_YIELD","조리 후 총량에는 중량이나 수율이 필요합니다. 중량 계산기에서 부위와 조리법에 맞는 실측 자료를 확인하세요.");
         if (UNSUPPORTED.matcher(text).find()) return status(result,"NEED_UNIT","질문에 사용할 중량(g) 또는 부피(mL)를 알려주세요.");
         String selected = request.foodCd();
         List<String> explicit = CODE.matcher(text).results().map(m -> m.group()).distinct().toList();

@@ -1,19 +1,23 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
+import CookingYieldPanel from '../components/CookingYieldPanel';
 import { commonStyles } from '../styles/commonStyles';
 
 function ComparePage() {
-    const apiBase = import.meta.env.VITE_API_BASE ?? '';
     const location = useLocation();
     const navigate = useNavigate();
     const { parentData, childData } = location.state || {};
 
     const [leftWeight, setLeftWeight] = useState(100);
-    const [rightWeight, setRightWeight] = useState(100);
-    const [aiLoading, setAiLoading] = useState(false);
-    const [aiError, setAiError] = useState(null);
-    const [aiPrediction, setAiPrediction] = useState(null);
+    const [manualWeight, setManualWeight] = useState(100);
+    const [estimate, setEstimate] = useState(null);
+    const foodCd = /^R\d{3}-\d{9}-\d{4}$/.test(parentData?.foodCd) ? parentData.foodCd : undefined;
+    // Refined "구운것" groups pan, grill and oven; preserve the protocol printed in the original food name.
+    const cookingMethod = childData?.name?.split('_').find(field => field.startsWith(childData.cookingMethod + '('))
+        ?? childData?.cookingMethod;
+    const yieldKey = JSON.stringify([foodCd, parentData?.name, childData?.id, childData?.name, cookingMethod, leftWeight]);
+    const usingEstimate = estimate?.key === yieldKey;
+    const rightWeight = usingEstimate ? estimate.weight : manualWeight;
 
     if (!parentData || !childData) return <div style={styles.container}>데이터 없음</div>;
 
@@ -34,6 +38,7 @@ function ComparePage() {
 
     // 왼쪽 핸들러
     const handleLeftWeightChange = (v) => {
+        setEstimate(null);
         if (v === '') { setLeftWeight(''); return; }
         const num = Number(v);
         if (!isNaN(num)) setLeftWeight(num);
@@ -41,36 +46,10 @@ function ComparePage() {
 
     // 오른쪽 핸들러 (추가)
     const handleRightWeightChange = (v) => {
-        if (v === '') { setRightWeight(''); return; }
+        setEstimate(null);
+        if (v === '') { setManualWeight(''); return; }
         const num = Number(v);
-        if (!isNaN(num)) setRightWeight(num);
-    };
-
-    const cookingVerbMap = {
-        '구운것': '구우면', '삶은것': '삶으면', '튀긴것': '튀기면', '찐것': '쪄면',
-        '데친것': '데치면', '볶은것': '볶으면', '조린것': '조리면',
-        '전자레인지로 가열한것': '전자레인지로 가열하면', '생것': '그대로 두면',
-    };
-    const getCookingVerb = () => cookingVerbMap[childData?.cookingMethod] || '조리하면';
-
-    const handleAiRecommend = async () => {
-        if (!parentData?.name || leftWeight === '' || leftWeight <= 0) return;
-        setAiError(null);
-        setAiPrediction(null);
-        setAiLoading(true);
-        try {
-            const res = await axios.post(`${apiBase}/api/weight/predict`, {
-                foodName: parentData.name,
-                cookingMethod: childData?.cookingMethod ?? null,
-                baseWeight: Number(leftWeight),
-            });
-            const predicted = Math.round(res.data.predictedWeight * 10) / 10;
-            setAiPrediction({ foodName: parentData.name, baseWeight: leftWeight, predicted, cookingVerb: getCookingVerb() });
-        } catch (err) {
-            setAiError(err.response?.data?.message || err.message || 'AI 예측에 실패했습니다.');
-        } finally {
-            setAiLoading(false);
-        }
+        if (!isNaN(num)) setManualWeight(num);
     };
 
     return (
@@ -112,12 +91,15 @@ function ComparePage() {
                     <span style={styles.cardLabel}>조리 후</span>
                     <h2 style={styles.foodTitle}>{childData.name}</h2>
                     <div style={styles.weightControl}>
-                        <label style={styles.weightControlLabel}>중량 (g)</label>
+                        <label htmlFor="yield-cooked-weight" style={styles.weightControlLabel}>
+                            비교 중량 (g){usingEstimate ? ' · 실측 수율 추정값' : ''}
+                        </label>
                         <input
+                            id="yield-cooked-weight"
                             type="number"
                             value={rightWeight}
                             onChange={(e) => handleRightWeightChange(e.target.value)}
-                            onBlur={() => { if (rightWeight === '') setRightWeight(0); }}
+                            onBlur={() => { if (rightWeight === '') setManualWeight(0); }}
                             style={styles.weightInput}
                         />
                     </div>
@@ -143,22 +125,13 @@ function ComparePage() {
                 </div>
             </div>
 
-            <div style={styles.aiSection}>
-                <button
-                    type="button"
-                    style={{...styles.aiButton, ...(aiLoading ? styles.aiButtonDisabled : {})}}
-                    onClick={handleAiRecommend}
-                    disabled={aiLoading}
-                >
-                    {aiLoading ? '예측 중...' : '조리 후 예상 중량 알려주기'}
-                </button>
-                {aiPrediction && (
-                    <div style={styles.aiPredictionCard}>
-                        {aiPrediction.foodName} {aiPrediction.baseWeight}g을(를) {aiPrediction.cookingVerb} 약 <strong>{aiPrediction.predicted}g</strong>이 될 것으로 예상됩니다.
-                    </div>
-                )}
-                {aiError && <div style={styles.aiError}>{aiError}</div>}
-            </div>
+            <section className="yield-compare">
+                <h2>조리 후 예상 중량</h2>
+                <p>원재료와 조리 조건에 맞는 실측 수율을 찾아 비교에 적용할 수 있습니다.</p>
+                <CookingYieldPanel key={yieldKey} foodName={parentData.name} foodCd={foodCd} cookingMethod={cookingMethod}
+                    baseWeight={leftWeight} manualInputId="yield-cooked-weight" onChangeCondition={() => setEstimate(null)}
+                    onApply={weight => setEstimate({ key: yieldKey, weight })} />
+            </section>
         </div>
     );
 }
@@ -274,40 +247,7 @@ const styles = {
         fontWeight: 600,
         outline: 'none',
     },
-    aiSection: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginTop: '40px',
-        gap: '12px',
-    },
-    aiButton: {
-        padding: '12px 24px',
-        borderRadius: '14px',
-        border: 'none',
-        backgroundColor: '#d4a574',
-        color: '#fff',
-        cursor: 'pointer',
-        fontSize: '0.95rem',
-        fontWeight: 600,
-        boxShadow: '0 2px 8px rgba(212,165,116,0.35)',
-        transition: 'all 0.2s',
-    },
-    aiButtonDisabled: { opacity: 0.7, cursor: 'not-allowed' },
-    aiPredictionCard: {
-        padding: '16px 24px',
-        backgroundColor: '#fdf8f2',
-        border: '1px solid #eeddc9',
-        borderRadius: '14px',
-        color: '#5c574f',
-        fontSize: '0.95rem',
-        maxWidth: '480px',
-        textAlign: 'center',
-    },
-    aiError: {
-        color: '#c45c4a',
-        fontSize: '0.9rem',
-    },
+
 };
 
 export default ComparePage;

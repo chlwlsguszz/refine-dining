@@ -1,0 +1,858 @@
+{
+  "title": "USDA Table of Cooking Yields for Meat and Poultry",
+  "version": "Release 2 (2014)",
+  "sourceUrl": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/retn/USDA_CookingYields_MeatPoultry02.xlsx",
+  "methodologyUrl": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/retn/USDA_CookingYields_MeatPoultry02.pdf",
+  "sourceSha256": "13bd2cec633841867bf8532ed57114c81f3791b9bcd35a396dec6a1b960773ff",
+  "records": [
+    {
+      "id": "usda-r2-13494",
+      "foodLabel": "다진 소고기 부스러기 (지방 22% 초과)",
+      "methodLabel": "팬에 볶기",
+      "conditions": "지방 22% 초과. 팬에 잘게 풀어 볶은 뒤 체에 밭쳐 기름을 뺀 상태.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 62,
+      "minPercent": 60.31,
+      "maxPercent": 63.89,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A17:L17",
+      "sourceNdb": "13494",
+      "sourceDescription": "Beef, ground, high fat (>22%), crumbles",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "다진 소고기",
+        "소고기 다짐육",
+        "소고기 분쇄육"
+      ],
+      "methodAliases": [
+        "볶은것",
+        "볶기",
+        "팬볶음"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-13496",
+      "foodLabel": "다진 소고기 패티 (지방 22% 초과)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "지방 22% 초과. 기름 없이 전기 팬에서 약 11.75분, 중심 71°C까지 가열한 패티.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 69,
+      "minPercent": 67.55,
+      "maxPercent": 72.23,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A19:L19",
+      "sourceNdb": "13496",
+      "sourceDescription": "Beef, ground, high fat (>22%), patty",
+      "sourceMethod": "Pan-broiled",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 패티",
+        "쇠고기 패티",
+        "다진 소고기 패티",
+        "소고기 햄버거 패티"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-13497",
+      "foodLabel": "다진 소고기 패티 (지방 22% 초과)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "지방 22% 초과. 자료의 조리법 범주는 브로일·그릴이고 연구의 패티는 예열한 오븐에서 브로일해 중심 71°C에 도달했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 63,
+      "minPercent": 55.33,
+      "maxPercent": 69.44,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A20:L20",
+      "sourceNdb": "13497",
+      "sourceDescription": "Beef, ground, high fat (>22%), patty",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 패티",
+        "쇠고기 패티",
+        "다진 소고기 패티",
+        "소고기 햄버거 패티"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-23565",
+      "foodLabel": "다진 소고기 부스러기 (지방 12% 미만)",
+      "methodLabel": "팬에 볶기",
+      "conditions": "지방 12% 미만. 팬에 잘게 풀어 볶은 뒤 체에 밭쳐 기름을 뺀 상태.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 69,
+      "minPercent": 67.08,
+      "maxPercent": 69.53,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A21:L21",
+      "sourceNdb": "23565",
+      "sourceDescription": "Beef, ground, low fat (<12%), crumbles",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "다진 소고기",
+        "소고기 다짐육",
+        "소고기 분쇄육"
+      ],
+      "methodAliases": [
+        "볶은것",
+        "볶기",
+        "팬볶음"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-23563",
+      "foodLabel": "다진 소고기 패티 (지방 12% 미만)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "지방 12% 미만. 자료의 조리법 범주는 브로일·그릴이고 연구의 패티는 예열한 오븐에서 브로일해 중심 71°C에 도달했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 73,
+      "minPercent": 72.82,
+      "maxPercent": 74.68,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A23:L23",
+      "sourceNdb": "23563",
+      "sourceDescription": "Beef, ground, low fat (<12%), patty",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "소고기 패티",
+        "쇠고기 패티",
+        "다진 소고기 패티",
+        "소고기 햄버거 패티"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-23564",
+      "foodLabel": "다진 소고기 패티 (지방 12% 미만)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "지방 12% 미만. 기름 없이 전기 팬에서 약 11.75분, 중심 71°C까지 가열한 패티.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 77,
+      "minPercent": 76.37,
+      "maxPercent": 78.3,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A24:L24",
+      "sourceNdb": "23564",
+      "sourceDescription": "Beef, ground, low fat (<12%), patty",
+      "sourceMethod": "Pan-broiled",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "소고기 패티",
+        "쇠고기 패티",
+        "다진 소고기 패티",
+        "소고기 햄버거 패티"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-23575",
+      "foodLabel": "다진 소고기 부스러기 (지방 12~22%)",
+      "methodLabel": "팬에 볶기",
+      "conditions": "지방 12~22%. 팬에 잘게 풀어 볶은 뒤 체에 밭쳐 기름을 뺀 상태.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 67,
+      "minPercent": 63.7,
+      "maxPercent": 71.62,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A25:L25",
+      "sourceNdb": "23575",
+      "sourceDescription": "Beef, ground, medium fat (12%-22%), crumbles",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "다진 소고기",
+        "소고기 다짐육",
+        "소고기 분쇄육"
+      ],
+      "methodAliases": [
+        "볶은것",
+        "볶기",
+        "팬볶음"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-23573",
+      "foodLabel": "다진 소고기 패티 (지방 12~22%)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "지방 12~22%. 자료의 조리법 범주는 브로일·그릴이고 연구의 패티는 예열한 오븐에서 브로일해 중심 71°C에 도달했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 69,
+      "minPercent": 63.96,
+      "maxPercent": 72.42,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A27:L27",
+      "sourceNdb": "23573",
+      "sourceDescription": "Beef, ground, medium fat (12%-22%), patty",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "소고기 패티",
+        "쇠고기 패티",
+        "다진 소고기 패티",
+        "소고기 햄버거 패티"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-23574",
+      "foodLabel": "다진 소고기 패티 (지방 12~22%)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "지방 12~22%. 기름 없이 전기 팬에서 약 11.75분, 중심 71°C까지 가열한 패티.",
+      "rawBasis": "부재료를 섞지 않은 생 소고기 분쇄육 중량.",
+      "meanPercent": 73,
+      "minPercent": 70.78,
+      "maxPercent": 75.97,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A28:L28",
+      "sourceNdb": "23574",
+      "sourceDescription": "Beef, ground, medium fat (12%-22%), patty",
+      "sourceMethod": "Pan-broiled",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "소고기 패티",
+        "쇠고기 패티",
+        "다진 소고기 패티",
+        "소고기 햄버거 패티"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05060",
+      "foodLabel": "닭 가슴 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요. 원자료에는 오븐 온도와 시간이 없습니다.",
+      "rawBasis": "껍질이 붙은 해당 생부위의 조리 직전 중량. 표에는 뼈 포함 여부가 명시되지 않았습니다.",
+      "meanPercent": 72,
+      "minPercent": 61,
+      "maxPercent": 82,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A70:L70",
+      "sourceNdb": "05060",
+      "sourceDescription": "Chicken, broiler-fryer, breast, meat and skin",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭가슴",
+        "닭고기 가슴",
+        "닭가슴 껍질 포함"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05061",
+      "foodLabel": "닭 가슴 (껍질 포함)",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요.",
+      "rawBasis": "껍질이 붙은 해당 생부위의 조리 직전 중량. 표에는 뼈 포함 여부가 명시되지 않았습니다.",
+      "meanPercent": 77,
+      "minPercent": 70,
+      "maxPercent": 88,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A71:L71",
+      "sourceNdb": "05061",
+      "sourceDescription": "Chicken, broiler-fryer, breast, meat and skin",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭가슴",
+        "닭고기 가슴",
+        "닭가슴 껍질 포함"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05069",
+      "foodLabel": "닭 아랫다리 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요. 원자료에는 오븐 온도와 시간이 없습니다.",
+      "rawBasis": "껍질이 붙은 해당 생부위의 조리 직전 중량. 표에는 뼈 포함 여부가 명시되지 않았습니다.",
+      "meanPercent": 76,
+      "minPercent": 63,
+      "maxPercent": 87,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A72:L72",
+      "sourceNdb": "05069",
+      "sourceDescription": "Chicken, broiler-fryer, drumstick, meat and skin",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭 아랫다리",
+        "닭 북채",
+        "닭고기 아랫다리",
+        "닭고기_아랫다리_생것"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [
+        "R209-008006301-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05094",
+      "foodLabel": "닭 넓적다리 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요. 원자료에는 오븐 온도와 시간이 없습니다.",
+      "rawBasis": "껍질이 붙은 해당 생부위의 조리 직전 중량. 표에는 뼈 포함 여부가 명시되지 않았습니다.",
+      "meanPercent": 69,
+      "minPercent": 58,
+      "maxPercent": 79,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A74:L74",
+      "sourceNdb": "05094",
+      "sourceDescription": "Chicken, broiler-fryer, thigh, meat and skin",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭 넓적다리",
+        "닭고기 넓적다리",
+        "닭고기_넓적다리_생것"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [
+        "R209-008000701-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05095",
+      "foodLabel": "닭 넓적다리 (껍질 포함)",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요.",
+      "rawBasis": "껍질이 붙은 해당 생부위의 조리 직전 중량. 표에는 뼈 포함 여부가 명시되지 않았습니다.",
+      "meanPercent": 74,
+      "minPercent": 67,
+      "maxPercent": 82,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A75:L75",
+      "sourceNdb": "05095",
+      "sourceDescription": "Chicken, broiler-fryer, thigh, meat and skin",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭 넓적다리",
+        "닭고기 넓적다리",
+        "닭고기_넓적다리_생것"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [
+        "R209-008000701-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05104",
+      "foodLabel": "닭 날개 (껍질 포함)",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요.",
+      "rawBasis": "껍질이 붙은 해당 생부위의 조리 직전 중량. 표에는 뼈 포함 여부가 명시되지 않았습니다.",
+      "meanPercent": 86,
+      "minPercent": 74,
+      "maxPercent": 96,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A78:L78",
+      "sourceNdb": "05104",
+      "sourceDescription": "Chicken, broiler-fryer, wing, meat and skin",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭 날개",
+        "닭고기 날개",
+        "닭고기_날개_생것"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [
+        "R209-008000601-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05676",
+      "foodLabel": "닭 아랫다리 (껍질 포함)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요. 연구에서는 물 100mL를 넣은 덮개 있는 팬에 익혀 5분 식힌 뒤 계량했습니다.",
+      "rawBasis": "뼈와 껍질을 포함한 생부위 전체 중량. 조리 후에도 뼈를 발라내기 전에 계량했습니다.",
+      "meanPercent": 77,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A80:L80",
+      "sourceNdb": "05676",
+      "sourceDescription": "Chicken, broilers or fryers, drumstick, meat and skin",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "닭 아랫다리",
+        "닭 북채",
+        "닭고기 아랫다리",
+        "닭고기_아랫다리_생것"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [
+        "R209-008006301-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05677",
+      "foodLabel": "닭 넓적다리 (껍질 포함)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요. 연구에서는 물 100mL를 넣은 덮개 있는 팬에 익혀 5분 식힌 뒤 계량했습니다.",
+      "rawBasis": "뼈와 껍질을 포함한 생부위 전체 중량. 조리 후에도 뼈를 발라내기 전에 계량했습니다.",
+      "meanPercent": 68,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A81:L81",
+      "sourceNdb": "05677",
+      "sourceDescription": "Chicken, broilers or fryers, thigh, meat and skin",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "닭 넓적다리",
+        "닭고기 넓적다리",
+        "닭고기_넓적다리_생것"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [
+        "R209-008000701-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-05103",
+      "foodLabel": "닭 날개 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "조리 전후 동일한 부위와 껍질 포함 상태로 계량합니다. 순살이나 가식부만의 중량은 별도 측정하세요.",
+      "rawBasis": "껍질이 붙은 해당 생부위의 조리 직전 중량. 표에는 뼈 포함 여부가 명시되지 않았습니다.",
+      "meanPercent": 78,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A82:L82",
+      "sourceNdb": "05103",
+      "sourceDescription": "Chicken, broilers or fryers, wing, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "닭 날개",
+        "닭고기 날개",
+        "닭고기_날개_생것"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [
+        "R209-008000601-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10037",
+      "foodLabel": "돼지 등심 찹 (센터 로인, 뼈 포함)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "미국식 센터 로인 찹 한 조각. 뼈 포함 상태와 지방을 포함하는 조건을 확인하세요.",
+      "rawBasis": "조리 전 찹 한 조각의 중량(뼈 포함, 살·지방 포함).",
+      "meanPercent": 74,
+      "minPercent": 67,
+      "maxPercent": 85,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A128:L128",
+      "sourceNdb": "10037",
+      "sourceDescription": "Pork, fresh, loin, center loin (chops), bone-in, separable lean and fat",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지 등심",
+        "돼지고기 등심",
+        "돼지고기_등심_생것",
+        "포크찹"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [
+        "R209-014008301-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10179",
+      "foodLabel": "돼지 등심 찹 (센터 로인, 뼈 포함)",
+      "methodLabel": "팬에 지지기",
+      "conditions": "미국식 센터 로인 찹 한 조각. 뼈 포함 상태와 지방을 포함하는 조건을 확인하세요.",
+      "rawBasis": "조리 전 찹 한 조각의 중량(뼈 포함, 살·지방 포함).",
+      "meanPercent": 76,
+      "minPercent": 58,
+      "maxPercent": 84,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A129:L129",
+      "sourceNdb": "10179",
+      "sourceDescription": "Pork, fresh, loin, center loin (chops), bone-in, separable lean and fat",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지 등심",
+        "돼지고기 등심",
+        "돼지고기_등심_생것",
+        "포크찹"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [
+        "R209-014008301-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10063",
+      "foodLabel": "돼지 등심 찹 (톱 로인, 뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "미국식 톱 로인 찹 한 조각. 뼈 제거 상태와 지방을 포함하는 조건을 확인하세요.",
+      "rawBasis": "조리 전 찹 한 조각의 중량(뼈 제거, 살·지방 포함).",
+      "meanPercent": 73,
+      "minPercent": 62,
+      "maxPercent": 84,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A141:L141",
+      "sourceNdb": "10063",
+      "sourceDescription": "Pork, fresh, loin, top loin (chops), boneless, separable lean and fat",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지 등심",
+        "돼지고기 등심",
+        "돼지고기_등심_생것",
+        "포크찹"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [
+        "R209-014008301-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10186",
+      "foodLabel": "돼지 등심 찹 (톱 로인, 뼈 제거)",
+      "methodLabel": "팬에 지지기",
+      "conditions": "미국식 톱 로인 찹 한 조각. 뼈 제거 상태와 지방을 포함하는 조건을 확인하세요.",
+      "rawBasis": "조리 전 찹 한 조각의 중량(뼈 제거, 살·지방 포함).",
+      "meanPercent": 77,
+      "minPercent": 60,
+      "maxPercent": 85,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A142:L142",
+      "sourceNdb": "10186",
+      "sourceDescription": "Pork, fresh, loin, top loin (chops), boneless, separable lean and fat",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지 등심",
+        "돼지고기 등심",
+        "돼지고기_등심_생것",
+        "포크찹"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [
+        "R209-014008301-0000"
+      ],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10974",
+      "foodLabel": "다진 돼지고기 부스러기 (지방 27% 초과)",
+      "methodLabel": "팬에 볶기",
+      "conditions": "지방 27% 초과. 전기 팬에서 잘게 풀어 중심 74°C까지 볶고 체에 밭쳐 기름을 뺀 뒤 5분 뒤 계량했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 돼지고기 분쇄육 중량.",
+      "meanPercent": 66,
+      "minPercent": 56,
+      "maxPercent": 81,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A150:L150",
+      "sourceNdb": "10974",
+      "sourceDescription": "Pork, ground, crumbles, high fat (>27%)",
+      "sourceMethod": "Pan-browned",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "다진 돼지고기",
+        "돼지고기 다짐육",
+        "돼지고기 분쇄육"
+      ],
+      "methodAliases": [
+        "볶은것",
+        "볶기",
+        "팬볶음"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10976",
+      "foodLabel": "다진 돼지고기 부스러기 (지방 10% 미만)",
+      "methodLabel": "팬에 볶기",
+      "conditions": "지방 10% 미만. 전기 팬에서 잘게 풀어 중심 74°C까지 볶고 체에 밭쳐 기름을 뺀 뒤 5분 뒤 계량했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 돼지고기 분쇄육 중량.",
+      "meanPercent": 68,
+      "minPercent": 61,
+      "maxPercent": 74,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A151:L151",
+      "sourceNdb": "10976",
+      "sourceDescription": "Pork, ground, crumbles, low fat (<10%)",
+      "sourceMethod": "Pan-browned",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "다진 돼지고기",
+        "돼지고기 다짐육",
+        "돼지고기 분쇄육"
+      ],
+      "methodAliases": [
+        "볶은것",
+        "볶기",
+        "팬볶음"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10975",
+      "foodLabel": "다진 돼지고기 부스러기 (지방 10~27%)",
+      "methodLabel": "팬에 볶기",
+      "conditions": "지방 10~27%. 전기 팬에서 잘게 풀어 중심 74°C까지 볶고 체에 밭쳐 기름을 뺀 뒤 5분 뒤 계량했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 돼지고기 분쇄육 중량.",
+      "meanPercent": 67,
+      "minPercent": 62,
+      "maxPercent": 75,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A152:L152",
+      "sourceNdb": "10975",
+      "sourceDescription": "Pork, ground, crumbles, medium fat (10%-27%)",
+      "sourceMethod": "Pan-browned",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "다진 돼지고기",
+        "돼지고기 다짐육",
+        "돼지고기 분쇄육"
+      ],
+      "methodAliases": [
+        "볶은것",
+        "볶기",
+        "팬볶음"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10977",
+      "foodLabel": "다진 돼지고기 패티 (지방 27% 초과)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "지방 27% 초과. 표에는 브로일·그릴로 분류되며 연구에서는 전기 팬에서 중심 74°C까지 구워 5분 뒤 계량했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 돼지고기 분쇄육 중량.",
+      "meanPercent": 69,
+      "minPercent": 65,
+      "maxPercent": 72,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A153:L153",
+      "sourceNdb": "10977",
+      "sourceDescription": "Pork, ground, patty, high fat (>27%)",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 패티",
+        "다진 돼지고기 패티"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10979",
+      "foodLabel": "다진 돼지고기 패티 (지방 10% 미만)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "지방 10% 미만. 표에는 브로일·그릴로 분류되며 연구에서는 전기 팬에서 중심 74°C까지 구워 5분 뒤 계량했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 돼지고기 분쇄육 중량.",
+      "meanPercent": 68,
+      "minPercent": 64,
+      "maxPercent": 70,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A154:L154",
+      "sourceNdb": "10979",
+      "sourceDescription": "Pork, ground, patty, low fat (<10%)",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 패티",
+        "다진 돼지고기 패티"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    },
+    {
+      "id": "usda-r2-10978",
+      "foodLabel": "다진 돼지고기 패티 (지방 10~27%)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "지방 10~27%. 표에는 브로일·그릴로 분류되며 연구에서는 전기 팬에서 중심 74°C까지 구워 5분 뒤 계량했습니다.",
+      "rawBasis": "부재료를 섞지 않은 생 돼지고기 분쇄육 중량.",
+      "meanPercent": 68,
+      "minPercent": 66,
+      "maxPercent": 69,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A155:L155",
+      "sourceNdb": "10978",
+      "sourceDescription": "Pork, ground, patty, medium fat (10%-27%)",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 패티",
+        "다진 돼지고기 패티"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": []
+    }
+  ]
+}
