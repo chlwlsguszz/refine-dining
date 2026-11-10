@@ -126,15 +126,16 @@ public class RawFoodDataService {
     /**
      * 공공데이터의 특수문자("-", "N/A") 및 null 대응 파싱
      */
-    private Double parseDouble(String value) {
+    static Double parseDouble(String value) {
         if (value == null || value.isBlank() || value.equals("-") || value.equalsIgnoreCase("N/A")) {
-            return 0.0;
+            return null;
         }
         try {
-            return Double.parseDouble(value);
+            double parsed = Double.parseDouble(value);
+            return Double.isFinite(parsed) ? parsed : null;
         } catch (NumberFormatException e) {
             log.warn("숫자 변환 실패: {}", value);
-            return 0.0;
+            return null;
         }
     }
 

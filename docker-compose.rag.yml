@@ -1,0 +1,9 @@
+services:
+  backend:
+    environment:
+      RAG_CATALOG: /rag/catalog.json
+      RAG_PROPOSALS: /rag/development.json
+      ADMIN_API_KEY: ${ADMIN_API_KEY:?Set a private key for reviewing nutrition proposals}
+    volumes:
+      - ./backend/build/rag/catalog.json:/rag/catalog.json:ro
+      - ./datasets/week1/2026-11-10/local-rag/development.json:/rag/development.json:ro
