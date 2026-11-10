@@ -1,0 +1,182 @@
+{
+  "testedOn": "2026-11-10",
+  "sourceCommit": "ec484a33e0cc1b0aeb24aeae15b262770bf79f3c",
+  "environment": {
+    "checkout": "New local Git clone with no untracked files, dependencies, index or generation cache at checkout",
+    "packages": "Fresh Python 3.12.14 environment installed from local wheel cache; NumPy 2.5.3, ONNX Runtime 1.30.0, tokenizers 0.23.2",
+    "frontend": "npm ci --offline installed 184 packages from package-lock.json; Vite production build succeeded",
+    "backend": "JDK 17.0.10; Gradle 9.2.1 --offline bootJar, 4 tasks executed; isolated H2 and MySQL 8.0 HTTP suites",
+    "hardware": "NVIDIA GeForce RTX 4070 SUPER; preloaded pinned Qwen GGUF served by loopback llama.cpp",
+    "inputs": "Only versioned repository inputs and locally cached dependencies/model weights; no copied vector index, result cache, source DB, or approvals"
+  },
+  "nutritionCatalog": {
+    "version": "sha256:eadb5bedff2e6629202ca97cac425a65de4dbf823566c7984d32561d02ad934a",
+    "rows": 3701,
+    "observedNutrientCells": 63125,
+    "observedZeroCells": 11048,
+    "missingCells": 25699
+  },
+  "retrieval": {
+    "modelRevision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+    "onnxSha256": "f80102d3f2a1229f387d3c81909990d8945513e347b0eab049f7de3c6f98c193",
+    "tokenizerSha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+    "newIndexFingerprint": "206b21eadfc6f63f35a6d7845cd12238ecba439ed84cca5ba258859d0257f233",
+    "rawRows": 2388,
+    "indexQueryRows": 466,
+    "encodeSeconds": 6.8,
+    "selectedPolicy": "family3_global",
+    "easyTopFive": {
+      "numerator": 455,
+      "denominator": 455
+    },
+    "partChecks": {
+      "conflictsDetected": 6,
+      "conflicts": 6,
+      "falseFlags": 0,
+      "samePartControls": 5,
+      "uncertainDeferred": 2
+    },
+    "rankedDevelopmentRows": 77,
+    "linksExamined": 385,
+    "frozenPolicyAndDevelopmentRankingByteIdentical": true
+  },
+  "matching": {
+    "queryCount": 77,
+    "rulesOnlyReferences": 1,
+    "withPassagesReferences": 3,
+    "withPassagesHolds": 74,
+    "rowsWithRetrievedPassage": 14,
+    "modelVerdicts": {
+      "hold": 77
+    },
+    "modelRevision": "7c41481f57cb95916b40956ab2f0b139b296d974",
+    "cold": {
+      "localCalls": 77,
+      "externalCalls": 0,
+      "cacheHits": 0,
+      "medianMsIncludingWrite": 2041.324,
+      "changedPublishedProposals": 0,
+      "changedModelVerdictsOrCitations": 0,
+      "changedModelFieldsAgainstArchive": [
+        {
+          "foodCd": "R101-025000006-0000",
+          "field": "differenceField",
+          "archive": "lv5Nm",
+          "new": "lv6Nm"
+        },
+        {
+          "foodCd": "R101-030120002-0000",
+          "field": "differenceField",
+          "archive": "lv5Nm",
+          "new": "lv6Nm"
+        },
+        {
+          "foodCd": "R101-030220002-0000",
+          "field": "differenceField",
+          "archive": "lv6Nm",
+          "new": "lv5Nm"
+        },
+        {
+          "foodCd": "R106-213002606-0000",
+          "field": "differenceField",
+          "archive": "lv6Nm",
+          "new": "lv5Nm"
+        },
+        {
+          "foodCd": "R211-037013928-5402",
+          "field": "differenceField",
+          "archive": "lv6Nm",
+          "new": "foodNm"
+        }
+      ]
+    },
+    "warm": {
+      "cacheHits": 77,
+      "localCalls": 0,
+      "externalCalls": 0,
+      "medianFileReadMs": 0.256
+    }
+  },
+  "postCleanupVerification": {
+    "workingTreeAfterChecks": "clean",
+    "releaseEvaluation": {
+      "action": "verify",
+      "families": 14,
+      "cases": 32,
+      "newHeldoutInferences": 0,
+      "archivedHashAndSourcesVerified": true
+    },
+    "gradle": {
+      "offline": true,
+      "forcedBuildTasks": 7,
+      "testsDiscovered": 7,
+      "passed": 3,
+      "optInSkipped": 4,
+      "failures": 0
+    },
+    "python": {
+      "testsDiscovered": 55,
+      "optInMysqlSkippedInDiscovery": 1,
+      "failures": 0
+    },
+    "reactProductionBuild": "passed after cleanup",
+    "freshSpringAnswers": {
+      "realHttpScenarios": 17,
+      "nutrientRows": 9,
+      "changedStableResponseFields": 0,
+      "explanation": "local-model:match",
+      "inputProposals": "regenerated in clean checkout"
+    },
+    "chromeStartup": {
+      "routes": [
+        "/nutrition",
+        "/nutrition/review"
+      ],
+      "submittedAmount": "150g",
+      "answer": "ANSWER",
+      "sourceCode": "R101-001010101-0000",
+      "pageErrors": 0
+    },
+    "relativeReadmeLinks": {
+      "checked": 25,
+      "missing": 0
+    },
+    "video": {
+      "codec": "H.264",
+      "width": 1360,
+      "height": 900,
+      "durationSeconds": 180,
+      "fullDecodeErrors": 0
+    },
+    "backendGitTree": "3eddb3b9305119a94df194e6c4957652aa51b071",
+    "frontendGitTree": "c040c897c5855b1e10e8990057baf6673638d113"
+  },
+  "verification": {
+    "python": {
+      "testsDiscovered": 50,
+      "optInIntegrationSkippedInDiscovery": 1,
+      "failures": 0
+    },
+    "mysql": {
+      "passed": true,
+      "seconds": 89.738,
+      "fixture": "synthetic disposable database",
+      "checks": [
+        "auth",
+        "missing versus observed zero",
+        "approve/hold",
+        "concurrent idempotence",
+        "version changes",
+        "rollback",
+        "restore previous release"
+      ]
+    },
+    "springAnswerChecks": {
+      "httpCases": 13,
+      "nutrientRows": 8,
+      "allStableResponseFieldsMatched": true,
+      "selectedExplanation": "local-model:match",
+      "citationTargetsOpenedAndChecked": true
+    }
+  }
+}

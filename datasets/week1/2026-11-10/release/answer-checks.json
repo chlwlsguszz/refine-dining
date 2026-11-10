@@ -8,7 +8,7 @@
       "sourceCodes": [
         "R101-001010101-0000"
       ],
-      "answerMs": 174.49,
+      "answerMs": 190.69,
       "checkedCells": 1,
       "values": [
         {
@@ -30,7 +30,7 @@
       "sourceCodes": [
         "R120-021030002-0000"
       ],
-      "answerMs": 17.19,
+      "answerMs": 18.8,
       "checkedCells": 1,
       "values": [
         {
@@ -53,7 +53,7 @@
         "R120-021030002-0000",
         "R120-021020001-0000"
       ],
-      "answerMs": 15.09,
+      "answerMs": 31.73,
       "checkedCells": 1,
       "values": [
         {
@@ -76,7 +76,7 @@
         "R120-021030002-0000",
         "R120-021020001-0000"
       ],
-      "answerMs": 1218.9,
+      "answerMs": 2678.83,
       "checkedCells": 1,
       "values": [
         {
@@ -93,12 +93,53 @@
       "explanationSource": "local-model:match"
     },
     {
+      "question": "R120-021020001-0000 R120-021030002-0000 150g 단백질 비교",
+      "status": "ANSWER",
+      "sourceCodes": [
+        "R120-021030002-0000",
+        "R120-021020001-0000"
+      ],
+      "answerMs": 5.62,
+      "checkedCells": 1,
+      "values": [
+        {
+          "key": "prot",
+          "label": "단백질",
+          "unit": "g",
+          "status": "observed",
+          "target": 19.53,
+          "candidate": 6.18,
+          "delta": 13.35,
+          "candidateStatus": "observed"
+        }
+      ],
+      "explanationSource": null
+    },
+    {
+      "question": "R120-021030002-0000 R101-001010101-0000 150g 단백질 비교",
+      "status": "HELD",
+      "sourceCodes": [],
+      "answerMs": 2.47,
+      "checkedCells": 0,
+      "values": [],
+      "explanationSource": null
+    },
+    {
+      "question": "당류 250mg",
+      "status": "NEED_UNIT",
+      "sourceCodes": [],
+      "answerMs": 3.24,
+      "checkedCells": 0,
+      "values": [],
+      "explanationSource": null
+    },
+    {
       "question": "인삼_홍삼_추출 100mL 단백질 비교",
       "status": "HELD",
       "sourceCodes": [
         "R120-021030024-0000"
       ],
-      "answerMs": 8.06,
+      "answerMs": 10.38,
       "checkedCells": 1,
       "values": [
         {
@@ -120,7 +161,7 @@
       "sourceCodes": [
         "R120-021030024-0000"
       ],
-      "answerMs": 17.58,
+      "answerMs": 8.74,
       "checkedCells": 0,
       "values": [],
       "explanationSource": null
@@ -129,7 +170,16 @@
       "question": "홍삼 100g 단백질",
       "status": "CHOOSE_FOOD",
       "sourceCodes": [],
-      "answerMs": 15.58,
+      "answerMs": 17.6,
+      "checkedCells": 0,
+      "values": [],
+      "explanationSource": null
+    },
+    {
+      "question": "홍삼 150g에는 단백질이 얼마나 들어 있나요?",
+      "status": "CHOOSE_FOOD",
+      "sourceCodes": [],
+      "answerMs": 7.1,
       "checkedCells": 0,
       "values": [],
       "explanationSource": null
@@ -140,7 +190,7 @@
       "sourceCodes": [
         "R120-021030002-0000"
       ],
-      "answerMs": 3.01,
+      "answerMs": 3.03,
       "checkedCells": 1,
       "values": [
         {
@@ -160,7 +210,7 @@
       "question": "수삼 150g을 조리한 뒤 총량",
       "status": "NEED_YIELD",
       "sourceCodes": [],
-      "answerMs": 2.85,
+      "answerMs": 3.19,
       "checkedCells": 0,
       "values": [],
       "explanationSource": null
@@ -169,7 +219,7 @@
       "question": "귀리 2컵 영양",
       "status": "NEED_UNIT",
       "sourceCodes": [],
-      "answerMs": 2.58,
+      "answerMs": 3.48,
       "checkedCells": 0,
       "values": [],
       "explanationSource": null
@@ -178,7 +228,7 @@
       "question": "존재하지않는식품xyz 100g 단백질",
       "status": "NO_MATCH",
       "sourceCodes": [],
-      "answerMs": 16.49,
+      "answerMs": 16.5,
       "checkedCells": 0,
       "values": [],
       "explanationSource": null
@@ -189,7 +239,7 @@
       "sourceCodes": [
         "R101-003000101-0000"
       ],
-      "answerMs": 3.6,
+      "answerMs": 25.21,
       "checkedCells": 1,
       "values": [
         {
@@ -211,7 +261,7 @@
       "sourceCodes": [
         "R101-005000001-0000"
       ],
-      "answerMs": 9.02,
+      "answerMs": 4.42,
       "checkedCells": 1,
       "values": [
         {
@@ -229,6 +279,6 @@
     }
   ],
   "approvedOnlyInIsolatedTestDb": true,
-  "cases": 13,
-  "checkedNutrientRows": 8
+  "cases": 17,
+  "checkedNutrientRows": 9
 }

@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
 public class NutritionAnswers {
     private static final Pattern WEIGHT = Pattern.compile("(?i)([-+]?\\d+(?:\\.\\d+)?)\\s*(밀리리터|킬로그램|그램|리터|kg|ml|g|l)(?![a-z])");
     private static final Pattern CODE = Pattern.compile("R\\d{3}-\\d{9}-\\d{4}");
-    private static final Pattern UNSUPPORTED = Pattern.compile("\\d\\s*(개|컵|인분|숟갈|스푼|온스|oz|lb|근)");
+    private static final Pattern UNSUPPORTED = Pattern.compile("(?i)\\d\\s*(개|컵|인분|숟갈|스푼|온스|oz|lb|근|mg|mcg|μg|밀리그램)");
     private static final Pattern YIELD = Pattern.compile("수율|조리하면|조리했을|조리한\\s*뒤|조리\\s*후\\s*(실제|총량|무게|중량)|익힌\\s*(뒤|후)\\s*총");
     private static final Pattern INTENT = Pattern.compile("비교|차이|전후|대비|차이점");
     private static final List<Nutrient> BASIC = List.of(Nutrient.enerc,Nutrient.prot,Nutrient.fatce,Nutrient.chocdf,Nutrient.sugar,Nutrient.nat);
@@ -51,9 +51,9 @@ public class NutritionAnswers {
         if (code.find()) return catalog.search(code.group());
         String term = WEIGHT.matcher(text).replaceAll(" ").replaceAll("[?？!.,]", " ");
         for (Nutrient nutrient : Nutrient.values()) {
-            if (nutrient.label.length() > 1) term = term.replace(nutrient.label," ");
+            if (nutrient.label.length() > 1) term = term.replaceAll(Pattern.quote(nutrient.label)+"(?:이|가|을|를|은|는|의)?"," ");
         }
-        term = term.replaceAll("칼로리|열량|영양성분|영양소|영양|얼마(?:인가요|예요|나요)?|알려\\s*줘|보여\\s*줘|비교(?:해\\s*줘)?|차이(?:가|는)?|같은\\s*중량|설명(?:해\\s*줘)?|이유|얼마나|들어있어|함량|무게|조리\\s*전후", " ")
+        term = term.replaceAll("칼로리|열량|영양성분|영양소|영양|얼마(?:나|인가요|예요|나요)?|알려\\s*(?:줘|주세요)|보여\\s*(?:줘|주세요)|비교(?:해\\s*(?:줘|주세요))?|차이(?:가|는)?|같은\\s*중량|설명(?:해\\s*줘)?|이유|들어\\s*있(?:나요|어|어요|습니까)|함량|무게|조리\\s*전후", " ")
                 .replaceAll("(?:에는|에서|으로|의|을|를|은|는|와|과)(?=\\s|$)", " ").trim();
         if (term.isBlank()) return List.of();
         String name = term.replaceAll("\\s+", "_");
@@ -73,6 +73,18 @@ public class NutritionAnswers {
         if (YIELD.matcher(text).find()) return status(result,"NEED_YIELD","실제 조리 후 총량에는 조리 후 중량이나 해당 표본의 수율이 필요합니다.");
         if (UNSUPPORTED.matcher(text).find()) return status(result,"NEED_UNIT","질문에 사용할 중량(g) 또는 부피(mL)를 알려주세요.");
         String selected = request.foodCd();
+        List<String> explicit = CODE.matcher(text).results().map(m -> m.group()).distinct().toList();
+        if (explicit.size() > 1) {
+            if (explicit.size() != 2) return status(result,"HELD","비교할 식품 두 개를 선택하세요.");
+            String targetCode = null;
+            for (String code : explicit) {
+                if (selected != null && !selected.isBlank() && !selected.equals(code)) continue;
+                var pair = reviews.approved(code);
+                if (pair.isPresent() && explicit.contains(pair.get().required("selectedCd").asText())) targetCode = code;
+            }
+            if (targetCode == null) return status(result,"HELD","지정한 두 식품 사이에 승인된 비교 관계가 없습니다.");
+            selected = targetCode;
+        }
         if (selected == null || selected.isBlank()) {
             var matches = choices(text);
             if (matches.isEmpty()) return status(result,"NO_MATCH","식품명 또는 원문 식품코드를 입력하세요.");
@@ -91,7 +103,7 @@ public class NutritionAnswers {
             return status(result,"NEED_UNIT","원문의 기준 단위에 맞는 중량 또는 부피 하나를 입력하세요.");
         }
         result.put("amount",requested.value).put("unit",requested.unit);
-        boolean compare = INTENT.matcher(text).find();
+        boolean compare = explicit.size() == 2 || INTENT.matcher(text).find();
         ObjectNode relation = compare ? reviews.approved(selected).orElse(null) : null;
         ObjectNode candidate = relation == null ? null : catalog.food(relation.required("selectedCd").asText());
         Amount candidateBasis = candidate == null ? null : basis(candidate);
@@ -115,7 +127,8 @@ public class NutritionAnswers {
                 if (rawValue != null && targetValue != null) line.put("delta",display(targetValue.subtract(rawValue)));
             }
         }
-        if (compare && relation == null) return status(result,"HELD","승인된 생것 연결이 없어 해당 식품의 확인된 단일 영양값만 표시합니다.");
+        if (compare && relation == null) return status(result,"HELD",
+                "승인된 생것 연결이 없어 해당 식품의 확인된 단일 영양값만 표시합니다. " + reviews.missingEvidence(selected).orElse("").trim());
         if (compare && !comparable) return status(result,"NEED_UNIT","두 원문의 기준 단위가 달라 영양 차이를 계산할 수 없습니다.");
         String message = compare ? "같은 양에서 대상 식품의 값에서 생것의 값을 뺀 차이입니다." : "선택한 식품의 원문 기준량으로 환산했습니다.";
         if (relation != null && (text.contains("설명") || text.contains("이유"))) message += " " + explanations.explain(result);

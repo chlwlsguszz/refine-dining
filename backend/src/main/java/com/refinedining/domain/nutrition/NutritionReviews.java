@@ -99,6 +99,12 @@ public class NutritionReviews {
         return load("and p.target_cd=? and r.decision='APPROVED'", targetCd).stream().findFirst();
     }
 
+    public Optional<String> missingEvidence(String targetCd) {
+        return load("and p.target_cd=?", targetCd).stream().findFirst()
+                .filter(p -> "보류".equals(p.path("verdict").asText()))
+                .map(p -> p.path("reason").asText());
+    }
+
     public record Decision(String decision, String reviewer, String note) {}
 
     @Transactional

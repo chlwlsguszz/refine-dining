@@ -1,0 +1,75 @@
+{
+  "fingerprint": "e57d6770729f0e60e0b1276309b37075d716d72e3aee574700e2a0091840251e",
+  "recipe": {
+    "protocol": "held-out-release-v1",
+    "snapshotId": "sha256:cc6de9d66cbfc1c3e71efd886a01483133932e5ab6ff1efd9db6ba1275b20484",
+    "splitHash": "d096728dafe5e9b2db0ab94ed02b6f4c8724428d0949c17fcf021bbaf00c0a36",
+    "passageVectorHash": "85b4a251b0158734f336eadd1c16c05ce1244d75d9b1c2951fb1817685dac786",
+    "retrieval": {
+      "protocol": "food-retrieval-v1",
+      "snapshotId": "sha256:cc6de9d66cbfc1c3e71efd886a01483133932e5ab6ff1efd9db6ba1275b20484",
+      "method": "family3_global",
+      "k": 5,
+      "familySlots": 3,
+      "model": "Xenova/multilingual-e5-small",
+      "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+      "modelSha256": "f80102d3f2a1229f387d3c81909990d8945513e347b0eab049f7de3c6f98c193",
+      "tokenizerSha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+      "embeddingProtocol": "e5-name-only-mean-pool-v1",
+      "tieTolerance": 1e-06,
+      "denseTiebreak": "food_cd",
+      "familyField": "food_lv4cd",
+      "sql": "same source/family, same middle first, food_cd"
+    },
+    "generation": {
+      "snapshotId": "sha256:cc6de9d66cbfc1c3e71efd886a01483133932e5ab6ff1efd9db6ba1275b20484",
+      "policy": "grounded-rag-v1",
+      "retrievalPolicy": "family3_global",
+      "retrievalEncoder": "Xenova/multilingual-e5-small",
+      "retrievalRevision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+      "retrievalProtocol": "food-retrieval-v1",
+      "k": 5,
+      "passageVersion": "2026-11-10.1",
+      "passageHash": "3deb41544195cda07c6fb24b65dac833aefbe2a5dea441e1e0d556325a07df89",
+      "model": {
+        "serverBuild": "b11206-2b129ccfa",
+        "contextSize": 8192,
+        "chatTemplateHash": "ec8f439daaf5791f1da8686759109efa3f5ff5698cd407018a9f96a739c28fae",
+        "alias": "refine-qwen3",
+        "repo": "Qwen/Qwen3-8B-GGUF",
+        "file": "Qwen3-8B-Q5_K_M.gguf",
+        "revision": "7c41481f57cb95916b40956ab2f0b139b296d974",
+        "sha256": "068bae163faa96ad48032daf4e071a6a28fe67d8dcc95367609c2ff165e52738"
+      },
+      "promptSha256": "66056afec8e49cc3c27c0b54f91f96fb6fc016cd0271f376353b7c78b245202a",
+      "generation": {
+        "temperature": 0,
+        "seed": 42,
+        "max_tokens": 384,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      }
+    },
+    "policyFiles": {
+      "retrieval_policy.py": "b07d4d0befd0528332c96e11b2f2d30000047540ec72d0a332340eafbf59b8a0",
+      "embed_food_names.py": "08ebd3b4cefb43639d3e185c3a3c18e6235062640301ab465f3ce5e49ef97c51",
+      "compare_dense.py": "9d6cdd7150ede234994919e7c8f71a8d384520be3054397fcd47ac39cddc47bb",
+      "dev_candidate_search.py": "c7fe635df2fd3e1746c1ec078359fda68daf437d79d7c3eb57ec353351f8fabe",
+      "blind_retrieval.py": "948bae398da67b8f753ef0097ae63051d68a3dd1b25e62c7956223c4229bf8b3",
+      "week1_cohort.py": "fd4ca189f5dadea874c661f489285df6be9f6ac6e2ede51e941ce3045b3ddb55",
+      "week1_snapshot.py": "e6a43b609e9179c22454381cce274693ea740bafe95fe0f944ec7e2b2f8eef83",
+      "assess_development.py": "7bcf53fdd6f004021c98c6dd3cfa9e107015ab8f3dc4e649755dcd55cddb7b3a",
+      "dev_match_policy.py": "60c6cb4c3d14ad82975f6b22be0bc4785480cc6d81aa1f6b8cc0c54d92f25d5c",
+      "benchmark_parts.py": "d6b2146aeb8356d13fd02559479e1bc3271ca1b6ebde1483ce88ed6e67e657ee",
+      "benchmark_cases.py": "c3a56818f92ebaf04c0e1bab01065fd1c247376c8cef2101f789d39468cbf0cb",
+      "match.py": "f6b5db00ce239575333f723c7c21df16a492e3dd1d746bf9d8e68c9c84303f13",
+      "grounded_rag.py": "8485bd1edc0cf3ffca9a50d38a22d8dfd178a525feba8a6e6f15932ea76e6986",
+      "run_local_rag.py": "d731cb8b9d40c8aeb7723015cc58790785ce3a65b895c01d23510c698ffc8a16",
+      "audit_evidence.py": "b51dd4e20cba223c7e81982c49fc4f22d56c2103a0f8438067a353c7dd93614a",
+      "release_evaluation.py": "596fddbb9a7307803e5277c8beb178a0fcc2881d1be860a58ffe116f94c4ce57"
+    },
+    "labelsHash": null,
+    "goldRule": "Only confirmed, blinded, independent source reviews with a reviewer and evidence. A no-match requires exhaustive catalog review. Unreviewed targets are excluded."
+  }
+}

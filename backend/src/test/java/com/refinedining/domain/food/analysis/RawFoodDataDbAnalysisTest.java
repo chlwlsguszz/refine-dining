@@ -2,6 +2,7 @@ package com.refinedining.domain.food.analysis;
 
 import com.refinedining.domain.food.raw.entity.RawFoodMaterial;
 import com.refinedining.domain.food.raw.repository.RawFoodMaterialRepository;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
+@Disabled("실제 DB 적재 데이터 분석용 수동 테스트")
 @SpringBootTest
 @ActiveProfiles("test")
-
 public class RawFoodDataDbAnalysisTest {
 
     @Autowired

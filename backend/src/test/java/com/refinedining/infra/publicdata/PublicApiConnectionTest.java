@@ -2,6 +2,7 @@ package com.refinedining.infra.publicdata;
 
 import com.refinedining.domain.food.raw.repository.RawFoodMaterialRepository;
 import com.refinedining.infra.publicdata.dto.PublicNutriResponse;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 
-
+@Disabled("외부 공공데이터 API 연결 수동 점검 테스트")
 @SpringBootTest(
         // API 통신만 확인할 것이므로 DB 관련 설정은 굳이 띄우지 않습니다. (속도 향상)
         properties = {
