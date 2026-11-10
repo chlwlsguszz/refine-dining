@@ -1,0 +1,91 @@
+{
+  "version": "2026-11-10.1",
+  "passages": [
+    {
+      "id": "ginseng-red-art2-3",
+      "title": "인삼산업법",
+      "publisher": "국가법령정보센터",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025789929",
+      "locator": "제2조 제3호 중 제조 부분",
+      "version": "법률 제21805호, 2026-09-17 시행",
+      "checkedOn": "2026-11-10",
+      "quote": "수삼을 증기나 그 밖의 방법으로 쪄서 익혀 말린 것",
+      "summary": "홍삼은 수삼을 쪄서 건조하는 과정을 거친다.",
+      "scope": {"families": ["인삼"], "processed": ["홍삼"], "states": ["말린것"]},
+      "use": "ingredient_reference",
+      "rawIngredient": "수삼",
+      "limitations": "말린 홍삼의 원료 관계에 한정한다. 표본 동일성, 생산지, 연근, 추출액의 농도·밀도는 제시하지 않는다."
+    },
+    {
+      "id": "ginseng-white-art2-5",
+      "title": "인삼산업법",
+      "publisher": "국가법령정보센터",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025789929",
+      "locator": "제2조 제5호 중 제조 부분",
+      "version": "법률 제21805호, 2026-09-17 시행",
+      "checkedOn": "2026-11-10",
+      "quote": "수삼을 햇볕ㆍ열풍 또는 그 밖의 방법으로 익히지 아니하고 말린 것",
+      "summary": "백삼은 수삼에 익히는 과정을 거치지 않고 건조하여 만든다.",
+      "scope": {"families": ["인삼"], "processed": ["백삼"], "states": ["말린것"]},
+      "use": "ingredient_reference",
+      "rawIngredient": "수삼",
+      "limitations": "말린 백삼의 원료 관계에 한정한다. 두 관측이 같은 지역에서 생산된 같은 연근의 표본인지는 확인할 수 없다."
+    },
+    {
+      "id": "codex-wheat-flour-2-1",
+      "title": "Standard for Wheat Flour",
+      "publisher": "FAO/WHO Codex Alimentarius Commission",
+      "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXS+152-1985%2FCXS_152e.pdf",
+      "locator": "CXS 152-1985 §§1.1–1.2, 2.1 (quote from §2.1)",
+      "version": "CXS 152-1985, amended 2023",
+      "checkedOn": "2026-11-10",
+      "quote": "by grinding or milling processes in which the bran and germ are partly removed",
+      "summary": "이 규격의 밀가루는 해당 밀 종의 곡립을 제분하며 겨와 배아 일부를 제거한다. 통밀가루는 규격 적용 범위에서 제외한다.",
+      "scope": {"families": ["밀"], "processed": ["강력밀가루", "중력밀가루", "박력밀가루"], "states": ["분말화한것"]},
+      "use": "process_context",
+      "limitations": "국내 식품코드별 밀 품종·배합·도정 수준 또는 이 표본에 해당 규격을 적용했다는 사실을 확인해 주지 않는다."
+    },
+    {
+      "id": "rda-malt-germination",
+      "title": "‘식혜의 품격’ 국산 보리원료로 만들어야 제맛",
+      "publisher": "농촌진흥청 국립식량과학원",
+      "url": "https://www.rda.go.kr/board/board.do?boardId=farmprmninfo&currPage=239&dataNo=100000788111&mode=updateCnt&prgId=day_farmprmninfoEntry&searchEDate=&searchKey=&searchOrgDeptKey=&searchOrgDeptVal=&searchSDate=&searchVal=",
+      "locator": "보도자료 본문 두 번째 문단의 엿기름(malt) 각주",
+      "version": "2023-06-08",
+      "checkedOn": "2026-11-10",
+      "quote": "보리싹을 말린 것으로 당화·분해효소제로 이용",
+      "summary": "엿기름은 보리를 발아시킨 뒤 말린다. 생곡과 건조 엿기름 사이에 발아 단계가 있다.",
+      "scope": {"families": ["보리"], "processed": ["엿기름"], "states": ["말린것"]},
+      "use": "process_context",
+      "limitations": "해당 영양 관측에서 쓴 품종과 발아 정도는 특정하지 않는다. 생곡을 건조 직전의 보리싹에 대응시킬 수 없다."
+    },
+    {
+      "id": "nfqs-umu-seaweed",
+      "title": "우뭇가사리로 만드는 ‘한천’",
+      "publisher": "국립수산물품질관리원 수산물안전정보서비스",
+      "url": "https://fsis.go.kr/front/contents/cmsView.do?cate_id=0401&cnts_id=33026&select_list_no=7",
+      "locator": "본문 ‘그럼 우무는 또 무엇인가?’ 문단",
+      "version": "2022-12-12",
+      "checkedOn": "2026-11-10",
+      "quote": "우무는 우뭇가사리 등의 홍조류를 녹여 만든 투명하고 탄력있는 끈끈한 물질이다.",
+      "summary": "우뭇가사리 등 홍조류는 우무의 원료이다. 제조 중 물에 삶아 거르거나 짜내고 냉각하는 단계를 거친다.",
+      "scope": {"families": ["우뭇가사리류"], "processed": ["우뭇가사리"], "states": ["우무(우뭇가사리를 끓여 굳힌것)"]},
+      "use": "process_context",
+      "limitations": "우뭇가사리 전체와 줄기는 구별해야 한다. 특정 관측의 원료 부위와 물 배합은 확인되지 않는다."
+    },
+    {
+      "id": "dtaq-jeotgal-fermentation",
+      "title": "식품 100문100답",
+      "publisher": "국방기술품질원",
+      "url": "https://www.dtaq.re.kr/_custom/dtaq/_common/board/download.jsp?attach_no=196139",
+      "locator": "Q60 ‘젓갈과 액젓에서 나는 냄새는 무엇인가요?’ 표 60-1 젓갈",
+      "version": "2020-10 초판",
+      "checkedOn": "2026-11-10",
+      "quote": "어류, 갑각류, 연체류, 극피류 등의 전체 또는 일부분에 식염(식해의 경우 식염 및 곡류 등)을 가하여 발효 숙성시킨 것",
+      "summary": "젓갈의 원료에는 수산물 전체 또는 특정 부위가 쓰이며 소금 첨가와 발효 과정이 있다.",
+      "scope": {"families": [], "processed": [], "states": ["젓갈", "젓갈(창난젓)", "젓갈(추젓)"]},
+      "use": "process_context",
+      "limitations": "이 책은 가공 설명 자료다. 개별 젓갈의 어종·부위·실제 소금 첨가량이나 현행 규격 준수 여부를 확인해 주지 않는다."
+    }
+  ]
+}
