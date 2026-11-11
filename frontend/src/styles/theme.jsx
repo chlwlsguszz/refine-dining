@@ -10,7 +10,7 @@ export const theme = {
         border: '#2d2d2d',
         accent: '#ffcc00',
         danger: '#ff4d4d',
-        success: '#4dfc8f'
+        success: '#d4d4d8'
     },
     fonts: {
         main: "'Pretendard', -apple-system, sans-serif"

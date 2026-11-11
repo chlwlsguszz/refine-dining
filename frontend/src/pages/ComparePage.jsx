@@ -114,7 +114,7 @@ function ComparePage() {
                                     <span style={styles.nutrientLabel}>{n.label}</span>
                                     <div style={styles.nutrientValue}>
                                         <strong>{rightVal} {n.unit}</strong>
-                                        <span style={{...styles.diff, color: isPlus ? '#c45c4a' : '#6b9b6e'}}>
+                                        <span style={{...styles.diff, color: isPlus ? '#c45c4a' : '#52525b'}}>
                                             {isPlus ? '+' : ''}{diff}
                                         </span>
                                     </div>
@@ -176,7 +176,7 @@ const styles = {
         flexDirection: 'column',
         minHeight: '340px',
     },
-    cardLeft: { borderTop: '4px solid #6b9b6e' },
+    cardLeft: { borderTop: '4px solid #71717a' },
     cardRight: { borderTop: '4px solid #d4a574' },
     cardLabel: {
         fontSize: '0.7rem',
