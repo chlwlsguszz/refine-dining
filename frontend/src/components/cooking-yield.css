@@ -1,50 +1,50 @@
 .yield-page, .yield-panel {
     color-scheme: light;
-    color: #252640;
+    color: #352b25;
     box-sizing: border-box;
     font-family: system-ui, sans-serif;
     text-align: left;
     line-height: 1.55;
 }
 .yield-page *, .yield-panel * { box-sizing: border-box; }
-.yield-page { background: linear-gradient(180deg, #efefff 0, #f7f7fc 380px); padding: 32px 20px 64px; min-height: 100vh; width: 100vw; }
+.yield-page { background: linear-gradient(180deg, #fff0e0 0, #fffaf5 380px); padding: 32px 20px 64px; min-height: 100vh; width: 100vw; }
 .yield-wrap { width: min(100%, 710px); margin: 0 auto; }
 .yield-wrap nav { display: flex; justify-content: space-between; gap: 12px; }
-.yield-wrap nav a, .yield-panel a { color: #5554c9; text-decoration: underline; text-underline-offset: .2em; }
-.yield-wrap nav a:hover, .yield-panel a:hover { color: #4544ad; }
-.yield-page :focus-visible, .yield-panel :focus-visible { outline: 3px solid #7772e0; outline-offset: 3px; }
+.yield-wrap nav a, .yield-panel a { color: #b94f16; text-decoration: underline; text-underline-offset: .2em; }
+.yield-wrap nav a:hover, .yield-panel a:hover { color: #963c0f; }
+.yield-page :focus-visible, .yield-panel :focus-visible { outline: 3px solid #c76325; outline-offset: 3px; }
 .yield-wrap h1 { font-size: clamp(1.75rem, 4vw, 2.45rem); margin: 30px 0 8px; }
-.yield-wrap header p { margin: 0 0 22px; color: #60637c; }
-.yield-card, .yield-compare { padding: clamp(16px, 4vw, 28px); border: 1px solid #e1e2ef; border-radius: 16px; background: #fff; box-shadow: 0 8px 28px rgba(64, 56, 134, .05); }
+.yield-wrap header p { margin: 0 0 22px; color: #746355; }
+.yield-card, .yield-compare { padding: clamp(16px, 4vw, 28px); border: 1px solid #eedfce; border-radius: 16px; background: #fff; box-shadow: 0 8px 28px rgba(128, 74, 30, .06); }
 .yield-compare { align-self: center; width: min(100%, 900px); margin: 28px auto 0; box-sizing: border-box; text-align: left; }
 .yield-compare h2 { margin: 0 0 5px; font-size: 1.2rem; }
 .yield-compare > p { margin: 0 0 14px; }
 .yield-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; margin-bottom: 18px; }
 .yield-field { display: grid; gap: 4px; min-width: 0; font-weight: 600; }
 .yield-field input, .yield-field select {
-    background: white; color: #252640; font: inherit; font-weight: 400; padding: 9px 10px;
-    min-width: 0; width: 100%; border: 1px solid #b8bdd6; border-radius: 8px;
+    background: white; color: #352b25; font: inherit; font-weight: 400; padding: 9px 10px;
+    min-width: 0; width: 100%; border: 1px solid #cbb8a5; border-radius: 8px;
 }
 .yield-action, .yield-secondary {
-    min-height: 42px; border: 1px solid #5554c9; border-radius: 8px;
+    min-height: 42px; border: 1px solid #b94f16; border-radius: 8px;
     padding: 8px 16px; font: inherit; font-weight: 650; cursor: pointer;
 }
-.yield-action { background: #5554c9; color: white; }
-.yield-action:hover:not(:disabled) { background: #4544ad; border-color: #4544ad; }
-.yield-secondary { color: #5554c9; background: white; }
-.yield-secondary:hover:not(:disabled) { background: #eeedff; border-color: #7772e0; }
+.yield-action { background: #b94f16; color: white; }
+.yield-action:hover:not(:disabled) { background: #963c0f; border-color: #963c0f; }
+.yield-secondary { color: #b94f16; background: white; }
+.yield-secondary:hover:not(:disabled) { background: #fff0df; border-color: #c76325; }
 .yield-action:disabled { opacity: .55; cursor: default; }
 .yield-options { margin: 0 0 12px; padding: 0; border: 0; }
 .yield-options legend { font-weight: 650; margin-bottom: 10px; }
-.yield-choice { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; margin: 6px 0; border: 1px solid #d5d2f2; border-radius: 8px; }
-.yield-choice input { margin-top: .4em; accent-color: #5554c9; }
+.yield-choice { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; margin: 6px 0; border: 1px solid #efcdae; border-radius: 8px; }
+.yield-choice input { margin-top: .4em; accent-color: #b94f16; }
 .yield-choice span span, .yield-choice small { display: block; }
-.yield-result { border-top: 2px solid #aaa5f0; padding-top: 14px; }
+.yield-result { border-top: 2px solid #dfa577; padding-top: 14px; }
 .yield-result p { margin: 4px 0; }
 .yield-result-title { font-weight: 650; }
-.yield-weight { display: block; color: #5554c9; font-size: 2rem; }
+.yield-weight { display: block; color: #b94f16; font-size: 2rem; }
 .yield-evidence { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 14px 0; }
-.yield-evidence dt { color: #60637c; }
+.yield-evidence dt { color: #746355; }
 .yield-evidence dd { margin: 0; overflow-wrap: anywhere; }
 .yield-manual { margin-top: 10px; }
 .yield-manual summary { cursor: pointer; margin-bottom: 8px; }
@@ -60,47 +60,47 @@
 .yield-search-wrap { width: min(100%, 900px); }
 .yield-search-form .yield-field { grid-template-rows: auto 1fr; }
 .yield-search-form .yield-field input { align-self: end; }
-.yield-label-hint { font-size: .8rem; font-weight: 400; color: #676b83; }
+.yield-label-hint { font-size: .8rem; font-weight: 400; color: #7a695b; }
 .yield-search-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; }
 .yield-search-actions p { margin: 0; }
-.yield-examples { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 18px; font-size: .9rem; color: #676b83; }
-.yield-examples button { font: inherit; color: #5554c9; background: #eeedff; border: 1px solid #e1e2ef; border-radius: 6px; padding: 4px 9px; cursor: pointer; }
-.yield-examples button:hover { background: #e3e0ff; border-color: #aaa5f0; }
+.yield-examples { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 18px; font-size: .9rem; color: #7a695b; }
+.yield-examples button { font: inherit; color: #b94f16; background: #fff0df; border: 1px solid #eedfce; border-radius: 6px; padding: 4px 9px; cursor: pointer; }
+.yield-examples button:hover { background: #ffe3c4; border-color: #dfa577; }
 .yield-search-status { margin: 24px 0; }
 .yield-search-results { margin-top: 30px; }
 .yield-search-heading h2 { font-size: 1.25rem; overflow-wrap: anywhere; margin: 0 0 5px; }
-.yield-search-heading p { color: #676b83; font-size: .9rem; margin: 0; }
+.yield-search-heading p { color: #7a695b; font-size: .9rem; margin: 0; }
 .yield-search-message { margin: 15px 0 8px; }
 .yield-candidate-list { list-style: none; margin: 18px 0; padding: 0; display: grid; gap: 16px; }
-.yield-search-candidate { padding: 20px; background: #fff; border: 1px solid #e1e2ef; border-radius: 12px; min-width: 0; overflow-wrap: anywhere; }
-.yield-search-candidate.is-selected { border: 2px solid #7772e0; background: #fcfbff; padding: 19px; }
+.yield-search-candidate { padding: 20px; background: #fff; border: 1px solid #eedfce; border-radius: 12px; min-width: 0; overflow-wrap: anywhere; }
+.yield-search-candidate.is-selected { border: 2px solid #c76325; background: #fffaf3; padding: 19px; }
 .yield-candidate-top { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 9px; font-size: .85rem; }
-.yield-candidate-rank { color: #676b83; }
-.yield-relation { color: #4d46a4; background: #eeedff; padding: 2px 7px; border-radius: 4px; }
+.yield-candidate-rank { color: #7a695b; }
+.yield-relation { color: #954512; background: #fff0df; padding: 2px 7px; border-radius: 4px; }
 .yield-relation.is-incompatible { color: #75523e; background: #f7f1e9; }
 .yield-search-candidate h3 { margin: 0; font-size: 1.1rem; }
-.yield-candidate-method { margin: 3px 0 12px; color: #60637c; }
+.yield-candidate-method { margin: 3px 0 12px; color: #746355; }
 .yield-match-reasons, .yield-match-differences { margin: 10px 0; font-size: .92rem; }
 .yield-match-reasons ul, .yield-match-differences ul { padding-left: 20px; margin: 3px 0; }
-.yield-match-differences { padding-left: 12px; border-left: 2px solid #d5d2f2; }
+.yield-match-differences { padding-left: 12px; border-left: 2px solid #efcdae; }
 .yield-candidate-conditions { margin: 12px 0 6px; font-size: .92rem; }
-.yield-search-candidate > .yield-note { margin: 6px 0; color: #60637c; }
+.yield-search-candidate > .yield-note { margin: 6px 0; color: #746355; }
 .yield-source-details { margin-top: 13px; font-size: .9rem; }
-.yield-source-details summary { cursor: pointer; color: #5554c9; }
-.yield-source-position { display: block; font-size: .85rem; color: #676b83; }
-.yield-candidate-select { display: flex; align-items: start; gap: 8px; margin-top: 16px; padding-top: 12px; border-top: 1px solid #e1e2ef; font-weight: 600; cursor: pointer; }
-.yield-candidate-select input, .yield-acknowledgement input { flex-shrink: 0; margin-top: .4em; accent-color: #5554c9; }
-.yield-excluded { border-top: 1px solid #e1e2ef; padding-top: 12px; }
-.yield-confirmation { background: #eeedff; border: 1px solid #d5d2f2; border-radius: 12px; padding: 22px; margin-top: 22px; }
+.yield-source-details summary { cursor: pointer; color: #b94f16; }
+.yield-source-position { display: block; font-size: .85rem; color: #7a695b; }
+.yield-candidate-select { display: flex; align-items: start; gap: 8px; margin-top: 16px; padding-top: 12px; border-top: 1px solid #eedfce; font-weight: 600; cursor: pointer; }
+.yield-candidate-select input, .yield-acknowledgement input { flex-shrink: 0; margin-top: .4em; accent-color: #b94f16; }
+.yield-excluded { border-top: 1px solid #eedfce; padding-top: 12px; }
+.yield-confirmation { background: #fff0df; border: 1px solid #efcdae; border-radius: 12px; padding: 22px; margin-top: 22px; }
 .yield-confirmation h2 { font-size: 1.15rem; margin: 0 0 12px; }
 .yield-confirmation > p { margin: 8px 0; overflow-wrap: anywhere; }
 .yield-acknowledgement { display: flex; align-items: start; gap: 8px; margin: 18px 0; cursor: pointer; }
 .yield-search-estimate { margin-top: 24px; }
-.yield-search-manual { border-top: 1px solid #e1e2ef; padding-top: 16px; margin-top: 24px; }
+.yield-search-manual { border-top: 1px solid #eedfce; padding-top: 16px; margin-top: 24px; }
 .yield-no-results { padding: 18px 0; }
-.yield-corpus-note { color: #676b83; font-size: .85rem; margin: 22px 0 0; }
+.yield-corpus-note { color: #7a695b; font-size: .85rem; margin: 22px 0 0; }
 .yield-different-candidates { margin-top: 20px; }
-.yield-different-candidates > summary { cursor: pointer; color: #60637c; padding: 10px 0; }
+.yield-different-candidates > summary { cursor: pointer; color: #746355; padding: 10px 0; }
 @media (max-width: 520px) {
     .yield-search-candidate, .yield-confirmation { padding: 16px; }
     .yield-search-candidate.is-selected { padding: 15px; }
