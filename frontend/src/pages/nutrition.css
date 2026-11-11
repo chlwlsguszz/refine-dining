@@ -31,13 +31,13 @@
 .rd-list button { font-weight: 500; background: #222a2d; color: #f1f4f6; text-align: left; word-break: break-word; }
 .rd-list button[aria-pressed=true] { border-color: #94cefc; background: #253a48; }
 .rd-list small { display: block; color: #bccacf; }
-.rd-evidence { background: #293335; border-left: 3px solid #a1a1aa; padding: 10px 16px; margin: 14px 0; }
+.rd-evidence { background: #293335; border-left: 3px solid #aaa5f0; padding: 10px 16px; margin: 14px 0; }
 .rd-evidence h3 { margin-top: 0; }
 .rd-evidence blockquote { margin: 0; }
 .rd-review-detail, .rd-status, .rd-panel { overflow-wrap: anywhere; }
 .rd-candidates { padding-left: 1.5em; }
 .rd-candidates li { padding: 7px 0; border-bottom: 1px solid #465151; }
-.rd-flag { color: #d4d4d8; margin-left: .6em; font-size: .8em; }
+.rd-flag { color: #c9c5ff; margin-left: .6em; font-size: .8em; }
 .rd-meta { color: #bac6c8; font-size: .86rem; }
 .rd-status { color: #c6e7ff; }
 @media (max-width: 720px) {
