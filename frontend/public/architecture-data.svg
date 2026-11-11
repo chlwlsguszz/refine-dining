@@ -1,0 +1,122 @@
+<svg id="data-root" xmlns="http://www.w3.org/2000/svg" width="1200" height="1220" viewBox="0 0 1200 1220" role="img" aria-labelledby="data-title data-desc">
+  <title id="data-title">Refine Dining 데이터 준비 아키텍처</title>
+  <desc id="data-desc">기존 규칙 정제, 원문과 근거를 이용한 식품 매칭 및 검수, USDA 실측 수율 준비를 세 개의 경로로 표시합니다. Qwen 판정은 별도 실험 기록이며 검수 제안을 자동 승인하지 않습니다. 중량 자료는 Spring과 Python이 각각 읽습니다.</desc>
+  <defs>
+    <marker id="data-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#b94f16"/></marker>
+    <marker id="data-muted-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#8c7868"/></marker>
+    <style>
+      #data-root text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;fill:#352b25} .data-title{font-size:28px;font-weight:750;letter-spacing:-.5px}#data-root .data-subtitle{font-size:16px;fill:#746355}#data-root .data-lane-title{font-size:19px;font-weight:700;fill:#954512}.data-node-title{font-size:18px;font-weight:700}#data-root .data-body{font-size:16px;fill:#746355}#data-root .data-code{font-size:16px;font-family:ui-monospace,Consolas,monospace;fill:#954512}#data-root .data-label{font-size:16px;fill:#954512}#data-root .data-note{font-size:16px;fill:#746355}.data-node{fill:#fff;stroke:#dfc5ae;stroke-width:1.4}.data-output{fill:#fff0df;stroke:#d9af8c;stroke-width:1.4}.data-lane{fill:#fffdf9;stroke:#eedfce;stroke-width:1.2}.data-edge{fill:none;stroke:#b94f16;stroke-width:2;stroke-linejoin:round;marker-end:url(#data-arrow)}.data-experiment{fill:none;stroke:#8c7868;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#data-muted-arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="1220" fill="#fffaf5"/>
+  <text x="40" y="48" class="data-title">데이터는 어떻게 서비스에 들어오는가</text>
+  <text x="40" y="80" class="data-subtitle">사전 처리 · 원본 보존 · 사람의 검수 · 서비스 시작 시 적재</text>
+  <rect x="30" y="112" width="260" height="1008" rx="16" class="data-lane"/>
+  <rect x="330" y="112" width="560" height="1008" rx="16" class="data-lane"/>
+  <rect x="910" y="112" width="260" height="1008" rx="16" class="data-lane"/>
+  <text x="50" y="150" class="data-lane-title">기존 규칙 정제</text>
+  <text x="350" y="150" class="data-lane-title">원문 기반 식품 매칭과 검수</text>
+  <text x="930" y="150" class="data-lane-title">실측 수율 준비</text>
+
+  <!-- Existing ingestion and deterministic refinement. -->
+  <path d="M160 260V300" class="data-edge"/>
+  <path d="M160 385V425" class="data-edge"/>
+  <path d="M160 510V550" class="data-edge"/>
+  <path d="M270 342H308V228H350" class="data-edge"/>
+  <rect x="290" y="307" width="38" height="24" fill="#fffaf5"/><text x="309" y="325" text-anchor="middle" class="data-label">고정</text>
+  <rect x="50" y="180" width="220" height="80" rx="10" class="data-node"/>
+  <text x="160" y="214" text-anchor="middle" class="data-node-title">공공데이터 수집</text>
+  <text x="160" y="240" text-anchor="middle" class="data-body">원본 식품·영양 자료</text>
+  <rect x="50" y="300" width="220" height="85" rx="10" class="data-output"/>
+  <text x="160" y="335" text-anchor="middle" class="data-node-title">원본 테이블</text>
+  <text x="160" y="362" text-anchor="middle" class="data-code">raw_food_materials</text>
+  <rect x="50" y="425" width="220" height="85" rx="10" class="data-node"/>
+  <text x="160" y="460" text-anchor="middle" class="data-node-title">규칙 기반 정제</text>
+  <text x="160" y="487" text-anchor="middle" class="data-body">분류·생것 연결·탈락 집계</text>
+  <rect x="50" y="550" width="220" height="85" rx="10" class="data-output"/>
+  <text x="160" y="585" text-anchor="middle" class="data-node-title">정제 테이블</text>
+  <text x="160" y="612" text-anchor="middle" class="data-code">food_materials</text>
+  <text x="50" y="684" class="data-note"><tspan x="50">기존 식품 검색·비교가</tspan><tspan x="50" dy="25">이 관계를 조회합니다.</tspan></text>
+  <text x="50" y="776" class="data-note"><tspan x="50">RAG 검수 결과를 이 테이블에</tspan><tspan x="50" dy="25">자동 반영하는 연결은</tspan><tspan x="50" dy="25">현재 구현되어 있지 않습니다.</tspan></text>
+
+  <!-- Frozen inputs branch into retrieval/proposals and a nutrition catalog. -->
+  <path d="M470 275V315" class="data-edge"/>
+  <path d="M740 275V315" class="data-edge"/>
+  <path d="M470 425V465" class="data-edge"/>
+  <path d="M740 425V465" class="data-edge"/>
+  <path d="M470 585V665" class="data-edge"/>
+  <text x="484" y="629" class="data-label">근거 대조 결과</text>
+  <path d="M470 765V815" class="data-edge"/>
+  <text x="484" y="794" class="data-label">Spring 시작 시</text>
+  <path d="M470 905V965" class="data-edge"/>
+  <text x="484" y="941" class="data-label">관리자 검수</text>
+  <path d="M590 525H606V715H620" class="data-experiment"/>
+  <path d="M740 775V815" class="data-experiment"/>
+  <rect x="350" y="180" width="510" height="95" rx="10" class="data-node"/>
+  <text x="605" y="214" text-anchor="middle" class="data-node-title">고정 원본 + 공식 원자료 보강</text>
+  <text x="605" y="243" text-anchor="middle" class="data-body">스냅샷 3,701행 · 공식 영양 원문 · 근거 문단</text>
+  <rect x="350" y="315" width="240" height="110" rx="10" class="data-node"/>
+  <text x="470" y="349" text-anchor="middle" class="data-node-title">로컬 E5 후보 검색</text>
+  <text x="470" y="377" text-anchor="middle" class="data-body">생것 2,388행 · 384차원</text>
+  <text x="470" y="403" text-anchor="middle" class="data-code">NumPy / .npz</text>
+  <rect x="620" y="315" width="240" height="110" rx="10" class="data-node"/>
+  <text x="740" y="349" text-anchor="middle" class="data-node-title">영양 카탈로그 생성</text>
+  <text x="740" y="377" text-anchor="middle" class="data-body">결측과 실제 0 구분</text>
+  <text x="740" y="403" text-anchor="middle" class="data-code">catalog.json</text>
+  <rect x="350" y="465" width="240" height="120" rx="10" class="data-node"/>
+  <text x="470" y="498" text-anchor="middle" class="data-node-title">원문·공식 근거 대조</text>
+  <text x="470" y="526" text-anchor="middle" class="data-body">후보 5개 + 공식 문단</text>
+  <text x="470" y="552" text-anchor="middle" class="data-body">문단: 적용 범위·어휘 검색</text>
+  <rect x="620" y="465" width="240" height="90" rx="10" class="data-output"/>
+  <text x="740" y="500" text-anchor="middle" class="data-node-title">원문 영양 데이터</text>
+  <text x="740" y="528" text-anchor="middle" class="data-code">rag_food</text>
+  <text x="740" y="588" text-anchor="middle" class="data-note">Spring 시작 시 DB 적재</text>
+  <rect x="350" y="665" width="240" height="100" rx="10" class="data-node"/>
+  <text x="470" y="698" text-anchor="middle" class="data-node-title">근거 기반 검수 제안</text>
+  <text x="470" y="725" text-anchor="middle" class="data-code">development.json</text>
+  <text x="470" y="748" text-anchor="middle" class="data-body">allowed 필드</text>
+  <rect x="620" y="665" width="240" height="110" rx="10" class="data-node" stroke-dasharray="7 5"/>
+  <text x="740" y="698" text-anchor="middle" class="data-node-title">로컬 Qwen 판정 실험</text>
+  <text x="740" y="726" text-anchor="middle" class="data-body">동일 후보·근거로 별도 판정</text>
+  <text x="740" y="752" text-anchor="middle" class="data-body">Qwen3-8B / llama.cpp</text>
+  <rect x="350" y="815" width="240" height="90" rx="10" class="data-output"/>
+  <text x="470" y="849" text-anchor="middle" class="data-node-title">검수 대기 제안</text>
+  <text x="470" y="878" text-anchor="middle" class="data-code">rag_proposal</text>
+  <rect x="620" y="815" width="240" height="90" rx="10" class="data-node" stroke-dasharray="7 5"/>
+  <text x="740" y="849" text-anchor="middle" class="data-node-title">실험 결과 보관·평가</text>
+  <text x="740" y="878" text-anchor="middle" class="data-body">검수 제안을 덮어쓰지 않음</text>
+  <rect x="350" y="965" width="240" height="110" rx="10" class="data-output"/>
+  <text x="470" y="999" text-anchor="middle" class="data-node-title">원문을 보고 승인·보류</text>
+  <text x="470" y="1027" text-anchor="middle" class="data-code">rag_review</text>
+  <text x="470" y="1053" text-anchor="middle" class="data-body">버전별 검수 이력</text>
+  <text x="620" y="988" class="data-note"><tspan x="620">Qwen 결과는 별도 기록입니다.</tspan><tspan x="620" dy="25">승인 관계를 자동 생성하거나</tspan><tspan x="620" dy="25">DB에 확정하지 않습니다.</tspan></text>
+
+  <!-- Yield evidence is loaded independently by Spring and Python. -->
+  <path d="M1040 275V315" class="data-edge"/>
+  <path d="M1040 425V465" class="data-edge"/>
+  <path d="M1150 515H1160V710H1150" class="data-edge"/>
+  <path d="M1160 710V875H1150" class="data-edge"/>
+  <rect x="930" y="180" width="220" height="95" rx="10" class="data-node"/>
+  <text x="1040" y="214" text-anchor="middle" class="data-node-title">USDA 원본 통합문서</text>
+  <text x="1040" y="243" text-anchor="middle" class="data-body">육류·가금류 실측 수율</text>
+  <rect x="930" y="315" width="220" height="110" rx="10" class="data-node"/>
+  <text x="1040" y="349" text-anchor="middle" class="data-node-title">원표 검증·변환</text>
+  <text x="1040" y="377" text-anchor="middle" class="data-code">import_usda.py</text>
+  <text x="1040" y="403" text-anchor="middle" class="data-body">수치·원문·출처 보존</text>
+  <rect x="930" y="465" width="220" height="100" rx="10" class="data-output"/>
+  <text x="1040" y="500" text-anchor="middle" class="data-code">cooking-yields.json</text>
+  <text x="1040" y="532" text-anchor="middle" class="data-body">조건별 실험 기록 173개</text>
+  <text x="1040" y="618" text-anchor="middle" class="data-label">동일 파일을 각각 읽기</text>
+  <rect x="930" y="665" width="220" height="90" rx="10" class="data-node"/>
+  <text x="1040" y="699" text-anchor="middle" class="data-node-title">Spring Boot</text>
+  <text x="1040" y="727" text-anchor="middle" class="data-body">메모리 수율 카탈로그</text>
+  <rect x="930" y="825" width="220" height="100" rx="10" class="data-node"/>
+  <text x="1040" y="859" text-anchor="middle" class="data-node-title">Python E5 검색기</text>
+  <text x="1040" y="888" text-anchor="middle" class="data-body">NumPy 메모리 인덱스</text>
+  <text x="1040" y="912" text-anchor="middle" class="data-body">173개 × 384차원</text>
+  <text x="930" y="993" class="data-note"><tspan x="930">중량 수율 자료는</tspan><tspan x="930" dy="25">관계형 DB에 적재하지 않고</tspan><tspan x="930" dy="25">각 서비스가 직접 읽습니다.</tspan></text>
+
+  <path d="M40 1157H85" class="data-edge"/><text x="100" y="1163" class="data-note">자료 변환·적재</text>
+  <path d="M290 1157H335" class="data-experiment"/><text x="350" y="1163" class="data-note">별도 모델 판정 실험</text>
+  <text x="40" y="1194" class="data-note">2026-11-11 코드 기준 · 파일 적재와 관리자 검수는 실시간 식품 검색 요청과 분리된 흐름입니다.</text>
+</svg>

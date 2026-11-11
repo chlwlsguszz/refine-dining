@@ -1,0 +1,93 @@
+<svg id="svc-root" xmlns="http://www.w3.org/2000/svg" width="1200" height="1080" viewBox="0 0 1200 1080" role="img" aria-labelledby="svc-title svc-desc">
+  <title id="svc-title">Refine Dining 실시간 서비스 아키텍처</title>
+  <desc id="svc-desc">React 화면이 Spring Boot API를 호출합니다. 기존 식품 및 영양 서비스는 공용 관계형 데이터베이스를 사용합니다. 중량 서비스는 로컬 Python E5 검색기와 실측 수율 JSON을 사용합니다. Qwen은 영양 설명의 선택적 연결이며 중량 계산에는 사용하지 않습니다.</desc>
+  <defs>
+    <marker id="svc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b94f16"/></marker>
+    <marker id="svc-file-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#8c7564"/></marker>
+    <style>
+      #svc-root text{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;fill:#352b25}
+      .svc-title{font-size:28px;font-weight:750}.svc-heading{font-size:21px;font-weight:700}.svc-body{font-size:17px}.svc-small{font-size:16px}#svc-root .svc-muted{fill:#746355}#svc-root .svc-accent{fill:#b94f16}.svc-node{fill:#fff;stroke:#decab8;stroke-width:1.5}.svc-group{fill:#fff0df;stroke:#e3c5aa;stroke-width:1.5}.svc-edge{fill:none;stroke:#b94f16;stroke-width:2;marker-end:url(#svc-arrow)}.svc-both{marker-start:url(#svc-arrow)}.svc-optional{stroke-dasharray:8 6}.svc-file{fill:none;stroke:#8c7564;stroke-width:2;marker-end:url(#svc-file-arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="1080" fill="#fffaf5"/>
+  <text x="40" y="44" class="svc-title">실시간 서비스 구조</text>
+  <text x="40" y="75" class="svc-body svc-muted">사용자 요청을 처리하는 화면, API, 저장소, 로컬 모델의 연결</text>
+
+  <rect x="360" y="110" width="480" height="100" rx="14" class="svc-node"/>
+  <text x="600" y="144" text-anchor="middle" class="svc-heading">사용자 · 검수자</text>
+  <text x="600" y="173" text-anchor="middle" class="svc-body">React / Vite 브라우저 화면</text>
+  <text x="600" y="196" text-anchor="middle" class="svc-small svc-muted">식품 비교 · 영양 질문 · 매칭 검수 · 중량 검색</text>
+  <path d="M600 210V255" class="svc-edge"/>
+  <text x="619" y="239" class="svc-small svc-muted">HTTP / JSON</text>
+
+  <rect x="40" y="255" width="1120" height="245" rx="18" class="svc-group"/>
+  <text x="65" y="289" class="svc-heading">Spring Boot · Java</text>
+  <text x="1135" y="286" text-anchor="end" class="svc-small svc-muted">로컬 데모 :18082 · frontend/dist 정적 화면 제공</text>
+
+  <rect x="70" y="325" width="290" height="135" rx="11" class="svc-node"/>
+  <text x="215" y="359" text-anchor="middle" class="svc-heading">식품 검색 · 비교</text>
+  <text x="215" y="390" text-anchor="middle" class="svc-body">/api/food/*</text>
+  <text x="215" y="420" text-anchor="middle" class="svc-small svc-muted">규칙 정제로 연결한 식품 조회</text>
+  <text x="215" y="442" text-anchor="middle" class="svc-small svc-muted">중량 기준 영양값 비교</text>
+
+  <rect x="455" y="325" width="290" height="135" rx="11" class="svc-node"/>
+  <text x="600" y="359" text-anchor="middle" class="svc-heading">영양 질의응답 · 검수</text>
+  <text x="600" y="389" text-anchor="middle" class="svc-small">/api/nutrition/*</text>
+  <text x="600" y="412" text-anchor="middle" class="svc-small">/api/admin/nutrition/*</text>
+  <text x="600" y="442" text-anchor="middle" class="svc-small svc-muted">원문 조회 · 승인 상태 확인</text>
+
+  <rect x="840" y="325" width="290" height="135" rx="11" class="svc-node"/>
+  <text x="985" y="359" text-anchor="middle" class="svc-heading">중량 검색 · 계산</text>
+  <text x="985" y="389" text-anchor="middle" class="svc-small">/api/weight/search · /predict</text>
+  <text x="985" y="420" text-anchor="middle" class="svc-small svc-muted">후보 조건 검사 · 사용자 선택</text>
+  <text x="985" y="442" text-anchor="middle" class="svc-small svc-muted">선택한 실험 수율로 중량 계산</text>
+  <text x="65" y="312" class="svc-small svc-muted">입력 검증 · 원문 확인 · 영양 질의응답과 중량 수치는 BigDecimal로 계산</text>
+
+  <path d="M215 460V620" class="svc-edge svc-both"/>
+  <text x="195" y="560" text-anchor="end" class="svc-small svc-muted">관계 조회</text>
+  <path d="M600 460V565H470V620" class="svc-edge svc-both"/>
+  <text x="590" y="545" text-anchor="end" class="svc-small svc-muted">조회 · 검수 저장</text>
+  <path d="M985 460V620" class="svc-edge svc-both"/>
+  <text x="965" y="552" text-anchor="end" class="svc-small svc-muted">로컬 HTTP</text>
+  <text x="965" y="575" text-anchor="end" class="svc-small svc-muted">후보 ID · 유사도</text>
+
+  <rect x="50" y="620" width="600" height="200" rx="14" class="svc-node"/>
+  <text x="75" y="654" class="svc-heading">공용 관계형 데이터베이스</text>
+  <text x="625" y="654" text-anchor="end" class="svc-small svc-muted">H2 데모 / MySQL 구성</text>
+  <rect x="70" y="680" width="245" height="115" rx="9" fill="#fffaf5" stroke="#eedfce"/>
+  <text x="90" y="708" class="svc-body" font-weight="650">기존 식품 데이터</text>
+  <text x="90" y="738" class="svc-small svc-muted">raw_food_materials</text>
+  <text x="90" y="765" class="svc-small svc-muted">food_materials</text>
+  <rect x="335" y="680" width="295" height="115" rx="9" fill="#fffaf5" stroke="#eedfce"/>
+  <text x="355" y="708" class="svc-body" font-weight="650">영양 원문 · 제안 · 검수 이력</text>
+  <text x="355" y="738" class="svc-small svc-muted">rag_food · rag_proposal</text>
+  <text x="355" y="765" class="svc-small svc-muted">rag_review</text>
+
+  <rect x="840" y="620" width="290" height="200" rx="14" class="svc-node"/>
+  <text x="985" y="655" text-anchor="middle" class="svc-heading">로컬 벡터 검색</text>
+  <text x="985" y="686" text-anchor="middle" class="svc-body">Python HTTP · :18086</text>
+  <text x="985" y="716" text-anchor="middle" class="svc-small svc-muted">multilingual-e5-small · ONNX</text>
+  <text x="985" y="750" text-anchor="middle" class="svc-body svc-accent">173개 실험 기록 · 384차원</text>
+  <text x="985" y="782" text-anchor="middle" class="svc-small svc-muted">NumPy 메모리 인덱스</text>
+  <text x="985" y="805" text-anchor="middle" class="svc-small svc-muted">별도 벡터 DB 없음</text>
+
+  <path d="M745 395H790V935H755" class="svc-edge svc-optional"/>
+  <text x="755" y="852" text-anchor="end" class="svc-small svc-muted">선택적 설명 · 설정한 경우</text>
+  <text x="755" y="876" text-anchor="end" class="svc-small svc-muted">승인 근거의 문장 ID 선택</text>
+  <rect x="365" y="895" width="390" height="90" rx="12" class="svc-node" stroke-dasharray="8 6"/>
+  <text x="560" y="930" text-anchor="middle" class="svc-heading">Qwen3-8B · llama.cpp</text>
+  <text x="560" y="960" text-anchor="middle" class="svc-body svc-muted">영양 설명용 로컬 LLM</text>
+
+  <rect x="840" y="895" width="290" height="90" rx="12" class="svc-node"/>
+  <text x="985" y="927" text-anchor="middle" class="svc-body" font-weight="700">cooking-yields.json</text>
+  <text x="985" y="952" text-anchor="middle" class="svc-small svc-muted">수율 · 조건 · 원문 · 출처</text>
+  <text x="985" y="976" text-anchor="middle" class="svc-small svc-muted">Spring과 Python이 각각 읽음</text>
+  <path d="M985 895V820" class="svc-file"/>
+  <path d="M1130 940H1175V395H1130" class="svc-file"/>
+
+  <path d="M50 855H92" class="svc-edge"/><text x="104" y="861" class="svc-small svc-muted">서비스 호출 · 데이터 조회</text>
+  <path d="M50 889H92" class="svc-edge svc-optional"/><text x="104" y="895" class="svc-small svc-muted">선택적으로 연결</text>
+  <path d="M50 923H92" class="svc-file"/><text x="104" y="929" class="svc-small svc-muted">준비된 파일 로드</text>
+  <text x="40" y="1033" class="svc-body svc-muted">중량 경로에는 생성형 LLM 호출이 없습니다. 영양 질문도 매번 식품 매칭 배치를 실행하지 않습니다.</text>
+  <text x="40" y="1062" class="svc-small svc-muted">현재 코드 구조 · 2026-11-11 기준 · MySQL은 별도 구성, 현재 로컬 데모의 데이터베이스는 H2</text>
+</svg>
