@@ -14,6 +14,8 @@ import java.util.Map;
 /** Optional local E5 suggestions. Returned names never authorize a numeric estimate. */
 @Component
 public class YieldNameSuggestions {
+    public record RankedEvidence(String id, Double score) {}
+    public record Ranking(String engine, List<RankedEvidence> matches) {}
     private final ObjectMapper json;
     private final URI endpoint;
     private final HttpClient client = HttpClient.newBuilder().connectTimeout(Duration.ofMillis(500)).build();
@@ -43,5 +45,25 @@ public class YieldNameSuggestions {
             // If the optional local index is unavailable, direct table lookup and manual input still work.
         }
         return List.of();
+    }
+
+    Ranking search(String foodName, String cookingMethod) {
+        if (endpoint == null) return null;
+        try {
+            byte[] data = json.writeValueAsBytes(Map.of("foodName", foodName,
+                    "cookingMethod", cookingMethod == null ? "" : cookingMethod));
+            var request = HttpRequest.newBuilder(endpoint.resolve("/search")).timeout(Duration.ofSeconds(8))
+                    .header("Content-Type", "application/json").POST(HttpRequest.BodyPublishers.ofByteArray(data)).build();
+            var response = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
+            if (response.statusCode() == 200) {
+                Ranking ranking = json.readValue(response.body(), Ranking.class);
+                if (ranking != null && ranking.matches() != null) return ranking;
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        } catch (IOException ignored) {
+            // The caller exposes the limited name-search fallback when the local encoder is unavailable.
+        }
+        return null;
     }
 }

@@ -6,6 +6,603 @@
   "sourceSha256": "13bd2cec633841867bf8532ed57114c81f3791b9bcd35a396dec6a1b960773ff",
   "records": [
     {
+      "id": "usda-r2-13953",
+      "foodLabel": "소고기 설로인",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, bottom sirloin, tri-tip roast, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 84,
+      "minPercent": 77,
+      "maxPercent": 89,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A2:L2",
+      "sourceNdb": "13953",
+      "sourceDescription": "Beef, bottom sirloin, tri-tip roast, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 설로인",
+        "Beef, bottom sirloin, tri-tip roast, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 설로인"
+      ],
+      "species": "beef",
+      "cut": "sirloin",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13806",
+      "foodLabel": "소고기 양지",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, brisket, flat half, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 69,
+      "minPercent": 65,
+      "maxPercent": 76,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A3:L3",
+      "sourceNdb": "13806",
+      "sourceDescription": "Beef, brisket, flat half, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 양지",
+        "Beef, brisket, flat half, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 양지",
+        "소고기 브리스킷"
+      ],
+      "species": "beef",
+      "cut": "brisket",
+      "methodKey": "braise",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23134",
+      "foodLabel": "소고기 갈비 (뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, chuck eye country-style ribs, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 68.3,
+      "minPercent": 60.7,
+      "maxPercent": 80.4,
+      "sampleCount": 70,
+      "sourceRow": "Sheet1!A4:L4",
+      "sourceNdb": "23134",
+      "sourceDescription": "Beef, chuck eye country-style ribs, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 갈비 (뼈 제거)",
+        "Beef, chuck eye country-style ribs, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 갈비"
+      ],
+      "species": "beef",
+      "cut": "ribs",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23113",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, chuck eye roast, boneless, America's Beef Roast, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": 75.8,
+      "maxPercent": 93.5,
+      "sampleCount": 35,
+      "sourceRow": "Sheet1!A5:L5",
+      "sourceNdb": "23113",
+      "sourceDescription": "Beef, chuck eye roast, boneless, America's Beef Roast, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, chuck eye roast, boneless, America's Beef Roast, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23140",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, chuck eye steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80.16846845907656,
+      "minPercent": 61.8,
+      "maxPercent": 94.9,
+      "sampleCount": 70,
+      "sourceRow": "Sheet1!A6:L6",
+      "sourceNdb": "23140",
+      "sourceDescription": "Beef, chuck eye steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, chuck eye steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13373",
+      "foodLabel": "소고기 어깨",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, chuck, arm pot roast, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 71,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A7:L7",
+      "sourceNdb": "13373",
+      "sourceDescription": "Beef, chuck, arm pot roast, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 어깨",
+        "Beef, chuck, arm pot roast, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "braise",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23119",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, chuck, mock tender steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 71.36,
+      "minPercent": 56.4,
+      "maxPercent": 99.5,
+      "sampleCount": 61,
+      "sourceRow": "Sheet1!A8:L8",
+      "sourceNdb": "23119",
+      "sourceDescription": "Beef, chuck, mock tender steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, chuck, mock tender steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23125",
+      "foodLabel": "소고기 갈비 (뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, chuck, short ribs, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 66.07,
+      "minPercent": 44.9,
+      "maxPercent": 97.3,
+      "sampleCount": 30,
+      "sourceRow": "Sheet1!A9:L9",
+      "sourceNdb": "23125",
+      "sourceDescription": "Beef, chuck, short ribs, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 갈비 (뼈 제거)",
+        "Beef, chuck, short ribs, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 갈비"
+      ],
+      "species": "beef",
+      "cut": "ribs",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23054",
+      "foodLabel": "소고기 어깨",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, chuck, shoulder clod, shoulder tender, medallion, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 74.01,
+      "maxPercent": 81.1,
+      "sampleCount": 10,
+      "sourceRow": "Sheet1!A10:L10",
+      "sourceNdb": "23054",
+      "sourceDescription": "Beef, chuck, shoulder clod, shoulder tender, medallion, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2004,
+      "foodAliases": [
+        "소고기 어깨",
+        "Beef, chuck, shoulder clod, shoulder tender, medallion, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23058",
+      "foodLabel": "소고기 어깨",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, chuck, shoulder clod, shoulder top and center steaks, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76,
+      "minPercent": 72.75,
+      "maxPercent": 83.39,
+      "sampleCount": 10,
+      "sourceRow": "Sheet1!A11:L11",
+      "sourceNdb": "23058",
+      "sourceDescription": "Beef, chuck, shoulder clod, shoulder top and center steaks, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2004,
+      "foodAliases": [
+        "소고기 어깨",
+        "Beef, chuck, shoulder clod, shoulder top and center steaks, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23060",
+      "foodLabel": "소고기 어깨",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, chuck, shoulder clod, top blade, steak, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76,
+      "minPercent": 70.71,
+      "maxPercent": 79.9,
+      "sampleCount": 10,
+      "sourceRow": "Sheet1!A12:L12",
+      "sourceNdb": "23060",
+      "sourceDescription": "Beef, chuck, shoulder clod, top blade, steak, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2004,
+      "foodAliases": [
+        "소고기 어깨",
+        "Beef, chuck, shoulder clod, top blade, steak, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23105",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, chuck, under blade center steak, boneless, Denver Cut, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 71,
+      "minPercent": 65.8,
+      "maxPercent": 83.1,
+      "sampleCount": 30,
+      "sourceRow": "Sheet1!A13:L13",
+      "sourceNdb": "23105",
+      "sourceDescription": "Beef, chuck, under blade center steak, boneless, Denver Cut, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, chuck, under blade center steak, boneless, Denver Cut, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23099",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, chuck, under blade pot roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 64,
+      "minPercent": 60.9,
+      "maxPercent": 78.2,
+      "sampleCount": 33,
+      "sourceRow": "Sheet1!A14:L14",
+      "sourceNdb": "23099",
+      "sourceDescription": "Beef, chuck, under blade pot roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, chuck, under blade pot roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23116",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, chuck, under blade steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 64.96,
+      "minPercent": 58.1,
+      "maxPercent": 72,
+      "sampleCount": 34,
+      "sourceRow": "Sheet1!A15:L15",
+      "sourceNdb": "23116",
+      "sourceDescription": "Beef, chuck, under blade steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, chuck, under blade steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13948",
+      "foodLabel": "소고기 복부",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, flank, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 81,
+      "minPercent": 74,
+      "maxPercent": 89,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A16:L16",
+      "sourceNdb": "13948",
+      "sourceDescription": "Beef, flank, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 복부",
+        "Beef, flank, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 복부",
+        "소고기 플랭크"
+      ],
+      "species": "beef",
+      "cut": "flank",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
       "id": "usda-r2-13494",
       "foodLabel": "다진 소고기 부스러기 (지방 22% 초과)",
       "methodLabel": "팬에 볶기",
@@ -31,7 +628,59 @@
         "팬볶음"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "saute",
+      "preparationTags": [
+        "ground",
+        "crumbles"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13495",
+      "foodLabel": "소고기 다짐육 미트로프",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, ground, high fat (>22%), loaf. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 63,
+      "minPercent": 61.94,
+      "maxPercent": 63.89,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A18:L18",
+      "sourceNdb": "13495",
+      "sourceDescription": "Beef, ground, high fat (>22%), loaf",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 다짐육 미트로프",
+        "Beef, ground, high fat (>22%), loaf"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 다짐육",
+        "소고기 분쇄육",
+        "소고기 미트로프"
+      ],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "roast",
+      "preparationTags": [
+        "ground",
+        "loaf"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-13496",
@@ -62,7 +711,16 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-13497",
@@ -92,7 +750,16 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "grill",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-23565",
@@ -120,7 +787,59 @@
         "팬볶음"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "saute",
+      "preparationTags": [
+        "ground",
+        "crumbles"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23566",
+      "foodLabel": "소고기 다짐육 미트로프",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, ground, low fat (<12%), loaf. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 72,
+      "minPercent": 67.59,
+      "maxPercent": 73.93,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A22:L22",
+      "sourceNdb": "23566",
+      "sourceDescription": "Beef, ground, low fat (<12%), loaf",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "소고기 다짐육 미트로프",
+        "Beef, ground, low fat (<12%), loaf"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 다짐육",
+        "소고기 분쇄육",
+        "소고기 미트로프"
+      ],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "roast",
+      "preparationTags": [
+        "ground",
+        "loaf"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-23563",
@@ -150,7 +869,16 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "grill",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-23564",
@@ -181,7 +909,16 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-23575",
@@ -209,7 +946,59 @@
         "팬볶음"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "saute",
+      "preparationTags": [
+        "ground",
+        "crumbles"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23576",
+      "foodLabel": "소고기 다짐육 미트로프",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, ground, medium fat (12%-22%), loaf. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 70,
+      "minPercent": 65.08,
+      "maxPercent": 76.25,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A26:L26",
+      "sourceNdb": "23576",
+      "sourceDescription": "Beef, ground, medium fat (12%-22%), loaf",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "소고기 다짐육 미트로프",
+        "Beef, ground, medium fat (12%-22%), loaf"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 다짐육",
+        "소고기 분쇄육",
+        "소고기 미트로프"
+      ],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "roast",
+      "preparationTags": [
+        "ground",
+        "loaf"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-23573",
@@ -239,7 +1028,16 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "grill",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-23574",
@@ -270,7 +1068,1635 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "beef",
+      "cut": "ground",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23345",
+      "foodLabel": "소고기 안심 (뼈 제거)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, loin, tenderloin roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A29:L29",
+      "sourceNdb": "23345",
+      "sourceDescription": "Beef, loin, tenderloin roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "소고기 안심 (뼈 제거)",
+        "Beef, loin, tenderloin roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 안심"
+      ],
+      "species": "beef",
+      "cut": "tenderloin",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13439",
+      "foodLabel": "소고기 안심",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, loin, tenderloin steak, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 79,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A30:L30",
+      "sourceNdb": "13439",
+      "sourceDescription": "Beef, loin, tenderloin steak, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "소고기 안심",
+        "Beef, loin, tenderloin steak, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 안심"
+      ],
+      "species": "beef",
+      "cut": "tenderloin",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13445",
+      "foodLabel": "소고기 등심 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, loin, top loin steak, boneless, lip off, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A31:L31",
+      "sourceNdb": "13445",
+      "sourceDescription": "Beef, loin, top loin steak, boneless, lip off, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "소고기 등심 (뼈 제거)",
+        "Beef, loin, top loin steak, boneless, lip off, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 등심",
+        "소고기 로인"
+      ],
+      "species": "beef",
+      "cut": "loin",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23214",
+      "foodLabel": "소고기 복부 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, plate steak, boneless, inside skirt, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 72.9,
+      "minPercent": 64.3,
+      "maxPercent": 84.9,
+      "sampleCount": 72,
+      "sourceRow": "Sheet1!A32:L32",
+      "sourceNdb": "23214",
+      "sourceDescription": "Beef, plate steak, boneless, inside skirt, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 복부 (뼈 제거)",
+        "Beef, plate steak, boneless, inside skirt, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 복부",
+        "소고기 플랭크"
+      ],
+      "species": "beef",
+      "cut": "flank",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23221",
+      "foodLabel": "소고기 복부 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 68.2,
+      "minPercent": 58.6,
+      "maxPercent": 79.3,
+      "sampleCount": 72,
+      "sourceRow": "Sheet1!A33:L33",
+      "sourceNdb": "23221",
+      "sourceDescription": "Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 복부 (뼈 제거)",
+        "Beef, plate steak, boneless, outside skirt, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 복부",
+        "소고기 플랭크"
+      ],
+      "species": "beef",
+      "cut": "flank",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-row-034",
+      "foodLabel": "소고기 전체 (여러 시료 합산)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, retail all cuts, all temps. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 78,
+      "minPercent": 68.6032798767554,
+      "maxPercent": 87.98179327725133,
+      "sampleCount": 458,
+      "sourceRow": "Sheet1!A34:L34",
+      "sourceNdb": null,
+      "sourceDescription": "Beef, retail all cuts, all temps",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 전체 (여러 시료 합산)",
+        "Beef, retail all cuts, all temps"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 전체",
+        "소고기 통째"
+      ],
+      "species": "beef",
+      "cut": "whole",
+      "methodKey": "grill",
+      "preparationTags": [],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-row-035",
+      "foodLabel": "소고기 전체 (뼈 포함, 여러 시료 합산)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, retail cuts, all, bone in. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 73,
+      "minPercent": 53,
+      "maxPercent": 87,
+      "sampleCount": 36,
+      "sourceRow": "Sheet1!A35:L35",
+      "sourceNdb": null,
+      "sourceDescription": "Beef, retail cuts, all, bone in",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 전체 (뼈 포함, 여러 시료 합산)",
+        "Beef, retail cuts, all, bone in"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 전체",
+        "소고기 통째"
+      ],
+      "species": "beef",
+      "cut": "whole",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_in"
+      ],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-row-036",
+      "foodLabel": "소고기 전체 (뼈 제거, 여러 시료 합산)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, retail cuts, all, boneless. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 67,
+      "minPercent": 55.74285714285714,
+      "maxPercent": 84.1712646001911,
+      "sampleCount": 361,
+      "sourceRow": "Sheet1!A36:L36",
+      "sourceNdb": null,
+      "sourceDescription": "Beef, retail cuts, all, boneless",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 전체 (뼈 제거, 여러 시료 합산)",
+        "Beef, retail cuts, all, boneless"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 전체",
+        "소고기 통째"
+      ],
+      "species": "beef",
+      "cut": "whole",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out"
+      ],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-row-037",
+      "foodLabel": "소고기 부위 (뼈 포함, 여러 시료 합산)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, retail cuts, bone in, all temps. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 72,
+      "maxPercent": 84,
+      "sampleCount": 35,
+      "sourceRow": "Sheet1!A37:L37",
+      "sourceNdb": null,
+      "sourceDescription": "Beef, retail cuts, bone in, all temps",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 부위 (뼈 포함, 여러 시료 합산)",
+        "Beef, retail cuts, bone in, all temps"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 부위",
+        "소고기 원문",
+        "소고기 확인"
+      ],
+      "species": "beef",
+      "cut": "unknown",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in"
+      ],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-row-038",
+      "foodLabel": "소고기 부위 (뼈 제거, 여러 시료 합산)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, retail cuts, boneless, all temps. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 79,
+      "minPercent": 64,
+      "maxPercent": 96,
+      "sampleCount": 71,
+      "sourceRow": "Sheet1!A38:L38",
+      "sourceNdb": null,
+      "sourceDescription": "Beef, retail cuts, boneless, all temps",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 부위 (뼈 제거, 여러 시료 합산)",
+        "Beef, retail cuts, boneless, all temps"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 부위",
+        "소고기 원문",
+        "소고기 확인"
+      ],
+      "species": "beef",
+      "cut": "unknown",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_out"
+      ],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-row-039",
+      "foodLabel": "소고기 갈비 (뼈 제거, 여러 시료 합산)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, retail cuts, boneless, short ribs. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 66,
+      "minPercent": 44.9,
+      "maxPercent": 97.3,
+      "sampleCount": 30,
+      "sourceRow": "Sheet1!A39:L39",
+      "sourceNdb": null,
+      "sourceDescription": "Beef, retail cuts, boneless, short ribs",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 갈비 (뼈 제거, 여러 시료 합산)",
+        "Beef, retail cuts, boneless, short ribs"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 갈비"
+      ],
+      "species": "beef",
+      "cut": "ribs",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out"
+      ],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-row-040",
+      "foodLabel": "소고기 부위 (뼈 포함, 뼈 제거, 여러 시료 합산)",
+      "methodLabel": "여러 조리법 합산",
+      "conditions": "원문 식품: Beef, retail cuts, steaks, bone in and boneless. 조리법: Multiple cooking methods. 미국식 부위와 손질 상태를 확인하세요. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76,
+      "minPercent": 66.53904717189079,
+      "maxPercent": 87.5725029876593,
+      "sampleCount": 553,
+      "sourceRow": "Sheet1!A40:L40",
+      "sourceNdb": null,
+      "sourceDescription": "Beef, retail cuts, steaks, bone in and boneless",
+      "sourceMethod": "Multiple cooking methods",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 부위 (뼈 포함, 뼈 제거, 여러 시료 합산)",
+        "Beef, retail cuts, steaks, bone in and boneless"
+      ],
+      "methodAliases": [
+        "여러 조리법"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 부위",
+        "소고기 원문",
+        "소고기 확인"
+      ],
+      "species": "beef",
+      "cut": "unknown",
+      "methodKey": "mixed",
+      "preparationTags": [
+        "bone_out",
+        "bone_in"
+      ],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-23191",
+      "foodLabel": "소고기 꽃등심 (뼈 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, rib eye roast, bone-in, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76.9,
+      "minPercent": 71.8,
+      "maxPercent": 83.5,
+      "sampleCount": 35,
+      "sourceRow": "Sheet1!A41:L41",
+      "sourceNdb": "23191",
+      "sourceDescription": "Beef, rib eye roast, bone-in, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 꽃등심 (뼈 포함)",
+        "Beef, rib eye roast, bone-in, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 꽃등심",
+        "소고기 립아이"
+      ],
+      "species": "beef",
+      "cut": "ribeye",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23198",
+      "foodLabel": "소고기 꽃등심 (뼈 제거)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, rib eye roast, boneless, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 75.8,
+      "minPercent": 65.7,
+      "maxPercent": 84.9,
+      "sampleCount": 36,
+      "sourceRow": "Sheet1!A42:L42",
+      "sourceNdb": "23198",
+      "sourceDescription": "Beef, rib eye roast, boneless, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 꽃등심 (뼈 제거)",
+        "Beef, rib eye roast, boneless, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 꽃등심",
+        "소고기 립아이"
+      ],
+      "species": "beef",
+      "cut": "ribeye",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23188",
+      "foodLabel": "소고기 꽃등심 (뼈 포함)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, rib eye steak, bone-in, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 85.7,
+      "minPercent": 77.7,
+      "maxPercent": 90.3,
+      "sampleCount": 36,
+      "sourceRow": "Sheet1!A43:L43",
+      "sourceNdb": "23188",
+      "sourceDescription": "Beef, rib eye steak, bone-in, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 꽃등심 (뼈 포함)",
+        "Beef, rib eye steak, bone-in, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 꽃등심",
+        "소고기 립아이"
+      ],
+      "species": "beef",
+      "cut": "ribeye",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23227",
+      "foodLabel": "소고기 꽃등심 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, rib eye steak, boneless, lip off, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82.2,
+      "minPercent": 75.2,
+      "maxPercent": 88.6,
+      "sampleCount": 36,
+      "sourceRow": "Sheet1!A44:L44",
+      "sourceNdb": "23227",
+      "sourceDescription": "Beef, rib eye steak, boneless, lip off, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 꽃등심 (뼈 제거)",
+        "Beef, rib eye steak, boneless, lip off, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 꽃등심",
+        "소고기 립아이"
+      ],
+      "species": "beef",
+      "cut": "ribeye",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23197",
+      "foodLabel": "소고기 꽃등심 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, rib eye steak, boneless, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 83.6,
+      "minPercent": 74.6,
+      "maxPercent": 91.9,
+      "sampleCount": 36,
+      "sourceRow": "Sheet1!A45:L45",
+      "sourceNdb": "23197",
+      "sourceDescription": "Beef, rib eye steak, boneless, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 꽃등심 (뼈 제거)",
+        "Beef, rib eye steak, boneless, lip-on, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 꽃등심",
+        "소고기 립아이"
+      ],
+      "species": "beef",
+      "cut": "ribeye",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23233",
+      "foodLabel": "소고기 갈비 (뼈 포함)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, rib, back ribs, bone-in, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 75.3,
+      "minPercent": 65.2,
+      "maxPercent": 82.2,
+      "sampleCount": 36,
+      "sourceRow": "Sheet1!A46:L46",
+      "sourceNdb": "23233",
+      "sourceDescription": "Beef, rib, back ribs, bone-in, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "소고기 갈비 (뼈 포함)",
+        "Beef, rib, back ribs, bone-in, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 갈비"
+      ],
+      "species": "beef",
+      "cut": "ribs",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13851",
+      "foodLabel": "소고기 갈비",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, rib, small end (ribs 10-12), separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": 70,
+      "maxPercent": 85,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A47:L47",
+      "sourceNdb": "13851",
+      "sourceDescription": "Beef, rib, small end (ribs 10-12), separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 갈비",
+        "Beef, rib, small end (ribs 10-12), separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 갈비"
+      ],
+      "species": "beef",
+      "cut": "ribs",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13421",
+      "foodLabel": "소고기 뒷다리",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, round tip round roast, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 85,
+      "minPercent": 76,
+      "maxPercent": 87,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A48:L48",
+      "sourceNdb": "13421",
+      "sourceDescription": "Beef, round tip round roast, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 뒷다리",
+        "Beef, round tip round roast, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뒷다리",
+        "소고기 우둔",
+        "소고기 홍두깨",
+        "소고기 라운드"
+      ],
+      "species": "beef",
+      "cut": "round",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13870",
+      "foodLabel": "소고기 뒷다리",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, round, bottom round, roast, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 84,
+      "minPercent": 76,
+      "maxPercent": 88,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A49:L49",
+      "sourceNdb": "13870",
+      "sourceDescription": "Beef, round, bottom round, roast, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 뒷다리",
+        "Beef, round, bottom round, roast, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뒷다리",
+        "소고기 우둔",
+        "소고기 홍두깨",
+        "소고기 라운드"
+      ],
+      "species": "beef",
+      "cut": "round",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13869",
+      "foodLabel": "소고기 뒷다리",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, round, bottom round, steak, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 69,
+      "minPercent": 62,
+      "maxPercent": 70,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A50:L50",
+      "sourceNdb": "13869",
+      "sourceDescription": "Beef, round, bottom round, steak, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 뒷다리",
+        "Beef, round, bottom round, steak, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뒷다리",
+        "소고기 우둔",
+        "소고기 홍두깨",
+        "소고기 라운드"
+      ],
+      "species": "beef",
+      "cut": "round",
+      "methodKey": "braise",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13878",
+      "foodLabel": "소고기 뒷다리",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Beef, round, eye of round, roast, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 81,
+      "minPercent": 75,
+      "maxPercent": 83,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A51:L51",
+      "sourceNdb": "13878",
+      "sourceDescription": "Beef, round, eye of round, roast, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 뒷다리",
+        "Beef, round, eye of round, roast, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뒷다리",
+        "소고기 우둔",
+        "소고기 홍두깨",
+        "소고기 라운드"
+      ],
+      "species": "beef",
+      "cut": "round",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23062",
+      "foodLabel": "소고기 뒷다리",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76,
+      "minPercent": 70.86,
+      "maxPercent": 81,
+      "sampleCount": 13,
+      "sourceRow": "Sheet1!A52:L52",
+      "sourceNdb": "23062",
+      "sourceDescription": "Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2004,
+      "foodAliases": [
+        "소고기 뒷다리",
+        "Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뒷다리",
+        "소고기 우둔",
+        "소고기 홍두깨",
+        "소고기 라운드"
+      ],
+      "species": "beef",
+      "cut": "round",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23056",
+      "foodLabel": "소고기 뒷다리",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, round, knuckle, tip side, steak, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 75,
+      "minPercent": 71.42,
+      "maxPercent": 78.59,
+      "sampleCount": 7,
+      "sourceRow": "Sheet1!A53:L53",
+      "sourceNdb": "23056",
+      "sourceDescription": "Beef, round, knuckle, tip side, steak, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2004,
+      "foodAliases": [
+        "소고기 뒷다리",
+        "Beef, round, knuckle, tip side, steak, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뒷다리",
+        "소고기 우둔",
+        "소고기 홍두깨",
+        "소고기 라운드"
+      ],
+      "species": "beef",
+      "cut": "round",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23064",
+      "foodLabel": "소고기 뒷다리",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, round, outside round, bottom round, steak, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 74.49,
+      "maxPercent": 81.65,
+      "sampleCount": 10,
+      "sourceRow": "Sheet1!A54:L54",
+      "sourceNdb": "23064",
+      "sourceDescription": "Beef, round, outside round, bottom round, steak, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2004,
+      "foodAliases": [
+        "소고기 뒷다리",
+        "Beef, round, outside round, bottom round, steak, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뒷다리",
+        "소고기 우둔",
+        "소고기 홍두깨",
+        "소고기 라운드"
+      ],
+      "species": "beef",
+      "cut": "round",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13893",
+      "foodLabel": "소고기 뒷다리",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, round, top round steak, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 72,
+      "minPercent": 62,
+      "maxPercent": 83,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A55:L55",
+      "sourceNdb": "13893",
+      "sourceDescription": "Beef, round, top round steak, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 뒷다리",
+        "Beef, round, top round steak, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뒷다리",
+        "소고기 우둔",
+        "소고기 홍두깨",
+        "소고기 라운드"
+      ],
+      "species": "beef",
+      "cut": "round",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13910",
+      "foodLabel": "소고기 등심",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, short loin, top loin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A56:L56",
+      "sourceNdb": "13910",
+      "sourceDescription": "Beef, short loin, top loin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "소고기 등심",
+        "Beef, short loin, top loin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 등심",
+        "소고기 로인"
+      ],
+      "species": "beef",
+      "cut": "loin",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23131",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, shoulder pot roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 66.28,
+      "minPercent": 54.6,
+      "maxPercent": 80.9,
+      "sampleCount": 71,
+      "sourceRow": "Sheet1!A57:L57",
+      "sourceNdb": "23131",
+      "sourceDescription": "Beef, shoulder pot roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Braised",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, shoulder pot roast, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23554",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, shoulder steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77.72357723577235,
+      "minPercent": 69.8,
+      "maxPercent": 88.9,
+      "sampleCount": 72,
+      "sourceRow": "Sheet1!A58:L58",
+      "sourceNdb": "23554",
+      "sourceDescription": "Beef, shoulder steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, shoulder steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13598",
+      "foodLabel": "소고기 어깨 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, shoulder top blade steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 73,
+      "minPercent": 69,
+      "maxPercent": 89.9,
+      "sampleCount": 34,
+      "sourceRow": "Sheet1!A59:L59",
+      "sourceNdb": "13598",
+      "sourceDescription": "Beef, shoulder top blade steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2010,
+      "foodAliases": [
+        "소고기 어깨 (뼈 제거)",
+        "Beef, shoulder top blade steak, boneless, separable lean and fat, trimmed to 0\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 어깨",
+        "소고기 앞다리",
+        "소고기 척"
+      ],
+      "species": "beef",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13918",
+      "foodLabel": "소고기 안심",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, tenderloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": 71,
+      "maxPercent": 86,
+      "sampleCount": 19,
+      "sourceRow": "Sheet1!A60:L60",
+      "sourceNdb": "13918",
+      "sourceDescription": "Beef, tenderloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 안심",
+        "Beef, tenderloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 안심"
+      ],
+      "species": "beef",
+      "cut": "tenderloin",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13930",
+      "foodLabel": "소고기 설로인",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": 69,
+      "maxPercent": 87,
+      "sampleCount": 20,
+      "sourceRow": "Sheet1!A61:L61",
+      "sourceNdb": "13930",
+      "sourceDescription": "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2000,
+      "foodAliases": [
+        "소고기 설로인",
+        "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 설로인"
+      ],
+      "species": "beef",
+      "cut": "sirloin",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13320",
+      "foodLabel": "소고기 뇌",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Beef, variety meats and by-products, brain. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 85,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A62:L62",
+      "sourceNdb": "13320",
+      "sourceDescription": "Beef, variety meats and by-products, brain",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 뇌",
+        "Beef, variety meats and by-products, brain"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 뇌"
+      ],
+      "species": "beef",
+      "cut": "brain",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13322",
+      "foodLabel": "소고기 심장",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Beef, variety meats and by-products, heart. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 57,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A63:L63",
+      "sourceNdb": "13322",
+      "sourceDescription": "Beef, variety meats and by-products, heart",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 심장",
+        "Beef, variety meats and by-products, heart"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 심장"
+      ],
+      "species": "beef",
+      "cut": "heart",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13324",
+      "foodLabel": "소고기 신장",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Beef, variety meats and by-products, kidneys. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 53,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A64:L64",
+      "sourceNdb": "13324",
+      "sourceDescription": "Beef, variety meats and by-products, kidneys",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 신장",
+        "Beef, variety meats and by-products, kidneys"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 신장",
+        "소고기 콩팥"
+      ],
+      "species": "beef",
+      "cut": "kidney",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13326",
+      "foodLabel": "소고기 간",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Beef, variety meats and by-products, liver. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 68,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A65:L65",
+      "sourceNdb": "13326",
+      "sourceDescription": "Beef, variety meats and by-products, liver",
+      "sourceMethod": "Braised",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 간",
+        "Beef, variety meats and by-products, liver"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 간"
+      ],
+      "species": "beef",
+      "cut": "liver",
+      "methodKey": "braise",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-13327",
+      "foodLabel": "소고기 간",
+      "methodLabel": "팬에 지지기",
+      "conditions": "원문 식품: Beef, variety meats and by-products, liver. 조리법: Pan-fried or Sauteed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 73,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A66:L66",
+      "sourceNdb": "13327",
+      "sourceDescription": "Beef, variety meats and by-products, liver",
+      "sourceMethod": "Pan-fried or Sauteed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 간",
+        "Beef, variety meats and by-products, liver"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 간"
+      ],
+      "species": "beef",
+      "cut": "liver",
+      "methodKey": "pan_fry",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-23640",
+      "foodLabel": "소고기 위",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Beef, variety meats and by-products, tripe. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 70,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A67:L67",
+      "sourceNdb": "23640",
+      "sourceDescription": "Beef, variety meats and by-products, tripe",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "소고기 위",
+        "Beef, variety meats and by-products, tripe"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "소고기 위",
+        "소고기 양"
+      ],
+      "species": "beef",
+      "cut": "tripe",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05051",
+      "foodLabel": "닭고기 등 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Chicken, broiler-fryer, back, full, meat and skin. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 61,
+      "minPercent": 49,
+      "maxPercent": 71,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A68:L68",
+      "sourceNdb": "05051",
+      "sourceDescription": "Chicken, broiler-fryer, back, full, meat and skin",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭고기 등 (껍질 포함)",
+        "Chicken, broiler-fryer, back, full, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 등",
+        "닭고기 부위"
+      ],
+      "species": "chicken",
+      "cut": "back",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05052",
+      "foodLabel": "닭고기 등 (껍질 포함)",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Chicken, broiler-fryer, back, full, meat and skin. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 67,
+      "minPercent": 58,
+      "maxPercent": 79,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A69:L69",
+      "sourceNdb": "05052",
+      "sourceDescription": "Chicken, broiler-fryer, back, full, meat and skin",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭고기 등 (껍질 포함)",
+        "Chicken, broiler-fryer, back, full, meat and skin"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 등",
+        "닭고기 부위"
+      ],
+      "species": "chicken",
+      "cut": "back",
+      "methodKey": "simmer",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05060",
@@ -301,7 +2727,15 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "breast",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05061",
@@ -330,7 +2764,15 @@
         "시머링"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "breast",
+      "methodKey": "simmer",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05069",
@@ -364,7 +2806,53 @@
       "foodCodes": [
         "R209-008006301-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "drumstick",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05087",
+      "foodLabel": "닭고기 목 (껍질 포함)",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Chicken, broiler-fryer, neck, meat and skin. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 70,
+      "minPercent": 62,
+      "maxPercent": 81,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A73:L73",
+      "sourceNdb": "05087",
+      "sourceDescription": "Chicken, broiler-fryer, neck, meat and skin",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭고기 목 (껍질 포함)",
+        "Chicken, broiler-fryer, neck, meat and skin"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 목"
+      ],
+      "species": "chicken",
+      "cut": "neck",
+      "methodKey": "simmer",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05094",
@@ -397,7 +2885,15 @@
       "foodCodes": [
         "R209-008000701-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "thigh",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05095",
@@ -428,7 +2924,95 @@
       "foodCodes": [
         "R209-008000701-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "thigh",
+      "methodKey": "simmer",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05004",
+      "foodLabel": "닭고기 전체 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Chicken, broiler-fryer, whole, including skin. 조리법: Baked or Roasted, specified time. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 78,
+      "minPercent": 68,
+      "maxPercent": 84,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A76:L76",
+      "sourceNdb": "05004",
+      "sourceDescription": "Chicken, broiler-fryer, whole, including skin",
+      "sourceMethod": "Baked or Roasted, specified time",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭고기 전체 (껍질 포함)",
+        "Chicken, broiler-fryer, whole, including skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 전체",
+        "닭고기 통째"
+      ],
+      "species": "chicken",
+      "cut": "whole",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05010",
+      "foodLabel": "닭고기 전체 (껍질 포함)",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Chicken, broiler-fryer, whole, including skin. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 75,
+      "minPercent": 69,
+      "maxPercent": 87,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A77:L77",
+      "sourceNdb": "05010",
+      "sourceDescription": "Chicken, broiler-fryer, whole, including skin",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭고기 전체 (껍질 포함)",
+        "Chicken, broiler-fryer, whole, including skin"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 전체",
+        "닭고기 통째"
+      ],
+      "species": "chicken",
+      "cut": "whole",
+      "methodKey": "simmer",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05104",
@@ -459,7 +3043,54 @@
       "foodCodes": [
         "R209-008000601-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "wing",
+      "methodKey": "simmer",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05102",
+      "foodLabel": "닭고기 날개 (껍질 포함, 가루옷)",
+      "methodLabel": "기름에 튀기기",
+      "conditions": "원문 식품: Chicken, broiler-fryer, wing, meat and skin, floured. 조리법: Fried in deep fat. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 66,
+      "minPercent": 53,
+      "maxPercent": 78,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A79:L79",
+      "sourceNdb": "05102",
+      "sourceDescription": "Chicken, broiler-fryer, wing, meat and skin, floured",
+      "sourceMethod": "Fried in deep fat",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "닭고기 날개 (껍질 포함, 가루옷)",
+        "Chicken, broiler-fryer, wing, meat and skin, floured"
+      ],
+      "methodAliases": [
+        "튀기기",
+        "튀김",
+        "튀긴것",
+        "딥프라이"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 날개"
+      ],
+      "species": "chicken",
+      "cut": "wing",
+      "methodKey": "deep_fry",
+      "preparationTags": [
+        "skin_on",
+        "floured"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05676",
@@ -490,7 +3121,15 @@
       "foodCodes": [
         "R209-008006301-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "drumstick",
+      "methodKey": "braise",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05677",
@@ -520,7 +3159,15 @@
       "foodCodes": [
         "R209-008000701-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "thigh",
+      "methodKey": "braise",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-05103",
@@ -553,7 +3200,1826 @@
       "foodCodes": [
         "R209-008000601-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "chicken",
+      "cut": "wing",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05687",
+      "foodLabel": "닭고기 아랫다리 (껍질 포함, 용액 첨가 처리)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Chicken, drumstick, meat and skin, enhanced. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 74,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A83:L83",
+      "sourceNdb": "05687",
+      "sourceDescription": "Chicken, drumstick, meat and skin, enhanced",
+      "sourceMethod": "Braised",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "닭고기 아랫다리 (껍질 포함, 용액 첨가 처리)",
+        "Chicken, drumstick, meat and skin, enhanced"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 아랫다리",
+        "닭고기 북채"
+      ],
+      "species": "chicken",
+      "cut": "drumstick",
+      "methodKey": "braise",
+      "preparationTags": [
+        "skin_on",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05689",
+      "foodLabel": "닭고기 아랫다리 (껍질 포함, 용액 첨가 처리)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Chicken, dark meat, drumstick, meat and skin, enhanced. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A84:L84",
+      "sourceNdb": "05689",
+      "sourceDescription": "Chicken, dark meat, drumstick, meat and skin, enhanced",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "닭고기 아랫다리 (껍질 포함, 용액 첨가 처리)",
+        "Chicken, dark meat, drumstick, meat and skin, enhanced"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 아랫다리",
+        "닭고기 북채"
+      ],
+      "species": "chicken",
+      "cut": "drumstick",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05690",
+      "foodLabel": "닭고기 넓적다리 (껍질 포함, 용액 첨가 처리)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Chicken, thigh, meat and skin, enhanced. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 72,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A85:L85",
+      "sourceNdb": "05690",
+      "sourceDescription": "Chicken, thigh, meat and skin, enhanced",
+      "sourceMethod": "Braised",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "닭고기 넓적다리 (껍질 포함, 용액 첨가 처리)",
+        "Chicken, thigh, meat and skin, enhanced"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 넓적다리",
+        "닭고기 허벅지",
+        "닭고기 다리살"
+      ],
+      "species": "chicken",
+      "cut": "thigh",
+      "methodKey": "braise",
+      "preparationTags": [
+        "skin_on",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05692",
+      "foodLabel": "닭고기 넓적다리 (껍질 포함, 용액 첨가 처리)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Chicken, thigh, meat and skin, enhanced. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 67,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A86:L86",
+      "sourceNdb": "05692",
+      "sourceDescription": "Chicken, thigh, meat and skin, enhanced",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "닭고기 넓적다리 (껍질 포함, 용액 첨가 처리)",
+        "Chicken, thigh, meat and skin, enhanced"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 넓적다리",
+        "닭고기 허벅지",
+        "닭고기 다리살"
+      ],
+      "species": "chicken",
+      "cut": "thigh",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05024",
+      "foodLabel": "닭고기 모래주머니",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Chicken, gizzard, all classes. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 55,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A87:L87",
+      "sourceNdb": "05024",
+      "sourceDescription": "Chicken, gizzard, all classes",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "닭고기 모래주머니",
+        "Chicken, gizzard, all classes"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 모래주머니",
+        "닭고기 근위",
+        "닭고기 닭똥집"
+      ],
+      "species": "chicken",
+      "cut": "gizzard",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05661",
+      "foodLabel": "닭고기 간",
+      "methodLabel": "팬에 지지기",
+      "conditions": "원문 식품: Chicken, liver, all classes. 조리법: Pan-fried or Sauteed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 62,
+      "minPercent": 61.14,
+      "maxPercent": 63.83,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A88:L88",
+      "sourceNdb": "05661",
+      "sourceDescription": "Chicken, liver, all classes",
+      "sourceMethod": "Pan-fried or Sauteed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "닭고기 간",
+        "Chicken, liver, all classes"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "닭고기 간"
+      ],
+      "species": "chicken",
+      "cut": "liver",
+      "methodKey": "pan_fry",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05622",
+      "foodLabel": "에뮤 다짐육",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Emu, ground. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": 70.79,
+      "maxPercent": 85.67,
+      "sampleCount": 6,
+      "sourceRow": "Sheet1!A89:L89",
+      "sourceNdb": "05622",
+      "sourceDescription": "Emu, ground",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2001,
+      "foodAliases": [
+        "에뮤 다짐육",
+        "Emu, ground"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "에뮤 다짐육",
+        "에뮤 분쇄육"
+      ],
+      "species": "emu",
+      "cut": "ground",
+      "methodKey": "grill",
+      "preparationTags": [
+        "ground"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-17331",
+      "foodLabel": "들소 다짐육",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Game meat, bison, ground. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 75.56,
+      "maxPercent": 78.86,
+      "sampleCount": 6,
+      "sourceRow": "Sheet1!A90:L90",
+      "sourceNdb": "17331",
+      "sourceDescription": "Game meat, bison, ground",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2001,
+      "foodAliases": [
+        "들소 다짐육",
+        "Game meat, bison, ground"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "들소 다짐육",
+        "들소 분쇄육"
+      ],
+      "species": "bison",
+      "cut": "ground",
+      "methodKey": "grill",
+      "preparationTags": [
+        "ground"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-17344",
+      "foodLabel": "사슴고기 다짐육",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Game meat, deer, ground. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 83,
+      "minPercent": 81.22,
+      "maxPercent": 84.87,
+      "sampleCount": 3,
+      "sourceRow": "Sheet1!A91:L91",
+      "sourceNdb": "17344",
+      "sourceDescription": "Game meat, deer, ground",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2001,
+      "foodAliases": [
+        "사슴고기 다짐육",
+        "Game meat, deer, ground"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "사슴고기 다짐육",
+        "사슴고기 분쇄육"
+      ],
+      "species": "deer",
+      "cut": "ground",
+      "methodKey": "grill",
+      "preparationTags": [
+        "ground"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-17339",
+      "foodLabel": "엘크 다짐육",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Game meat, elk, ground. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 84,
+      "minPercent": 80.05,
+      "maxPercent": 88.91,
+      "sampleCount": 5,
+      "sourceRow": "Sheet1!A92:L92",
+      "sourceNdb": "17339",
+      "sourceDescription": "Game meat, elk, ground",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2001,
+      "foodAliases": [
+        "엘크 다짐육",
+        "Game meat, elk, ground"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "엘크 다짐육",
+        "엘크 분쇄육"
+      ],
+      "species": "elk",
+      "cut": "ground",
+      "methodKey": "grill",
+      "preparationTags": [
+        "ground"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-row-093",
+      "foodLabel": "양고기 부위 (여러 시료 합산)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Lamb, retail cuts, roasts, all samples. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 74,
+      "minPercent": 53,
+      "maxPercent": 88,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A93:L93",
+      "sourceNdb": null,
+      "sourceDescription": "Lamb, retail cuts, roasts, all samples",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "양고기 부위 (여러 시료 합산)",
+        "Lamb, retail cuts, roasts, all samples"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "양고기 부위",
+        "양고기 원문",
+        "양고기 확인"
+      ],
+      "species": "lamb",
+      "cut": "unknown",
+      "methodKey": "roast",
+      "preparationTags": [],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-row-094",
+      "foodLabel": "양고기 부위 (여러 시료 합산)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Lamb, retail cuts, shoulder, shank, breast, flank. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 60,
+      "minPercent": 54,
+      "maxPercent": 72,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A94:L94",
+      "sourceNdb": null,
+      "sourceDescription": "Lamb, retail cuts, shoulder, shank, breast, flank",
+      "sourceMethod": "Braised",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "양고기 부위 (여러 시료 합산)",
+        "Lamb, retail cuts, shoulder, shank, breast, flank"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "양고기 부위",
+        "양고기 원문",
+        "양고기 확인"
+      ],
+      "species": "lamb",
+      "cut": "unknown",
+      "methodKey": "braise",
+      "preparationTags": [],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-row-095",
+      "foodLabel": "양고기 부위 (여러 시료 합산)",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Lamb, retail cuts, shoulder, shank, breast, flank. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요. 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 60,
+      "minPercent": 54,
+      "maxPercent": 72,
+      "sampleCount": null,
+      "sourceRow": "Sheet1!A95:L95",
+      "sourceNdb": null,
+      "sourceDescription": "Lamb, retail cuts, shoulder, shank, breast, flank",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "양고기 부위 (여러 시료 합산)",
+        "Lamb, retail cuts, shoulder, shank, breast, flank"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "양고기 부위",
+        "양고기 원문",
+        "양고기 확인"
+      ],
+      "species": "lamb",
+      "cut": "unknown",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": true
+    },
+    {
+      "id": "usda-r2-05642",
+      "foodLabel": "타조 다짐육",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Ostrich, ground. 조리법: Broiled or grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 86,
+      "minPercent": 81,
+      "maxPercent": 88,
+      "sampleCount": 6,
+      "sourceRow": "Sheet1!A96:L96",
+      "sourceNdb": "05642",
+      "sourceDescription": "Ostrich, ground",
+      "sourceMethod": "Broiled or grilled",
+      "sourceYear": 2001,
+      "foodAliases": [
+        "타조 다짐육",
+        "Ostrich, ground"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "타조 다짐육",
+        "타조 분쇄육"
+      ],
+      "species": "ostrich",
+      "cut": "ground",
+      "methodKey": "grill",
+      "preparationTags": [
+        "ground"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10193",
+      "foodLabel": "돼지고기 갈비 (뼈 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork loin, fresh, backribs, bone-in, separable lean and fat. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": 74,
+      "maxPercent": 90,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A97:L97",
+      "sourceNdb": "10193",
+      "sourceDescription": "Pork loin, fresh, backribs, bone-in, separable lean and fat",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 갈비 (뼈 포함)",
+        "Pork loin, fresh, backribs, bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 갈비"
+      ],
+      "species": "pork",
+      "cut": "ribs",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-07064",
+      "foodLabel": "돼지고기 소시지",
+      "methodLabel": "팬에 지지기",
+      "conditions": "원문 식품: Pork sausage, fresh. 조리법: Pan-fried. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A98:L98",
+      "sourceNdb": "07064",
+      "sourceDescription": "Pork sausage, fresh",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2012,
+      "foodAliases": [
+        "돼지고기 소시지",
+        "Pork sausage, fresh"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 소시지"
+      ],
+      "species": "pork",
+      "cut": "sausage",
+      "methodKey": "pan_fry",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10860",
+      "foodLabel": "돼지고기 베이컨 (염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, bacon. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 32,
+      "minPercent": 30.53,
+      "maxPercent": 32.57,
+      "sampleCount": 3,
+      "sourceRow": "Sheet1!A99:L99",
+      "sourceNdb": "10860",
+      "sourceDescription": "Pork, cured, bacon",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "돼지고기 베이컨 (염지)",
+        "Pork, cured, bacon"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 베이컨"
+      ],
+      "species": "pork",
+      "cut": "bacon",
+      "methodKey": "roast",
+      "preparationTags": [
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10861",
+      "foodLabel": "돼지고기 베이컨 (염지)",
+      "methodLabel": "전자레인지 조리",
+      "conditions": "원문 식품: Pork, cured, bacon. 조리법: Microwaved. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 29,
+      "minPercent": 28.89,
+      "maxPercent": 30.13,
+      "sampleCount": 3,
+      "sourceRow": "Sheet1!A100:L100",
+      "sourceNdb": "10861",
+      "sourceDescription": "Pork, cured, bacon",
+      "sourceMethod": "Microwaved",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "돼지고기 베이컨 (염지)",
+        "Pork, cured, bacon"
+      ],
+      "methodAliases": [
+        "전자레인지",
+        "전자레인지 조리",
+        "마이크로웨이브"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 베이컨"
+      ],
+      "species": "pork",
+      "cut": "bacon",
+      "methodKey": "microwave",
+      "preparationTags": [
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10862",
+      "foodLabel": "돼지고기 베이컨 (염지)",
+      "methodLabel": "팬에 지지기",
+      "conditions": "원문 식품: Pork, cured, bacon. 조리법: Pan-fried. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 32,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A101:L101",
+      "sourceNdb": "10862",
+      "sourceDescription": "Pork, cured, bacon",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2012,
+      "foodAliases": [
+        "돼지고기 베이컨 (염지)",
+        "Pork, cured, bacon"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 베이컨"
+      ],
+      "species": "pork",
+      "cut": "bacon",
+      "methodKey": "pan_fry",
+      "preparationTags": [
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10865",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham -- water added, rump, bone-in. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 87,
+      "minPercent": 79.93,
+      "maxPercent": 91.81,
+      "sampleCount": 5,
+      "sourceRow": "Sheet1!A102:L102",
+      "sourceNdb": "10865",
+      "sourceDescription": "Pork, cured, ham -- water added, rump, bone-in",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham -- water added, rump, bone-in"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "cured",
+        "water_added"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10877",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham and water product, rump, bone-in. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 85,
+      "minPercent": 79.95,
+      "maxPercent": 89.74,
+      "sampleCount": 5,
+      "sourceRow": "Sheet1!A103:L103",
+      "sourceNdb": "10877",
+      "sourceDescription": "Pork, cured, ham and water product, rump, bone-in",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham and water product, rump, bone-in"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "cured",
+        "water_added"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10881",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham and water product, shank, bone-in. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": 73.51,
+      "maxPercent": 91.98,
+      "sampleCount": 6,
+      "sourceRow": "Sheet1!A104:L104",
+      "sourceNdb": "10881",
+      "sourceDescription": "Pork, cured, ham and water product, shank, bone-in",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham and water product, shank, bone-in"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "cured",
+        "water_added"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10869",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "원문 식품: Pork, cured, ham and water product, slice, bone-in. 조리법: Pan-broiled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 81,
+      "minPercent": 75.89,
+      "maxPercent": 86.73,
+      "sampleCount": 5,
+      "sourceRow": "Sheet1!A105:L105",
+      "sourceNdb": "10869",
+      "sourceDescription": "Pork, cured, ham and water product, slice, bone-in",
+      "sourceMethod": "Pan-broiled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham and water product, slice, bone-in"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "bone_in",
+        "cured",
+        "water_added"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10871",
+      "foodLabel": "돼지고기 햄 (뼈 제거, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham and water product, whole, boneless. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 96,
+      "minPercent": 92.73,
+      "maxPercent": 97.98,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A106:L106",
+      "sourceNdb": "10871",
+      "sourceDescription": "Pork, cured, ham and water product, whole, boneless",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 제거, 염지)",
+        "Pork, cured, ham and water product, whole, boneless"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_out",
+        "cured",
+        "water_added"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10873",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham with natural juices, rump, bone-in. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 87,
+      "minPercent": 81.11,
+      "maxPercent": 96.81,
+      "sampleCount": 7,
+      "sourceRow": "Sheet1!A107:L107",
+      "sourceNdb": "10873",
+      "sourceDescription": "Pork, cured, ham with natural juices, rump, bone-in",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham with natural juices, rump, bone-in"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10874",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham with natural juices, shank, bone-in. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 93,
+      "minPercent": 88.43,
+      "maxPercent": 98.26,
+      "sampleCount": 7,
+      "sourceRow": "Sheet1!A108:L108",
+      "sourceNdb": "10874",
+      "sourceDescription": "Pork, cured, ham with natural juices, shank, bone-in",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham with natural juices, shank, bone-in"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10875",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "원문 식품: Pork, cured, ham with natural juices, slice, bone-in. 조리법: Pan-broiled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 86,
+      "minPercent": 85.78,
+      "maxPercent": 86.36,
+      "sampleCount": 2,
+      "sourceRow": "Sheet1!A109:L109",
+      "sourceNdb": "10875",
+      "sourceDescription": "Pork, cured, ham with natural juices, slice, bone-in",
+      "sourceMethod": "Pan-broiled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham with natural juices, slice, bone-in"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "bone_in",
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10876",
+      "foodLabel": "돼지고기 햄 (염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham with natural juices, spiral slice. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 87,
+      "minPercent": 78.65,
+      "maxPercent": 93,
+      "sampleCount": 3,
+      "sourceRow": "Sheet1!A110:L110",
+      "sourceNdb": "10876",
+      "sourceDescription": "Pork, cured, ham with natural juices, spiral slice",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (염지)",
+        "Pork, cured, ham with natural juices, spiral slice"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10883",
+      "foodLabel": "돼지고기 햄 (뼈 제거, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham with natural juices, whole, boneless. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 94,
+      "minPercent": 91.22,
+      "maxPercent": 95.54,
+      "sampleCount": 9,
+      "sourceRow": "Sheet1!A111:L111",
+      "sourceNdb": "10883",
+      "sourceDescription": "Pork, cured, ham with natural juices, whole, boneless",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 제거, 염지)",
+        "Pork, cured, ham with natural juices, whole, boneless"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_out",
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10931",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham, rump, bone-in. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 90,
+      "minPercent": 88.85,
+      "maxPercent": 91.39,
+      "sampleCount": 3,
+      "sourceRow": "Sheet1!A112:L112",
+      "sourceNdb": "10931",
+      "sourceDescription": "Pork, cured, ham, rump, bone-in",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham, rump, bone-in"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10933",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham, shank, bone-in. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 92,
+      "minPercent": 90.25,
+      "maxPercent": 93.35,
+      "sampleCount": 3,
+      "sourceRow": "Sheet1!A113:L113",
+      "sourceNdb": "10933",
+      "sourceDescription": "Pork, cured, ham, shank, bone-in",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham, shank, bone-in"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10899",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "원문 식품: Pork, cured, ham, slice, bone-in. 조리법: Pan-broiled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 86,
+      "minPercent": 83.13,
+      "maxPercent": 88.15,
+      "sampleCount": 3,
+      "sourceRow": "Sheet1!A114:L114",
+      "sourceNdb": "10899",
+      "sourceDescription": "Pork, cured, ham, slice, bone-in",
+      "sourceMethod": "Pan-broiled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham, slice, bone-in"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "bone_in",
+        "cured"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10867",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham--water added, shank, bone-in. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 86,
+      "minPercent": 75.81,
+      "maxPercent": 92.68,
+      "sampleCount": 6,
+      "sourceRow": "Sheet1!A115:L115",
+      "sourceNdb": "10867",
+      "sourceDescription": "Pork, cured, ham--water added, shank, bone-in",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham--water added, shank, bone-in"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "cured",
+        "water_added"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10868",
+      "foodLabel": "돼지고기 햄 (뼈 포함, 염지)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "원문 식품: Pork, cured, ham--water added, slice, bone-in. 조리법: Pan-broiled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": 76.21,
+      "maxPercent": 90.93,
+      "sampleCount": 7,
+      "sourceRow": "Sheet1!A116:L116",
+      "sourceNdb": "10868",
+      "sourceDescription": "Pork, cured, ham--water added, slice, bone-in",
+      "sourceMethod": "Pan-broiled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 포함, 염지)",
+        "Pork, cured, ham--water added, slice, bone-in"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "bone_in",
+        "cured",
+        "water_added"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10879",
+      "foodLabel": "돼지고기 햄 (뼈 제거, 염지)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, cured, ham--water added, whole, boneless. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 94,
+      "minPercent": 83.12,
+      "maxPercent": 97.84,
+      "sampleCount": 10,
+      "sourceRow": "Sheet1!A117:L117",
+      "sourceNdb": "10879",
+      "sourceDescription": "Pork, cured, ham--water added, whole, boneless",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 햄 (뼈 제거, 염지)",
+        "Pork, cured, ham--water added, whole, boneless"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 햄"
+      ],
+      "species": "pork",
+      "cut": "ham",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_out",
+        "cured",
+        "water_added"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10988",
+      "foodLabel": "돼지고기 어깨 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Pork, fresh, blade, (chops), boneless, separable lean and fat. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 85,
+      "minPercent": 78,
+      "maxPercent": 90,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A118:L118",
+      "sourceNdb": "10988",
+      "sourceDescription": "Pork, fresh, blade, (chops), boneless, separable lean and fat",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 어깨 (뼈 제거)",
+        "Pork, fresh, blade, (chops), boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10950",
+      "foodLabel": "돼지고기 등심 (뼈 제거, 용액 첨가 처리)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Pork, fresh, enhanced, loin, top loin (chops), boneless, separable lean and fat. 조리법: Broiled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A119:L119",
+      "sourceNdb": "10950",
+      "sourceDescription": "Pork, fresh, enhanced, loin, top loin (chops), boneless, separable lean and fat",
+      "sourceMethod": "Broiled",
+      "sourceYear": 2014,
+      "foodAliases": [
+        "돼지고기 등심 (뼈 제거, 용액 첨가 처리)",
+        "Pork, fresh, enhanced, loin, top loin (chops), boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 등심",
+        "돼지고기 로인"
+      ],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10013",
+      "foodLabel": "돼지고기 다리",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, leg (ham), rump half, separable lean and fat. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 70,
+      "maxPercent": 80,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A120:L120",
+      "sourceNdb": "10013",
+      "sourceDescription": "Pork, fresh, leg (ham), rump half, separable lean and fat",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 다리",
+        "Pork, fresh, leg (ham), rump half, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 다리"
+      ],
+      "species": "pork",
+      "cut": "leg",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10017",
+      "foodLabel": "돼지고기 다리",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, leg (ham), shank half, separable lean and fat. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 79,
+      "minPercent": 68.5,
+      "maxPercent": 82,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A121:L121",
+      "sourceNdb": "10017",
+      "sourceDescription": "Pork, fresh, leg (ham), shank half, separable lean and fat",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 다리",
+        "Pork, fresh, leg (ham), shank half, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 다리"
+      ],
+      "species": "pork",
+      "cut": "leg",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10962",
+      "foodLabel": "돼지고기 설로인 (뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Pork, fresh, leg sirloin tip roast, boneless, separable lean and fat. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 79,
+      "minPercent": 72.09,
+      "maxPercent": 82.12,
+      "sampleCount": 4,
+      "sourceRow": "Sheet1!A122:L122",
+      "sourceNdb": "10962",
+      "sourceDescription": "Pork, fresh, leg sirloin tip roast, boneless, separable lean and fat",
+      "sourceMethod": "Braised",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 설로인 (뼈 제거)",
+        "Pork, fresh, leg sirloin tip roast, boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 설로인"
+      ],
+      "species": "pork",
+      "cut": "sirloin",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10029",
+      "foodLabel": "돼지고기 어깨 (뼈 포함)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Pork, fresh, loin, blade (chops), bone-in, separable lean and fat. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 78,
+      "minPercent": 65,
+      "maxPercent": 93,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A123:L123",
+      "sourceNdb": "10029",
+      "sourceDescription": "Pork, fresh, loin, blade (chops), bone-in, separable lean and fat",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 어깨 (뼈 포함)",
+        "Pork, fresh, loin, blade (chops), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10030",
+      "foodLabel": "돼지고기 어깨 (뼈 포함)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Pork, fresh, loin, blade (chops), bone-in, separable lean and fat. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 83,
+      "minPercent": 78,
+      "maxPercent": 90,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A124:L124",
+      "sourceNdb": "10030",
+      "sourceDescription": "Pork, fresh, loin, blade (chops), bone-in, separable lean and fat",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 어깨 (뼈 포함)",
+        "Pork, fresh, loin, blade (chops), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10178",
+      "foodLabel": "돼지고기 어깨 (뼈 포함)",
+      "methodLabel": "팬에 지지기",
+      "conditions": "원문 식품: Pork, fresh, loin, blade (chops), bone-in, separable lean and fat. 조리법: Pan-fried. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": 68,
+      "maxPercent": 97,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A125:L125",
+      "sourceNdb": "10178",
+      "sourceDescription": "Pork, fresh, loin, blade (chops), bone-in, separable lean and fat",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 어깨 (뼈 포함)",
+        "Pork, fresh, loin, blade (chops), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "pan_fry",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10031",
+      "foodLabel": "돼지고기 어깨 (뼈 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, loin, blade (roasts), bone-in, separable lean and fat. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 68,
+      "maxPercent": 88,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A126:L126",
+      "sourceNdb": "10031",
+      "sourceDescription": "Pork, fresh, loin, blade (roasts), bone-in, separable lean and fat",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 어깨 (뼈 포함)",
+        "Pork, fresh, loin, blade (roasts), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10990",
+      "foodLabel": "돼지고기 어깨 (뼈 제거)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, loin, blade (roasts), boneless, separable lean and fat. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 75,
+      "minPercent": 68,
+      "maxPercent": 88,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A127:L127",
+      "sourceNdb": "10990",
+      "sourceDescription": "Pork, fresh, loin, blade (roasts), boneless, separable lean and fat",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 어깨 (뼈 제거)",
+        "Pork, fresh, loin, blade (roasts), boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10037",
@@ -584,7 +5050,16 @@
       "foodCodes": [
         "R209-014008301-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10179",
@@ -617,7 +5092,455 @@
       "foodCodes": [
         "R209-014008301-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "pan_fry",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10189",
+      "foodLabel": "돼지고기 등심 (뼈 제거)",
+      "methodLabel": "기름 없는 팬구이",
+      "conditions": "원문 식품: Pork, fresh, loin, center loin (chops), boneless, separable lean and fat. 조리법: Pan broiled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A130:L130",
+      "sourceNdb": "10189",
+      "sourceDescription": "Pork, fresh, loin, center loin (chops), boneless, separable lean and fat",
+      "sourceMethod": "Pan broiled",
+      "sourceYear": 2014,
+      "foodAliases": [
+        "돼지고기 등심 (뼈 제거)",
+        "Pork, fresh, loin, center loin (chops), boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "기름 없는 팬구이",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 등심",
+        "돼지고기 로인"
+      ],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10039",
+      "foodLabel": "돼지고기 등심 (뼈 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, loin, center loin (roasts), bone-in, separable lean and fat. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 63,
+      "maxPercent": 88,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A131:L131",
+      "sourceNdb": "10039",
+      "sourceDescription": "Pork, fresh, loin, center loin (roasts), bone-in, separable lean and fat",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 등심 (뼈 포함)",
+        "Pork, fresh, loin, center loin (roasts), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 등심",
+        "돼지고기 로인"
+      ],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10045",
+      "foodLabel": "돼지고기 등심 (뼈 포함)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Pork, fresh, loin, center rib (chops), bone-in, separable lean and fat. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 68,
+      "maxPercent": 89,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A132:L132",
+      "sourceNdb": "10045",
+      "sourceDescription": "Pork, fresh, loin, center rib (chops), bone-in, separable lean and fat",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 등심 (뼈 포함)",
+        "Pork, fresh, loin, center rib (chops), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 등심",
+        "돼지고기 로인"
+      ],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10180",
+      "foodLabel": "돼지고기 등심 (뼈 포함)",
+      "methodLabel": "팬에 지지기",
+      "conditions": "원문 식품: Pork, fresh, loin, center rib (chops), bone-in, separable lean and fat. 조리법: Pan-fried. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 68,
+      "maxPercent": 87,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A133:L133",
+      "sourceNdb": "10180",
+      "sourceDescription": "Pork, fresh, loin, center rib (chops), bone-in, separable lean and fat",
+      "sourceMethod": "Pan-fried",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 등심 (뼈 포함)",
+        "Pork, fresh, loin, center rib (chops), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 등심",
+        "돼지고기 로인"
+      ],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "pan_fry",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10047",
+      "foodLabel": "돼지고기 등심 (뼈 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, loin, center rib (roasts), bone-in, separable lean and fat. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 75,
+      "minPercent": 65,
+      "maxPercent": 84,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A134:L134",
+      "sourceNdb": "10047",
+      "sourceDescription": "Pork, fresh, loin, center rib (roasts), bone-in, separable lean and fat",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 등심 (뼈 포함)",
+        "Pork, fresh, loin, center rib (roasts), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 등심",
+        "돼지고기 로인"
+      ],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "roast",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10956",
+      "foodLabel": "돼지고기 다리 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Pork, fresh, loin, leg cap steak, boneless, separable lean and fat. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 81,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A135:L135",
+      "sourceNdb": "10956",
+      "sourceDescription": "Pork, fresh, loin, leg cap steak, boneless, separable lean and fat",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 다리 (뼈 제거)",
+        "Pork, fresh, loin, leg cap steak, boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 다리"
+      ],
+      "species": "pork",
+      "cut": "leg",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10053",
+      "foodLabel": "돼지고기 설로인 (뼈 포함)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Pork, fresh, loin, sirloin (chops), bone-in, separable lean and fat. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 73,
+      "minPercent": 68,
+      "maxPercent": 79,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A136:L136",
+      "sourceNdb": "10053",
+      "sourceDescription": "Pork, fresh, loin, sirloin (chops), bone-in, separable lean and fat",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 설로인 (뼈 포함)",
+        "Pork, fresh, loin, sirloin (chops), bone-in, separable lean and fat"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 설로인"
+      ],
+      "species": "pork",
+      "cut": "sirloin",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_in",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10211",
+      "foodLabel": "돼지고기 설로인 (뼈 제거)",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Pork, fresh, loin, sirloin (chops), boneless, separable lean and fat. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76,
+      "minPercent": 61,
+      "maxPercent": 87,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A137:L137",
+      "sourceNdb": "10211",
+      "sourceDescription": "Pork, fresh, loin, sirloin (chops), boneless, separable lean and fat",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 설로인 (뼈 제거)",
+        "Pork, fresh, loin, sirloin (chops), boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 설로인"
+      ],
+      "species": "pork",
+      "cut": "sirloin",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10212",
+      "foodLabel": "돼지고기 설로인 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Pork, fresh, loin, sirloin (chops), boneless, separable lean and fat. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 79,
+      "minPercent": 73,
+      "maxPercent": 94,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A138:L138",
+      "sourceNdb": "10212",
+      "sourceDescription": "Pork, fresh, loin, sirloin (chops), boneless, separable lean and fat",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 설로인 (뼈 제거)",
+        "Pork, fresh, loin, sirloin (chops), boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 설로인"
+      ],
+      "species": "pork",
+      "cut": "sirloin",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10218",
+      "foodLabel": "돼지고기 안심",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, loin, tenderloin, separable lean and fat. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A139:L139",
+      "sourceNdb": "10218",
+      "sourceDescription": "Pork, fresh, loin, tenderloin, separable lean and fat",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 안심",
+        "Pork, fresh, loin, tenderloin, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 안심"
+      ],
+      "species": "pork",
+      "cut": "tenderloin",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10061",
+      "foodLabel": "돼지고기 안심",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, loin, tenderloin, separable lean only. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": 74,
+      "maxPercent": 84,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A140:L140",
+      "sourceNdb": "10061",
+      "sourceDescription": "Pork, fresh, loin, tenderloin, separable lean only",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 안심",
+        "Pork, fresh, loin, tenderloin, separable lean only"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 안심"
+      ],
+      "species": "pork",
+      "cut": "tenderloin",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_only"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10063",
@@ -648,7 +5571,16 @@
       "foodCodes": [
         "R209-014008301-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "braise",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10186",
@@ -681,7 +5613,287 @@
       "foodCodes": [
         "R209-014008301-0000"
       ],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "loin",
+      "methodKey": "pan_fry",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10959",
+      "foodLabel": "돼지고기 어깨 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Pork, fresh, shoulder breast, boneless, separable lean and fat. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 80,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A143:L143",
+      "sourceNdb": "10959",
+      "sourceDescription": "Pork, fresh, shoulder breast, boneless, separable lean and fat",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 어깨 (뼈 제거)",
+        "Pork, fresh, shoulder breast, boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10075",
+      "foodLabel": "돼지고기 어깨",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Pork, fresh, shoulder, arm picnic, separable lean and fat. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 74,
+      "minPercent": 70,
+      "maxPercent": 78,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A144:L144",
+      "sourceNdb": "10075",
+      "sourceDescription": "Pork, fresh, shoulder, arm picnic, separable lean and fat",
+      "sourceMethod": "Braised",
+      "sourceYear": 2011,
+      "foodAliases": [
+        "돼지고기 어깨",
+        "Pork, fresh, shoulder, arm picnic, separable lean and fat"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "braise",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10960",
+      "foodLabel": "돼지고기 어깨 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Pork, fresh, shoulder, petite tender, boneless, separable lean and fat. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 82,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A145:L145",
+      "sourceNdb": "10960",
+      "sourceDescription": "Pork, fresh, shoulder, petite tender, boneless, separable lean and fat",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 어깨 (뼈 제거)",
+        "Pork, fresh, shoulder, petite tender, boneless, separable lean and fat"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 어깨",
+        "돼지고기 앞다리",
+        "돼지고기 척"
+      ],
+      "species": "pork",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out",
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10940",
+      "foodLabel": "돼지고기 갈비",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Pork, fresh, spareribs, separable lean and fat. 조리법: Baked or Roasted, unspecified. 미국식 부위와 손질 상태를 확인하세요. 원표에는 세부 조리 조건이 기재되어 있지 않습니다.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76,
+      "minPercent": 68,
+      "maxPercent": 79,
+      "sampleCount": 12,
+      "sourceRow": "Sheet1!A146:L146",
+      "sourceNdb": "10940",
+      "sourceDescription": "Pork, fresh, spareribs, separable lean and fat",
+      "sourceMethod": "Baked or Roasted, unspecified",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 갈비",
+        "Pork, fresh, spareribs, separable lean and fat"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 갈비"
+      ],
+      "species": "pork",
+      "cut": "ribs",
+      "methodKey": "roast",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10099",
+      "foodLabel": "돼지고기 내장",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Pork, fresh, variety meats and by-products, chitterlings. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 39,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A147:L147",
+      "sourceNdb": "10099",
+      "sourceDescription": "Pork, fresh, variety meats and by-products, chitterlings",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2009,
+      "foodAliases": [
+        "돼지고기 내장",
+        "Pork, fresh, variety meats and by-products, chitterlings"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 내장",
+        "돼지고기 창자"
+      ],
+      "species": "pork",
+      "cut": "intestine",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10173",
+      "foodLabel": "돼지고기 발",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Pork, fresh, variety meats and by-products, feet. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 36,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A148:L148",
+      "sourceNdb": "10173",
+      "sourceDescription": "Pork, fresh, variety meats and by-products, feet",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "돼지고기 발",
+        "Pork, fresh, variety meats and by-products, feet"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 발",
+        "돼지고기 족"
+      ],
+      "species": "pork",
+      "cut": "feet",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-10863",
+      "foodLabel": "돼지고기 위",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Pork, fresh, variety meats and by-products, stomach. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 69,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A149:L149",
+      "sourceNdb": "10863",
+      "sourceDescription": "Pork, fresh, variety meats and by-products, stomach",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "돼지고기 위",
+        "Pork, fresh, variety meats and by-products, stomach"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "돼지고기 위"
+      ],
+      "species": "pork",
+      "cut": "stomach",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10974",
@@ -709,7 +5921,16 @@
         "팬볶음"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "ground",
+      "methodKey": "saute",
+      "preparationTags": [
+        "ground",
+        "crumbles"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10976",
@@ -737,7 +5958,16 @@
         "팬볶음"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "ground",
+      "methodKey": "saute",
+      "preparationTags": [
+        "ground",
+        "crumbles"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10975",
@@ -765,7 +5995,16 @@
         "팬볶음"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "ground",
+      "methodKey": "saute",
+      "preparationTags": [
+        "ground",
+        "crumbles"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10977",
@@ -794,7 +6033,16 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "ground",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10979",
@@ -823,7 +6071,16 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "ground",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
     },
     {
       "id": "usda-r2-10978",
@@ -852,7 +6109,771 @@
         "구운것"
       ],
       "foodCodes": [],
-      "exactFoodAliases": []
+      "exactFoodAliases": [],
+      "searchAliases": [],
+      "species": "pork",
+      "cut": "ground",
+      "methodKey": "dry_pan",
+      "preparationTags": [
+        "ground",
+        "patty"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-07958",
+      "foodLabel": "칠면조 소시지",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Turkey sausage, fresh. 조리법: Broiled or Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A156:L156",
+      "sourceNdb": "07958",
+      "sourceDescription": "Turkey sausage, fresh",
+      "sourceMethod": "Broiled or Grilled",
+      "sourceYear": 2002,
+      "foodAliases": [
+        "칠면조 소시지",
+        "Turkey sausage, fresh"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 소시지"
+      ],
+      "species": "turkey",
+      "cut": "sausage",
+      "methodKey": "grill",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05745",
+      "foodLabel": "칠면조 등 (껍질 포함, 용액 첨가 처리)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, from whole, enhanced, back, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A157:L157",
+      "sourceNdb": "05745",
+      "sourceDescription": "Turkey, from whole, enhanced, back, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 등 (껍질 포함, 용액 첨가 처리)",
+        "Turkey, from whole, enhanced, back, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 등",
+        "칠면조 부위"
+      ],
+      "species": "turkey",
+      "cut": "back",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05701",
+      "foodLabel": "칠면조 전체 (껍질 포함, 용액 첨가 처리)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, from whole, enhanced, dark meat, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 74,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A158:L158",
+      "sourceNdb": "05701",
+      "sourceDescription": "Turkey, from whole, enhanced, dark meat, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 전체 (껍질 포함, 용액 첨가 처리)",
+        "Turkey, from whole, enhanced, dark meat, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 전체",
+        "칠면조 통째"
+      ],
+      "species": "turkey",
+      "cut": "whole",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05184",
+      "foodLabel": "칠면조 전체 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, from whole, non-enhanced, dark meat, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 69,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A159:L159",
+      "sourceNdb": "05184",
+      "sourceDescription": "Turkey, from whole, non-enhanced, dark meat, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 전체 (껍질 포함)",
+        "Turkey, from whole, non-enhanced, dark meat, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 전체",
+        "칠면조 통째"
+      ],
+      "species": "turkey",
+      "cut": "whole",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "non_enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05172",
+      "foodLabel": "칠면조 내장",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Turkey, all, giblets. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 64,
+      "minPercent": 62,
+      "maxPercent": 66,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A160:L160",
+      "sourceNdb": "05172",
+      "sourceDescription": "Turkey, all, giblets",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 1975,
+      "foodAliases": [
+        "칠면조 내장",
+        "Turkey, all, giblets"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 내장",
+        "칠면조 창자"
+      ],
+      "species": "turkey",
+      "cut": "intestine",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05174",
+      "foodLabel": "칠면조 모래주머니",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Turkey, gizzard, all classes. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 85,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A161:L161",
+      "sourceNdb": "05174",
+      "sourceDescription": "Turkey, gizzard, all classes",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "칠면조 모래주머니",
+        "Turkey, gizzard, all classes"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 모래주머니",
+        "칠면조 근위",
+        "칠면조 닭똥집"
+      ],
+      "species": "turkey",
+      "cut": "gizzard",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05176",
+      "foodLabel": "칠면조 심장",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Turkey, heart, all classes. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 76,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A162:L162",
+      "sourceNdb": "05176",
+      "sourceDescription": "Turkey, heart, all classes",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "칠면조 심장",
+        "Turkey, heart, all classes"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 심장"
+      ],
+      "species": "turkey",
+      "cut": "heart",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05178",
+      "foodLabel": "칠면조 간",
+      "methodLabel": "약한 불로 삶기",
+      "conditions": "원문 식품: Turkey, liver, all classes. 조리법: Poached, Simmered or Stewed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 83,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A163:L163",
+      "sourceNdb": "05178",
+      "sourceDescription": "Turkey, liver, all classes",
+      "sourceMethod": "Poached, Simmered or Stewed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "칠면조 간",
+        "Turkey, liver, all classes"
+      ],
+      "methodAliases": [
+        "삶은것",
+        "삶기",
+        "약불 삶기",
+        "시머링"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 간"
+      ],
+      "species": "turkey",
+      "cut": "liver",
+      "methodKey": "simmer",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05731",
+      "foodLabel": "칠면조 가슴 (껍질 포함, 용액 첨가 처리)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, retail parts, enhanced, breast, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 68,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A164:L164",
+      "sourceNdb": "05731",
+      "sourceDescription": "Turkey, retail parts, enhanced, breast, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 가슴 (껍질 포함, 용액 첨가 처리)",
+        "Turkey, retail parts, enhanced, breast, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 가슴"
+      ],
+      "species": "turkey",
+      "cut": "breast",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05733",
+      "foodLabel": "칠면조 가슴 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, retail parts, non-enhanced, breast, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 72,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A165:L165",
+      "sourceNdb": "05733",
+      "sourceDescription": "Turkey, retail parts, non-enhanced, breast, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 가슴 (껍질 포함)",
+        "Turkey, retail parts, non-enhanced, breast, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 가슴"
+      ],
+      "species": "turkey",
+      "cut": "breast",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "non_enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05737",
+      "foodLabel": "칠면조 아랫다리 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, retail parts, non-enhanced, drumstick, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 72,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A166:L166",
+      "sourceNdb": "05737",
+      "sourceDescription": "Turkey, retail parts, non-enhanced, drumstick, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 아랫다리 (껍질 포함)",
+        "Turkey, retail parts, non-enhanced, drumstick, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 아랫다리",
+        "칠면조 북채"
+      ],
+      "species": "turkey",
+      "cut": "drumstick",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "non_enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05743",
+      "foodLabel": "칠면조 넓적다리 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, retail parts, non-enhanced, thigh, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 83,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A167:L167",
+      "sourceNdb": "05743",
+      "sourceDescription": "Turkey, retail parts, non-enhanced, thigh, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 넓적다리 (껍질 포함)",
+        "Turkey, retail parts, non-enhanced, thigh, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 넓적다리",
+        "칠면조 허벅지",
+        "칠면조 다리살"
+      ],
+      "species": "turkey",
+      "cut": "thigh",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "non_enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05735",
+      "foodLabel": "칠면조 날개 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, retail parts, non-enhanced, wing, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 71,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A168:L168",
+      "sourceNdb": "05735",
+      "sourceDescription": "Turkey, retail parts, non-enhanced, wing, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 날개 (껍질 포함)",
+        "Turkey, retail parts, non-enhanced, wing, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 날개"
+      ],
+      "species": "turkey",
+      "cut": "wing",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "non_enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05707",
+      "foodLabel": "칠면조 전체 (껍질 포함, 용액 첨가 처리)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, whole, enhanced, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 71,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A169:L169",
+      "sourceNdb": "05707",
+      "sourceDescription": "Turkey, whole, enhanced, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 전체 (껍질 포함, 용액 첨가 처리)",
+        "Turkey, whole, enhanced, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 전체",
+        "칠면조 통째"
+      ],
+      "species": "turkey",
+      "cut": "whole",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-05166",
+      "foodLabel": "칠면조 전체 (껍질 포함)",
+      "methodLabel": "오븐구이",
+      "conditions": "원문 식품: Turkey, whole, non-enhanced, meat and skin. 조리법: Roasted. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 71,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A170:L170",
+      "sourceNdb": "05166",
+      "sourceDescription": "Turkey, whole, non-enhanced, meat and skin",
+      "sourceMethod": "Roasted",
+      "sourceYear": 2013,
+      "foodAliases": [
+        "칠면조 전체 (껍질 포함)",
+        "Turkey, whole, non-enhanced, meat and skin"
+      ],
+      "methodAliases": [
+        "오븐구이",
+        "구운것(오븐)",
+        "오븐에 구운것",
+        "로스트",
+        "로스팅",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "칠면조 전체",
+        "칠면조 통째"
+      ],
+      "species": "turkey",
+      "cut": "whole",
+      "methodKey": "roast",
+      "preparationTags": [
+        "skin_on",
+        "non_enhanced"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-17425",
+      "foodLabel": "송아지고기 뒷다리 (뼈 제거)",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Veal, leg, top round, cap off, cutlet, boneless. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 74,
+      "minPercent": 66.51,
+      "maxPercent": 82.73,
+      "sampleCount": 6,
+      "sourceRow": "Sheet1!A171:L171",
+      "sourceNdb": "17425",
+      "sourceDescription": "Veal, leg, top round, cap off, cutlet, boneless",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2014,
+      "foodAliases": [
+        "송아지고기 뒷다리 (뼈 제거)",
+        "Veal, leg, top round, cap off, cutlet, boneless"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "송아지고기 뒷다리",
+        "송아지고기 우둔",
+        "송아지고기 홍두깨",
+        "송아지고기 라운드"
+      ],
+      "species": "veal",
+      "cut": "round",
+      "methodKey": "grill",
+      "preparationTags": [
+        "bone_out"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-17438",
+      "foodLabel": "송아지고기 어깨",
+      "methodLabel": "그릴·브로일 구이",
+      "conditions": "원문 식품: Veal, shoulder, blade chop, separable lean and fat. 조리법: Grilled. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 77,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A172:L172",
+      "sourceNdb": "17438",
+      "sourceDescription": "Veal, shoulder, blade chop, separable lean and fat",
+      "sourceMethod": "Grilled",
+      "sourceYear": 2014,
+      "foodAliases": [
+        "송아지고기 어깨",
+        "Veal, shoulder, blade chop, separable lean and fat"
+      ],
+      "methodAliases": [
+        "그릴구이",
+        "직화구이",
+        "브로일",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "송아지고기 어깨",
+        "송아지고기 앞다리",
+        "송아지고기 척"
+      ],
+      "species": "veal",
+      "cut": "shoulder",
+      "methodKey": "grill",
+      "preparationTags": [
+        "lean_and_fat"
+      ],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-17203",
+      "foodLabel": "송아지고기 간",
+      "methodLabel": "소량의 물로 뚜껑 덮어 익히기",
+      "conditions": "원문 식품: Veal, variety meats and by-products, liver. 조리법: Braised. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 69,
+      "minPercent": null,
+      "maxPercent": null,
+      "sampleCount": 1,
+      "sourceRow": "Sheet1!A173:L173",
+      "sourceNdb": "17203",
+      "sourceDescription": "Veal, variety meats and by-products, liver",
+      "sourceMethod": "Braised",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "송아지고기 간",
+        "Veal, variety meats and by-products, liver"
+      ],
+      "methodAliases": [
+        "조림",
+        "조린것",
+        "브레이징"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "송아지고기 간"
+      ],
+      "species": "veal",
+      "cut": "liver",
+      "methodKey": "braise",
+      "preparationTags": [],
+      "aggregate": false
+    },
+    {
+      "id": "usda-r2-17204",
+      "foodLabel": "송아지고기 간",
+      "methodLabel": "팬에 지지기",
+      "conditions": "원문 식품: Veal, variety meats and by-products, liver. 조리법: Pan-fried or Sauteed. 미국식 부위와 손질 상태를 확인하세요.",
+      "rawBasis": "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요.",
+      "meanPercent": 68,
+      "minPercent": 67.5,
+      "maxPercent": 67.64,
+      "sampleCount": 2,
+      "statisticNote": "원표의 반올림된 평균이 관측 범위 밖에 있습니다. 원표 숫자를 그대로 보존했습니다.",
+      "sourceRow": "Sheet1!A174:L174",
+      "sourceNdb": "17204",
+      "sourceDescription": "Veal, variety meats and by-products, liver",
+      "sourceMethod": "Pan-fried or Sauteed",
+      "sourceYear": 2003,
+      "foodAliases": [
+        "송아지고기 간",
+        "Veal, variety meats and by-products, liver"
+      ],
+      "methodAliases": [
+        "팬에 지지기",
+        "팬구이",
+        "구운것(팬)",
+        "팬에 구운것",
+        "구운것"
+      ],
+      "foodCodes": [],
+      "exactFoodAliases": [],
+      "searchAliases": [
+        "송아지고기 간"
+      ],
+      "species": "veal",
+      "cut": "liver",
+      "methodKey": "pan_fry",
+      "preparationTags": [],
+      "aggregate": false
     }
   ]
 }

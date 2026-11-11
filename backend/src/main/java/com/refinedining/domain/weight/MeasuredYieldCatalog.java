@@ -16,9 +16,11 @@ import java.util.*;
 public class MeasuredYieldCatalog {
     public record Evidence(String id, String foodLabel, String methodLabel, String conditions, String rawBasis,
                            BigDecimal meanPercent, BigDecimal minPercent, BigDecimal maxPercent, Integer sampleCount,
-                           String title, String sourceUrl, String sourceRow, String version) {}
+                           String title, String sourceUrl, String sourceRow, String version,
+                           String sourceDescription, String sourceMethod, String statisticNote) {}
 
-    private record Entry(Evidence source, Set<String> foods, Set<String> methods, Set<String> codes) {}
+    record Entry(Evidence source, Set<String> foods, Set<String> methods, Set<String> codes,
+                 String species, String cut, String methodKey, Set<String> preparationTags) {}
 
     private final List<Entry> entries;
 
@@ -34,11 +36,14 @@ public class MeasuredYieldCatalog {
                         row.required("rawBasis").asText(), number(row,"meanPercent"), number(row,"minPercent"),
                         number(row,"maxPercent"), row.path("sampleCount").isNumber() ? row.get("sampleCount").intValue() : null,
                         catalog.required("title").asText(), catalog.required("sourceUrl").asText(), row.required("sourceRow").asText(),
-                        catalog.required("version").asText());
+                        catalog.required("version").asText(), row.path("sourceDescription").asText(),
+                        row.path("sourceMethod").asText(), row.path("statisticNote").asText(""));
                 if (!ids.add(evidence.id()) || evidence.meanPercent() == null || evidence.meanPercent().signum() <= 0)
                     throw new IOException("Invalid measured cooking yield at " + evidence.sourceRow());
                 loaded.add(new Entry(evidence, aliases(row,"foodAliases",food), aliases(row,"methodAliases",method),
-                        aliases(row,"foodCodes","")));
+                        aliases(row,"foodCodes",""), row.path("species").asText("unknown"),
+                        row.path("cut").asText("unknown"), row.path("methodKey").asText("unknown"),
+                        tags(row)));
             }
             if (loaded.isEmpty()) throw new IOException("Cooking yield table is empty.");
             entries = List.copyOf(loaded);
@@ -63,9 +68,17 @@ public class MeasuredYieldCatalog {
         return Set.copyOf(values);
     }
 
+    private static Set<String> tags(JsonNode row) {
+        Set<String> values = new HashSet<>();
+        row.path("preparationTags").forEach(value -> values.add(value.asText()));
+        return Set.copyOf(values);
+    }
+
     public List<Evidence> options() {
         return entries.stream().map(Entry::source).toList();
     }
+
+    List<Entry> searchEntries() { return entries; }
 
     List<Evidence> candidates(String foodName, String foodCode, String cookingMethod) {
         String name = key(foodName), code = key(foodCode), method = key(cookingMethod);

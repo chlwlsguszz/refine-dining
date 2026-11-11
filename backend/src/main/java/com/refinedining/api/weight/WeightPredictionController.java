@@ -2,6 +2,7 @@ package com.refinedining.api.weight;
 
 import com.refinedining.domain.weight.MeasuredYieldCatalog;
 import com.refinedining.domain.weight.MeasuredYieldService;
+import com.refinedining.domain.weight.YieldEvidenceSearch;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -24,6 +25,11 @@ public class WeightPredictionController {
 
     @GetMapping("/options")
     public List<MeasuredYieldCatalog.Evidence> options() { return catalog.options(); }
+
+    @PostMapping("/search")
+    public YieldEvidenceSearch.Result search(@Valid @RequestBody MeasuredYieldService.SearchQuery input) {
+        return service.search(input);
+    }
 
     @PostMapping("/predict")
     public MeasuredYieldService.Prediction predict(@Valid @RequestBody MeasuredYieldService.Query input) {

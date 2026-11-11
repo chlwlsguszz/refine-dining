@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.refinedining.domain.weight.MeasuredYieldCatalog;
 import com.refinedining.domain.weight.MeasuredYieldService;
 import com.refinedining.domain.weight.YieldNameSuggestions;
+import com.refinedining.domain.weight.YieldEvidenceSearch;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
@@ -22,7 +23,8 @@ class MeasuredYieldApiTest {
 
     MeasuredYieldApiTest() throws Exception {
         var table = new MeasuredYieldCatalog(json);
-        var service = new MeasuredYieldService(table,new YieldNameSuggestions(json,""));
+        var suggestions = new YieldNameSuggestions(json, "");
+        var service = new MeasuredYieldService(table, suggestions, new YieldEvidenceSearch(table, suggestions));
         http = MockMvcBuilders.standaloneSetup(new WeightPredictionController(table,service)).build();
     }
 

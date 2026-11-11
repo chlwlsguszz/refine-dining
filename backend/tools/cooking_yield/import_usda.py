@@ -54,6 +54,9 @@ METHODS = {
     "dry_pan": ("기름 없는 팬구이", ["팬구이", "구운것(팬)", "팬에 구운것", "기름 없는 팬구이", "구운것"]),
     "saute": ("팬에 볶기", ["볶은것", "볶기", "팬볶음"]),
     "pan_fry": ("팬에 지지기", ["팬에 지지기", "팬구이", "구운것(팬)", "팬에 구운것", "구운것"]),
+    "deep_fry": ("기름에 튀기기", ["튀기기", "튀김", "튀긴것", "딥프라이"]),
+    "microwave": ("전자레인지 조리", ["전자레인지", "전자레인지 조리", "마이크로웨이브"]),
+    "mixed": ("여러 조리법 합산", ["여러 조리법"]),
 }
 CHICKEN = {
     "breast": ("닭 가슴", ["닭가슴", "닭고기 가슴", "닭가슴 껍질 포함"], []),
@@ -135,17 +138,119 @@ def korean_mappings():
     return mappings
 
 
+SPECIES_NAMES = {
+    "beef": "소고기", "chicken": "닭고기", "pork": "돼지고기", "turkey": "칠면조",
+    "veal": "송아지고기", "lamb": "양고기", "emu": "에뮤", "bison": "들소",
+    "deer": "사슴고기", "elk": "엘크", "ostrich": "타조", "unknown": "식품",
+}
+# These terms translate source descriptions for retrieval; they do not declare
+# that a domestic butcher's cut is anatomically identical to a US retail cut.
+CUT_NAMES = {
+    "thigh": "넓적다리 허벅지 다리살", "drumstick": "아랫다리 북채", "breast": "가슴",
+    "wing": "날개", "back": "등 부위", "neck": "목", "whole": "전체 통째",
+    "tenderloin": "안심", "loin": "등심 로인", "ribeye": "꽃등심 립아이", "ribs": "갈비",
+    "brisket": "양지 브리스킷", "flank": "복부 플랭크", "round": "뒷다리 우둔 홍두깨 라운드",
+    "shoulder": "어깨 앞다리 척", "sirloin": "설로인", "leg": "다리", "ground": "다짐육 분쇄육",
+    "liver": "간", "heart": "심장", "kidney": "신장 콩팥", "tripe": "위 양", "brain": "뇌",
+    "gizzard": "모래주머니 근위 닭똥집", "stomach": "위", "intestine": "내장 창자", "feet": "발 족",
+    "ham": "햄", "bacon": "베이컨", "sausage": "소시지", "unknown": "부위 원문 확인",
+}
+SOURCE_METHODS = {
+    "baked or roasted, unspecified": "roast", "baked or roasted, specified time": "roast",
+    "roasted": "roast", "braised": "braise", "broiled or grilled": "grill", "broiled": "grill",
+    "grilled": "grill", "pan-broiled": "dry_pan", "pan broiled": "dry_pan",
+    "pan-fried": "pan_fry", "pan-fried or sauteed": "pan_fry", "pan-browned": "saute",
+    "poached, simmered or stewed": "simmer", "fried in deep fat": "deep_fry",
+    "microwaved": "microwave", "multiple cooking methods": "mixed",
+}
+
+
+def source_metadata(description, method, has_ndb):
+    text = description.lower()
+    species = next((name for name in SPECIES_NAMES if re.search(r"\b" + name + r"\b", text)), "unknown")
+    cuts = (
+        ("sausage", r"sausage"), ("bacon", r"bacon"), ("ham", r"cured, ham"),
+        ("liver", r"\bliver\b"), ("heart", r"\bheart\b"), ("kidney", r"kidney"),
+        ("brain", r"brain"), ("tripe", r"tripe"), ("gizzard", r"gizzard"),
+        ("stomach", r"stomach"), ("intestine", r"chitterlings|giblets"), ("feet", r"\bfeet\b"),
+        ("ground", r"ground"), ("thigh", r"\bthigh\b"), ("drumstick", r"drumstick"),
+        ("wing", r"\bwing\b"), ("breast", r"\bbreast\b"), ("neck", r"\bneck\b"),
+        ("tenderloin", r"tenderloin"), ("ribeye", r"rib eye"), ("ribs", r"ribs|backribs|spareribs"),
+        ("brisket", r"brisket"), ("flank", r"flank|skirt"), ("round", r"\bround\b|knuckle"),
+        ("shoulder", r"shoulder|\bchuck\b|\bblade\b"), ("sirloin", r"sirloin"),
+        ("loin", r"\bloin\b"), ("leg", r"\bleg\b|\bshank\b"),
+        ("back", r"\bback\b"), ("whole", r"\bwhole\b|retail all cuts|retail cuts, all"),
+    )
+    cut = next((key for key, pattern in cuts if re.search(pattern, text)), "unknown")
+    if "shoulder breast" in text:
+        cut = "shoulder"
+    elif "leg cap" in text:
+        cut = "leg"
+    elif not has_ndb and "shoulder, shank, breast, flank" in text:
+        cut = "unknown"
+    tags = []
+    for tag, pattern in (
+        ("skin_on", r"meat and skin|including skin"), ("skin_off", r"skinless|without skin"),
+        ("bone_out", r"boneless"), ("bone_in", r"bone-in|bone in"),
+        ("ground", r"ground"), ("patty", r"patty"), ("crumbles", r"crumbles"), ("loaf", r"loaf"),
+        ("cured", r"\bcured\b"), ("floured", r"floured"), ("lean_and_fat", r"lean and fat"),
+        ("lean_only", r"lean only"), ("water_added", r"water added|water product"),
+    ):
+        if re.search(pattern, text):
+            tags.append(tag)
+    if "enhanced" in text:
+        tags.append("non_enhanced" if "non-enhanced" in text else "enhanced")
+    return dict(species=species, cut=cut, methodKey=SOURCE_METHODS[method.lower()],
+                preparationTags=tags, aggregate=not has_ndb)
+
+
+def translated_source(row, metadata):
+    """Keep source-specific qualifiers visible; search translations are only hints."""
+    species = SPECIES_NAMES[metadata["species"]]
+    cut_terms = CUT_NAMES[metadata["cut"]]
+    tags = metadata["preparationTags"]
+    shape = "패티" if "patty" in tags else "부스러기" if "crumbles" in tags else "미트로프" if "loaf" in tags else ""
+    label = " ".join(filter(None, [species, cut_terms.split()[0], shape]))
+    qualifiers = []
+    for tag, word in (("skin_on", "껍질 포함"), ("skin_off", "껍질 제거"),
+                      ("bone_in", "뼈 포함"), ("bone_out", "뼈 제거"),
+                      ("enhanced", "용액 첨가 처리"), ("cured", "염지"), ("floured", "가루옷")):
+        if tag in tags:
+            qualifiers.append(word)
+    if metadata["aggregate"]:
+        qualifiers.append("여러 시료 합산")
+    if qualifiers:
+        label += " (" + ", ".join(qualifiers) + ")"
+    # The entire English description remains in conditions and sourceDescription.
+    conditions = f"원문 식품: {row['C']}. 조리법: {row['D']}. 미국식 부위와 손질 상태를 확인하세요."
+    if "unspecified" in row["D"].lower():
+        conditions += " 원표에는 세부 조리 조건이 기재되어 있지 않습니다."
+    if metadata["aggregate"]:
+        conditions += " 여러 부위 또는 시료를 합산한 수율이며 특정 부위만의 측정값이 아닙니다."
+    basis = "원문에 기재된 시료의 조리 직전 중량. 뼈·껍질·손질 상태가 같은지 원문과 방법서를 확인하세요."
+    aliases = [label, row["C"]]
+    search_aliases = [f"{species} {term}" for term in cut_terms.split()]
+    if shape:
+        search_aliases.append(f"{species} {shape}")
+    return label, conditions, basis, aliases, search_aliases
+
+
 def yield_statistics(row):
     mean = number(row["E"])
     lower, upper = number(row.get("H")), number(row.get("I"))
     count = number(row.get("F"))
     if mean is None or mean <= 0 or (lower is None) != (upper is None):
         raise ValueError(f"Invalid cooking yield statistics for NDB {row['B']}")
-    if lower is not None and not (0 < lower <= mean <= upper):
+    # Release 2 reports some means rounded to whole percent (e.g. 68 vs max 67.64).
+    # Preserve the published numbers, permitting at most that rounding precision.
+    if lower is not None and not (0 < lower <= upper and lower - .5 <= mean <= upper + .5):
         raise ValueError(f"Mean outside observed range for NDB {row['B']}")
     if count is not None and (not isinstance(count, int) or count < 1):
         raise ValueError(f"Invalid sample count for NDB {row['B']}")
-    return dict(meanPercent=mean, minPercent=lower, maxPercent=upper, sampleCount=count)
+    result = dict(meanPercent=mean, minPercent=lower, maxPercent=upper, sampleCount=count)
+    if lower is not None and not lower <= mean <= upper:
+        result["statisticNote"] = "원표의 반올림된 평균이 관측 범위 밖에 있습니다. 원표 숫자를 그대로 보존했습니다."
+    return result
 
 
 def build_catalog(path):
@@ -157,19 +262,26 @@ def build_catalog(path):
             if any(row.get(col) != name for col, name in expected.items()):
                 raise ValueError("Unexpected workbook schema")
             continue
-        if not row.get("B", "").isdigit() or int(row["B"]) not in mappings:
+        if not row.get("C") or not row.get("D") or not row.get("E"):
             continue
-        ndb = int(row["B"])
-        food, method, conditions, basis, aliases, codes = mappings.pop(ndb)
+        ndb = int(row["B"]) if row.get("B", "").isdigit() else None
+        metadata = source_metadata(row["C"], row["D"], ndb is not None)
+        search_aliases = []
+        if ndb in mappings:
+            food, method, conditions, basis, aliases, codes = mappings.pop(ndb)
+        else:
+            food, conditions, basis, aliases, search_aliases = translated_source(row, metadata)
+            method, codes = metadata["methodKey"], []
+        metadata["methodKey"] = method
         method_label, method_aliases = METHODS[method]
         records.append({
-            "id": f"usda-r2-{ndb:05d}", "foodLabel": food, "methodLabel": method_label,
+            "id": f"usda-r2-{ndb:05d}" if ndb is not None else f"usda-r2-row-{row_number:03d}", "foodLabel": food, "methodLabel": method_label,
             "conditions": conditions, "rawBasis": basis,
             **yield_statistics(row),
-            "sourceRow": f"Sheet1!A{row_number}:L{row_number}", "sourceNdb": f"{ndb:05d}",
+            "sourceRow": f"Sheet1!A{row_number}:L{row_number}", "sourceNdb": f"{ndb:05d}" if ndb is not None else None,
             "sourceDescription": row["C"], "sourceMethod": row["D"], "sourceYear": int(row["L"]),
             "foodAliases": aliases, "methodAliases": method_aliases, "foodCodes": codes,
-            "exactFoodAliases": [],
+            "exactFoodAliases": [], "searchAliases": search_aliases, **metadata,
         })
     if mappings:
         raise ValueError(f"Missing mapped NDB entries: {sorted(mappings)}")

@@ -13,11 +13,13 @@
 
 새 체크아웃에서 인덱스를 다시 만들고 77건을 생성했을 때 검색 순위·선택 코드·판정·인용은 일치했습니다. GPU에서 다시 생성한 응답 5건은 설명에 표시할 차이 항목이 달랐습니다. 캐시를 사용한 재실행에서는 77건의 응답이 일치했습니다. [새 체크아웃 재현 기록](datasets/week1/2026-11-10/release/reproduction.json)
 
-### 조리 후 중량 계산
+### 조리 후 중량 검색과 계산
 
-비교 화면의 **실측 수율 조회** 또는 [중량 계산기](http://127.0.0.1:18082/weight)에서 생중량, 부위, 조리법을 입력합니다. USDA 실험 28개에서 조건을 선택하면 서버가 생중량에 평균 수율을 곱합니다. 예를 들어 껍질 포함 닭 넓적다리 오븐구이의 평균 수율은 69%입니다. 200g을 넣으면 예상 중량 138g, 관측 최저·최고 수율로 계산한 범위 116~158g과 원표 위치가 표시됩니다. 실제 자신의 재료와 조건이 다르면 조리 후 무게를 직접 입력할 수 있습니다. [실측 자료와 도입 범위](datasets/cooking-yield/README.md)
+[중량 화면](http://127.0.0.1:18082/weight)에서 식품명을 자유롭게 검색합니다. `닭다리살`, `소고기 안심`, `돼지 등심`처럼 입력하면 로컬 E5가 USDA 원표 173개 기록에서 비슷한 식품·부위·조리법을 찾습니다. 각 후보에는 검색한 이유, 입력과의 차이, 실험 조건과 원문 위치가 표시됩니다. 검색어는 그대로 유지하고 참고할 실험을 별도로 선택합니다. [자료 범위와 검색 방식](datasets/cooking-yield/README.md)
 
-외부 패티 연구의 조리군 13개 중 지방 구간과 조리법을 대응시킨 5개에서 값을 얻었습니다. 중량을 보고한 두 조리군의 평균 절대오차는 3.15g, 같은 두 건에 고정 70% 수율을 쓴 오차는 2.10g이었습니다. 다른 세 집단에는 수율만 있어 오차를 별도로 평가했습니다. [평가 입력·결과와 한계](datasets/cooking-yield/evaluation/README.md)
+사용자가 조건을 확인한 뒤 계산을 요청하면 서버가 생중량에 선택한 실험의 평균 수율을 곱합니다. 껍질 포함 닭 넓적다리 오븐구이 기록의 수율 69%를 200g에 적용하면 참고 중량 138g입니다. 확인되지 않거나 충돌하는 동물 종류·부위·손질 상태·조리법이 있으면 후보의 차이는 보여주되 계산에는 적용하지 않습니다. 현재 원표는 육류·가금류이므로 채소 등 자료가 없는 식품에는 숫자를 제시하지 않습니다.
+
+기존 28개 기록으로 진행했던 외부 패티 연구 평가에서는 13개 조리군 중 5개에 수율을 적용했습니다. 중량을 보고한 두 조리군의 평균 절대오차는 3.15g, 같은 두 건에 고정 70% 수율을 쓴 오차는 2.10g이었습니다. 이 결과는 확대된 173개 기록의 검색 정확도를 평가한 수치가 아닙니다. [평가 입력·결과와 한계](datasets/cooking-yield/evaluation/README.md)
 
 ### 로컬에서 데모 열기
 
@@ -187,13 +189,15 @@ docker compose down -v
 GET /api/food/search?name=감자&page=0&size=10
 ```
 
-### 실측 조리 수율
+### 실측 조리 수율 검색
 
-`GET /api/weight/options`로 지원하는 조건과 출처를 조회합니다. `POST /api/weight/predict`에는 `foodName` 또는 검증된 원본 `foodCd`, `cookingMethod`, g 단위의 `baseWeight`를 전달합니다. 첫 응답이 `NEED_CONDITIONS`이면 현물과 일치하는 후보 행을 확인하고 그 `id`를 `evidenceId`로 보내 계산합니다. `NO_MATCH`에는 예상 중량이 없습니다.
+`POST /api/weight/search`에 `foodName`과 선택적인 `cookingMethod`를 보냅니다. 자유 입력 질의에 대해 검색 이유·차이·원문을 담은 후보를 반환합니다. `canEstimate`가 참인 후보만 사용자가 확인한 뒤 `POST /api/weight/predict`에 원래 질의, g 단위 `baseWeight`, 선택한 `evidenceId`, `confirmReference:true`를 보냅니다. 서버는 해당 기록이 현재 검색 결과에 있는지와 조건 충돌을 다시 검사합니다. `GET /api/weight/options`는 전체 원표 목록입니다.
 
 ```json
-{"foodName":"닭 넓적다리","cookingMethod":"오븐구이","baseWeight":200,"evidenceId":"usda-r2-05094"}
+{"foodName":"닭다리살","cookingMethod":"구이","baseWeight":200,"evidenceId":"usda-r2-05094","confirmReference":true}
 ```
+
+로컬 의미 검색은 `python backend/tools/cooking_yield/suggest_names.py --port 18086`으로 시작하고 Spring에 `YIELD_SEARCH_URL=http://127.0.0.1:18086`을 설정합니다. 검색기가 없으면 제한된 이름·부위 검색으로 전환되며 응답에 이 상태를 표시합니다. 외부 LLM API는 사용하지 않습니다.
 
 ### 관리자 배치
 
