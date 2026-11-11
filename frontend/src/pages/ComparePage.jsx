@@ -1,12 +1,23 @@
-import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import CookingYieldPanel from '../components/CookingYieldPanel';
 import { commonStyles } from '../styles/commonStyles';
 
 function ComparePage() {
+    const { id } = useParams();
+    return <Comparison key={id} id={id} />;
+}
+
+function Comparison({ id }) {
+    const apiBase = import.meta.env.VITE_API_BASE ?? '';
     const location = useLocation();
     const navigate = useNavigate();
-    const { parentData, childData } = location.state || {};
+
+    const [parentData, setParentData] = useState(location.state?.parentData || null);
+    const [childData, setChildData] = useState(location.state?.childData || null);
+    const [pageLoading, setPageLoading] = useState(Boolean(id) && (!location.state?.parentData || !location.state?.childData));
+    const [pageError, setPageError] = useState(id ? null : '잘못된 접근입니다.');
 
     const [leftWeight, setLeftWeight] = useState(100);
     const [manualWeight, setManualWeight] = useState(100);
@@ -19,12 +30,51 @@ function ComparePage() {
     const usingEstimate = estimate?.key === yieldKey;
     const rightWeight = usingEstimate ? estimate.weight : manualWeight;
 
-    if (!parentData || !childData) return <div style={styles.container}>데이터 없음</div>;
+    useEffect(() => {
+        if (!id || (parentData && childData)) {
+            return;
+        }
 
-    // 실시간 영양소 계산 함수
-    const calculate = (value, weight) => {
-        if (!value || !weight || weight === '') return '0.0';
-        return ((value * weight) / 100).toFixed(1);
+        let cancelled = false;
+
+        axios.get(`${apiBase}/api/food/compare/${id}`)
+            .then((res) => {
+                if (cancelled) return;
+                setParentData(res.data.parentData);
+                setChildData(res.data.childData);
+            })
+            .catch((err) => {
+                if (cancelled) return;
+                setPageError(err.response?.data?.message || '비교 데이터를 불러올 수 없습니다.');
+            })
+            .finally(() => {
+                if (!cancelled) setPageLoading(false);
+            });
+
+        return () => {
+            cancelled = true;
+        };
+    }, [apiBase, id, parentData, childData]);
+
+    if (pageLoading) {
+        return <div style={styles.container}>데이터를 불러오는 중입니다...</div>;
+    }
+
+    if (pageError || !parentData || !childData) {
+        return (
+            <div style={styles.container}>
+                <p>{pageError || '데이터 없음'}</p>
+                <button onClick={() => navigate('/')} style={styles.backButton}>검색 화면으로 이동</button>
+            </div>
+        );
+    }
+
+    // 실시간 영양소 계산 함수 (숫자 반환)
+    const calculateNum = (value, weight) => {
+        const numVal = Number(value);
+        const numWeight = Number(weight);
+        if (isNaN(numVal) || isNaN(numWeight) || weight === '') return 0;
+        return (numVal * numWeight) / 100;
     };
 
     const nutrients = [
@@ -33,23 +83,21 @@ function ComparePage() {
         { label: '🥑 지방', key: 'fat', unit: 'g' },
         { label: '🧂 나트륨', key: 'sodium', unit: 'mg' },
         { label: '🍞 탄수화물', key: 'carbohydrate', unit: 'g' },
-        { label: '🍬 당류', key: 'sugar', unit: 'g' },  // 추가
+        { label: '🍬 당류', key: 'sugar', unit: 'g' },
     ];
 
-    // 왼쪽 핸들러
     const handleLeftWeightChange = (v) => {
         setEstimate(null);
         if (v === '') { setLeftWeight(''); return; }
         const num = Number(v);
-        if (!isNaN(num)) setLeftWeight(num);
+        if (!isNaN(num) && num >= 0) setLeftWeight(num);
     };
 
-    // 오른쪽 핸들러 (추가)
     const handleRightWeightChange = (v) => {
         setEstimate(null);
         if (v === '') { setManualWeight(''); return; }
         const num = Number(v);
-        if (!isNaN(num)) setManualWeight(num);
+        if (!isNaN(num) && num >= 0) setManualWeight(num);
     };
 
     return (
@@ -60,13 +108,14 @@ function ComparePage() {
             </header>
 
             <div style={styles.comparisonWrapper}>
-                <div style={{...styles.card, ...styles.cardLeft}}>
+                <div style={{ ...styles.card, ...styles.cardLeft }}>
                     <span style={styles.cardLabel}>원재료</span>
                     <h2 style={styles.foodTitle}>{parentData.name}</h2>
                     <div style={styles.weightControl}>
                         <label style={styles.weightControlLabel}>중량 (g)</label>
                         <input
                             type="number"
+                            min="0"
                             value={leftWeight}
                             onChange={(e) => handleLeftWeightChange(e.target.value)}
                             onBlur={() => { if (leftWeight === '') setLeftWeight(0); }}
@@ -77,7 +126,7 @@ function ComparePage() {
                         {nutrients.map(n => (
                             <div key={n.key} style={styles.nutrientRow}>
                                 <span style={styles.nutrientLabel}>{n.label}</span>
-                                <strong>{calculate(parentData[n.key], leftWeight)} {n.unit}</strong>
+                                <strong>{calculateNum(parentData[n.key], leftWeight).toFixed(1)} {n.unit}</strong>
                             </div>
                         ))}
                     </div>
@@ -87,8 +136,8 @@ function ComparePage() {
                     <span style={styles.connectorArrow}>→</span>
                 </div>
 
-                <div style={{...styles.card, ...styles.cardRight}}>
-                    <span style={styles.cardLabel}>조리 후</span>
+                <div style={{ ...styles.card, ...styles.cardRight }}>
+                    <span style={styles.cardLabel}>조리 후 ({childData.cookingMethod || '조리'})</span>
                     <h2 style={styles.foodTitle}>{childData.name}</h2>
                     <div style={styles.weightControl}>
                         <label htmlFor="yield-cooked-weight" style={styles.weightControlLabel}>
@@ -97,6 +146,7 @@ function ComparePage() {
                         <input
                             id="yield-cooked-weight"
                             type="number"
+                            min="0"
                             value={rightWeight}
                             onChange={(e) => handleRightWeightChange(e.target.value)}
                             onBlur={() => { if (rightWeight === '') setManualWeight(0); }}
@@ -105,17 +155,18 @@ function ComparePage() {
                     </div>
                     <div style={styles.nutrientList}>
                         {nutrients.map(n => {
-                            const leftVal = calculate(parentData[n.key], leftWeight);
-                            const rightVal = calculate(childData[n.key], rightWeight);
-                            const diff = (rightVal - leftVal).toFixed(1);
-                            const isPlus = diff > 0;
+                            const leftVal = calculateNum(parentData[n.key], leftWeight);
+                            const rightVal = calculateNum(childData[n.key], rightWeight);
+                            const rawDiff = Math.round((rightVal - leftVal) * 10) / 10;
+                            const isPlus = rawDiff > 0;
+                            const diffText = rawDiff === 0 ? '0.0' : `${isPlus ? '+' : ''}${rawDiff.toFixed(1)}`;
                             return (
                                 <div key={n.key} style={styles.nutrientRow}>
                                     <span style={styles.nutrientLabel}>{n.label}</span>
                                     <div style={styles.nutrientValue}>
-                                        <strong>{rightVal} {n.unit}</strong>
-                                        <span style={{...styles.diff, color: isPlus ? '#c45c4a' : '#b94f16'}}>
-                                            {isPlus ? '+' : ''}{diff}
+                                        <strong>{rightVal.toFixed(1)} {n.unit}</strong>
+                                        <span style={{ ...styles.diff, color: isPlus ? '#c45c4a' : '#b94f16' }}>
+                                            {diffText}
                                         </span>
                                     </div>
                                 </div>
@@ -158,14 +209,16 @@ const styles = {
     mainTitle: { fontSize: '1.4rem', fontWeight: 600, margin: 0, letterSpacing: '-0.02em', color: '#2d2a26' },
     comparisonWrapper: {
         display: 'flex',
+        flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'stretch',
         gap: '20px',
         maxWidth: '900px',
+        width: '100%',
         margin: '0 auto',
     },
     card: {
-        flex: 1,
+        flex: '1 1 300px',
         padding: '28px 24px',
         position: 'relative',
         borderRadius: '20px',

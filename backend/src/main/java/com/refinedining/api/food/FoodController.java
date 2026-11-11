@@ -1,5 +1,6 @@
 package com.refinedining.api.food;
 
+import com.refinedining.domain.food.refined.dto.FoodCompareResponse;
 import com.refinedining.domain.food.refined.dto.FoodSearchResponse;
 import com.refinedining.domain.food.refined.service.FoodSearchService;
 import lombok.RequiredArgsConstructor;
@@ -19,10 +20,15 @@ public class FoodController {
     private final FoodSearchService foodSearchService;
 
     @GetMapping("/search")
-    public ResponseEntity<List<FoodSearchResponse>> search(@RequestParam String name,
+    public ResponseEntity<List<FoodSearchResponse>> search(@RequestParam(defaultValue = "") String name,
                                                            @RequestParam(defaultValue = "0") int page,
                                                            @RequestParam(defaultValue = "10") int size) {
 
         return ResponseEntity.ok(foodSearchService.searchFood(name, page, size));
+    }
+
+    @GetMapping("/compare/{childId}")
+    public ResponseEntity<FoodCompareResponse> getCompareData(@PathVariable Long childId) {
+        return ResponseEntity.ok(foodSearchService.getCompareData(childId));
     }
 }

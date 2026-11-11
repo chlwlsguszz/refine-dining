@@ -1,13 +1,84 @@
 package com.refinedining.infra.publicdata.dto;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public record PublicNutriResponse(Response response) {
-    public record Response(Header header, Body body) {}
-    public record Header(String resultCode, String resultMsg) {}
-    public record Body(List<NutriItem> items, int totalCount) {}
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record PublicNutriResponse(
+        Response response,
+        Header header,
+        Body body
+) {
+    public PublicNutriResponse(Response response) {
+        this(response, null, null);
+    }
 
+    @Override
+    public Response response() {
+        if (response != null) {
+            return response;
+        }
+        if (header != null || body != null) {
+            return new Response(header, body);
+        }
+        return null;
+    }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public record Response(Header header, Body body) {}
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public record Header(String resultCode, String resultMsg) {}
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public record Body(
+            @JsonDeserialize(using = ItemsDeserializer.class)
+            List<NutriItem> items,
+            int totalCount
+    ) {}
+
+    /**
+     * 공공데이터 API 응답에서 items가 배열([...]) 형태이거나 객체({"item": [...]}) 형태인 경우 모두 호환 처리합니다.
+     */
+    public static class ItemsDeserializer extends JsonDeserializer<List<NutriItem>> {
+        @Override
+        public List<NutriItem> deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
+            ObjectMapper mapper = (ObjectMapper) p.getCodec();
+            JsonNode node = mapper.readTree(p);
+            if (node == null || node.isNull()) {
+                return Collections.emptyList();
+            }
+
+            JsonNode targetNode = node.has("item") ? node.get("item") : node;
+            if (targetNode == null || targetNode.isNull()) {
+                return Collections.emptyList();
+            }
+
+            List<NutriItem> result = new ArrayList<>();
+            if (targetNode.isArray()) {
+                for (JsonNode itemNode : targetNode) {
+                    result.add(mapper.treeToValue(itemNode, NutriItem.class));
+                }
+            } else if (targetNode.isObject()) {
+                result.add(mapper.treeToValue(targetNode, NutriItem.class));
+            }
+            return result;
+        }
+    }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public record NutriItem(
             // ==========================================
             // 1. 기본 식별 정보
@@ -77,7 +148,7 @@ public record PublicNutriResponse(Response response) {
             @JsonProperty("crtYmd") String crtYmd,             // 데이터생성일자
             @JsonProperty("prdCollCapMon") String prdCollCapMon, // 생산·채취·포획월
             @JsonProperty("crtrYmd") String crtrYmd,           // 데이터기준일자
-            @JsonProperty("instt_code") String insttCode,      // 제공기관코드 (snake_case -> camelCase 매핑)
-            @JsonProperty("instt_nm") String insttNm           // 제공기관기관명
+            @JsonProperty("instt_code") @JsonAlias("insttCode") String insttCode,      // 제공기관코드
+            @JsonProperty("instt_nm") @JsonAlias("insttNm") String insttNm           // 제공기관기관명
     ) {}
 }

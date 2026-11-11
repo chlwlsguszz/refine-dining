@@ -20,7 +20,7 @@ public record FoodSearchResponse(
         return new FoodSearchResponse(
                 entity.getId(),
                 entity.getName(),
-                entity.getCookingMethod(),
+                entity.getFoodCd(),
                 entity.getCalories(),
                 entity.getProtein(),
                 entity.getFat(),
@@ -33,4 +33,3 @@ public record FoodSearchResponse(
         );
     }
 }
-

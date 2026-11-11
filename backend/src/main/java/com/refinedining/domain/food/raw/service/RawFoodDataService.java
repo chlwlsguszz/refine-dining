@@ -8,8 +8,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -18,44 +23,65 @@ public class RawFoodDataService {
 
     private final PublicDataClient publicDataClient;
     private final RawFoodMaterialRepository rawFoodMaterialRepository;
+    private final TransactionTemplate transactionTemplate;
 
     /**
      * 공공데이터를 가져와서 DB에 동기화합니다.
+     * 외부 API 호출은 트랜잭션 밖에서 수행하고, DB 반영만 트랜잭션 안에서 일괄 처리합니다.
      */
-    @Transactional
     public void syncPublicFoodData(int page, int size) {
         PublicNutriResponse response = publicDataClient.fetchNutriData(page, size);
 
-        if (response == null || response.response().body() == null) {
-            log.warn("API 응답 데이터가 없습니다.");
+        if (response == null || response.response() == null || response.response().body() == null) {
+            log.warn("API 응답 데이터가 없습니다. (page={})", page);
             return;
         }
 
         List<PublicNutriResponse.NutriItem> items = response.response().body().items();
-
-        for (PublicNutriResponse.NutriItem item : items) {
-            saveOrUpdate(item);
+        if (items == null || items.isEmpty()) {
+            log.info("동기화할 항목이 없습니다. (page={})", page);
+            return;
         }
 
-        log.info("성공적으로 {}건의 데이터를 동기화했습니다.", items.size());
+        if (transactionTemplate != null) {
+            transactionTemplate.executeWithoutResult(status -> saveOrUpdateBatch(items));
+        } else {
+            saveOrUpdateBatch(items);
+        }
+
+        log.info("성공적으로 {}건의 데이터를 동기화했습니다. (page={})", items.size(), page);
     }
 
-    private void saveOrUpdate(PublicNutriResponse.NutriItem item) {
-        rawFoodMaterialRepository.findByFoodCd(item.foodCd())
-                .ifPresentOrElse(
-                        existingFood -> {
-                            // 1. 새로운 데이터를 임시 엔티티로 변환
-                            RawFoodMaterial updatedData = convertToEntity(item);
-                            // 2. 기존 엔티티의 필드 업데이트 (Dirty Checking 발생)
-                            existingFood.updateAllFields(updatedData);
-                            log.debug("Existing data update: {}", item.foodNm());
-                        },
-                        () -> {
-                            // 없으면 신규 생성
-                            RawFoodMaterial newFood = convertToEntity(item);
-                            rawFoodMaterialRepository.save(newFood);
-                        }
-                );
+    @Transactional
+    protected void saveOrUpdateBatch(List<PublicNutriResponse.NutriItem> items) {
+        List<String> foodCds = items.stream()
+                .map(PublicNutriResponse.NutriItem::foodCd)
+                .filter(cd -> cd != null && !cd.isBlank())
+                .distinct()
+                .toList();
+
+        Map<String, RawFoodMaterial> existingMap = rawFoodMaterialRepository.findAllByFoodCdIn(foodCds).stream()
+                .collect(Collectors.toMap(RawFoodMaterial::getFoodCd, Function.identity(), (a, b) -> a));
+
+        List<RawFoodMaterial> newEntities = new ArrayList<>();
+
+        for (PublicNutriResponse.NutriItem item : items) {
+            if (item.foodCd() == null || item.foodCd().isBlank()) {
+                continue;
+            }
+            RawFoodMaterial converted = convertToEntity(item);
+            RawFoodMaterial existing = existingMap.get(item.foodCd());
+            if (existing != null) {
+                existing.updateAllFields(converted);
+            } else {
+                newEntities.add(converted);
+                existingMap.put(item.foodCd(), converted);
+            }
+        }
+
+        if (!newEntities.isEmpty()) {
+            rawFoodMaterialRepository.saveAll(newEntities);
+        }
     }
 
     /**
@@ -139,14 +165,13 @@ public class RawFoodDataService {
         }
     }
 
-    @Transactional
     public void syncAllPublicFoodData() {
         int pageSize = 100;
 
         // 1. 최초 호출로 전체 데이터 개수(totalCount) 파악
         PublicNutriResponse initialResponse = publicDataClient.fetchNutriData(1, 1);
-        if (initialResponse == null || initialResponse.response().body() == null) {
-            throw new RuntimeException("공공데이터 API로부터 데이터를 가져올 수 없습니다.");
+        if (initialResponse == null || initialResponse.response() == null || initialResponse.response().body() == null) {
+            throw new IllegalStateException("공공데이터 API로부터 데이터를 가져올 수 없습니다.");
         }
 
         int totalCount = initialResponse.response().body().totalCount();
@@ -154,18 +179,19 @@ public class RawFoodDataService {
 
         log.info("전체 데이터 동기화 시작: 총 {}건, {}페이지", totalCount, totalPages);
 
-        // 2. 페이지별로 루프를 돌며 저장
+        List<Integer> failedPages = new ArrayList<>();
+
+        // 2. 페이지별로 루프를 돌며 저장 (각 페이지별 독립 트랜잭션)
         for (int i = 1; i <= totalPages; i++) {
             try {
                 syncPublicFoodData(i, pageSize);
                 log.info("페이지 동기화 완료: {}/{}", i, totalPages);
             } catch (Exception e) {
                 log.error("{} 페이지 동기화 중 오류 발생: {}", i, e.getMessage());
-                // 특정 페이지 실패 시 건너뛸지, 전체 중단할지 결정 (여기서는 계속 진행)
-                continue;
+                failedPages.add(i);
             }
         }
 
-        log.info("모든 데이터 동기화가 완료되었습니다.");
+        log.info("모든 데이터 동기화가 완료되었습니다. (실패 페이지 수: {})", failedPages.size());
     }
 }

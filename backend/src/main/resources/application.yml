@@ -5,9 +5,8 @@ spring:
   application:
     name: refine-dining
 
-# =======local dev environment, need to change this===========
   profiles:
-    active: local
+    active: ${SPRING_PROFILES_ACTIVE:local}
 
   # =========================================================
   # Database Configuration (MySQL)
@@ -22,21 +21,29 @@ spring:
   # JPA & Hibernate Configuration
   # =========================================================
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: update
     show-sql: false
     properties:
       hibernate:
+        default_batch_fetch_size: 100
         format_sql: true
         highlight_sql: true
         use_sql_comments: true # 쿼리 상단에 어떤 로직에서 왔는지 주석 표시
         dialect: org.hibernate.dialect.MySQLDialect
 
 # =========================================================
+# Admin API Security Configuration
+# =========================================================
+admin:
+  api-key: ${ADMIN_API_KEY:}
+
+# =========================================================
 # Public Data API Configuration
 # =========================================================
 public-data:
-  api-key: ${PUBLIC_DATA_API_KEY}
+  api-key: ${PUBLIC_DATA_API_KEY:}
   base-url: https://api.data.go.kr/openapi/tn_pubr_public_nutri_material_info_api
 
 # =========================================================

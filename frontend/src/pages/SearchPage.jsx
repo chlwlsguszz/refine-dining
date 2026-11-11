@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 import { commonStyles } from '../styles/commonStyles';
 
@@ -10,6 +10,9 @@ function SearchPage() {
     const [foods, setFoods] = useState([]);
     const [page, setPage] = useState(0);
     const [hasMore, setHasMore] = useState(true);
+    const [hasSearched, setHasSearched] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
     const [expandedId, setExpandedId] = useState(null);
     const navigate = useNavigate();
 
@@ -24,7 +27,10 @@ function SearchPage() {
     const SIZE = 10; // 한 번에 가져올 개수
 
     const handleSearch = async (isNewSearch = true) => {
+        if (loading) return;
         const currentPage = isNewSearch ? 0 : page;
+        setLoading(true);
+        setError(null);
 
         try {
             const response = await axios.get(`${apiBase}/api/food/search`, {
@@ -35,10 +41,12 @@ function SearchPage() {
                 }
             });
             const newData = response.data;
+            setHasSearched(true);
 
             if (isNewSearch) {
                 setFoods(newData);
                 setPage(1);
+                setExpandedId(null);
             } else {
                 setFoods(prev => [...prev, ...newData]);
                 setPage(prev => prev + 1);
@@ -46,10 +54,18 @@ function SearchPage() {
 
             // 가져온 데이터가 SIZE보다 작으면 더 이상 데이터가 없는 것으로 판단
             setHasMore(newData.length === SIZE);
-            if (isNewSearch) setExpandedId(null);
+        } catch (err) {
+            console.error('검색 실패:', err);
+            setError(err.response?.data?.message || '식품 정보를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.');
+        } finally {
+            setLoading(false);
+        }
+    };
 
-        } catch (error) {
-            console.error("검색 실패:", error);
+    const handleKeyDown = (e) => {
+        if (e.nativeEvent.isComposing) return;
+        if (e.key === 'Enter') {
+            handleSearch(true);
         }
     };
 
@@ -70,12 +86,20 @@ function SearchPage() {
                         type="text"
                         value={keyword}
                         onChange={(e) => setKeyword(e.target.value)}
-                        onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+                        onKeyDown={handleKeyDown}
                         style={styles.input}
                         placeholder="식품 이름 검색 (예: 감자, 삼겹살)"
                     />
-                    <button onClick={() => handleSearch(true)} style={styles.button}>검색</button>
+                    <button
+                        onClick={() => handleSearch(true)}
+                        disabled={loading}
+                        style={{ ...styles.button, ...(loading ? styles.buttonDisabled : {}) }}
+                    >
+                        {loading && page === 0 ? '검색 중...' : '검색'}
+                    </button>
                 </div>
+
+                {error && <div style={styles.errorBox}>{error}</div>}
 
                 <div style={styles.listContainer}>
                     {foods.length > 0 ? (
@@ -84,7 +108,7 @@ function SearchPage() {
                                 <div onClick={() => toggleExpand(food.id)} style={styles.parentRow}>
                                     <span style={styles.foodName}>{food.name}</span>
                                     <div style={styles.parentRight}>
-                                        <span style={styles.mainKcal}>{food.calories || 0} kcal</span>
+                                        <span style={styles.mainKcal}>{food.calories ?? 0} kcal</span>
                                         <span style={styles.arrow}>{expandedId === food.id ? '▲' : '▼'}</span>
                                     </div>
                                 </div>
@@ -100,9 +124,9 @@ function SearchPage() {
                                                 >
                                                     <span style={styles.methodTag}>{child.cookingMethod || '일반'}</span>
                                                     <div style={styles.nutritionGrid}>
-                                                        <span>🔥 {child.calories} kcal</span>
-                                                        <span>💪 {child.protein}g</span>
-                                                        <span>🥑 {child.fat}g</span>
+                                                        <span>🔥 {child.calories ?? 0} kcal</span>
+                                                        <span>💪 {child.protein ?? 0}g</span>
+                                                        <span>🥑 {child.fat ?? 0}g</span>
                                                     </div>
                                                     <span style={styles.compareHint}>비교하기 →</span>
                                                 </div>
@@ -117,17 +141,23 @@ function SearchPage() {
                     ) : (
                         <div style={styles.emptyState}>
                             <p style={styles.emptyText}>
-                                {keyword ? "검색 결과가 없습니다." : "식품 이름을 검색해보세요"}
+                                {hasSearched ? '검색 결과가 없습니다.' : '식품 이름을 검색해보세요'}
                             </p>
                             <p style={styles.emptyHint}>
-                                {!keyword && "감자, 삼겹살, 닭가슴살 등을 입력해보세요"}
+                                {hasSearched
+                                    ? '다른 검색어(예: 감자, 삼겹살, 닭고기)로 다시 검색해보세요'
+                                    : '감자, 삼겹살, 닭가슴살 등을 입력해보세요'}
                             </p>
                         </div>
                     )}
 
                     {foods.length > 0 && hasMore && (
-                        <button onClick={() => handleSearch(false)} style={styles.loadMoreButton}>
-                            더 보기
+                        <button
+                            onClick={() => handleSearch(false)}
+                            disabled={loading}
+                            style={styles.loadMoreButton}
+                        >
+                            {loading ? '불러오는 중...' : '더 보기'}
                         </button>
                     )}
 
@@ -168,7 +198,7 @@ const styles = {
         display: 'flex',
         gap: '12px',
         width: '100%',
-        marginBottom: '32px',
+        marginBottom: '24px',
     },
     input: {
         flex: 1,
@@ -192,6 +222,20 @@ const styles = {
         fontSize: '0.95rem',
         boxShadow: '0 2px 8px rgba(185,79,22,0.18)',
         transition: 'opacity 0.2s',
+    },
+    buttonDisabled: {
+        opacity: 0.65,
+        cursor: 'not-allowed',
+    },
+    errorBox: {
+        marginBottom: '16px',
+        padding: '12px 16px',
+        borderRadius: '12px',
+        backgroundColor: '#fdf2f0',
+        border: '1px solid #f2cfc9',
+        color: '#c45c4a',
+        fontSize: '0.9rem',
+        textAlign: 'center',
     },
     listContainer: { display: 'flex', flexDirection: 'column', gap: '12px' },
     foodItem: {

@@ -1,0 +1,10 @@
+.gradle/
+build/
+out/
+.idea/
+.vscode/
+*.iml
+**/application-local.yml
+**/application-test.yml
+**/application-test.properties
+*.csv

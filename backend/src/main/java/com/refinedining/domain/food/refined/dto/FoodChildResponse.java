@@ -4,6 +4,7 @@ import com.refinedining.domain.food.refined.entity.FoodMaterial;
 
 public record FoodChildResponse(
         Long id,
+        String foodCd,
         String name,
         String cookingMethod,
         Double calories,
@@ -16,6 +17,7 @@ public record FoodChildResponse(
     public static FoodChildResponse from(FoodMaterial entity) {
         return new FoodChildResponse(
                 entity.getId(),
+                entity.getFoodCd(),
                 entity.getName(),
                 entity.getCookingMethod(),
                 entity.getCalories(),

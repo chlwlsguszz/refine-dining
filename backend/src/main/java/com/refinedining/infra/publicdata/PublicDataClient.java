@@ -1,7 +1,7 @@
 package com.refinedining.infra.publicdata;
 
-import com.refinedining.infra.publicdata.dto.PublicNutriResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.refinedining.infra.publicdata.dto.PublicNutriResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -48,21 +48,22 @@ public class PublicDataClient {
             HttpHeaders headers = new HttpHeaders();
             headers.setAccept(MediaType.parseMediaTypes("application/json, */*"));
 
-            ResponseEntity<String> response = restTemplate.exchange(
+            // 공공데이터 API 응답 헤더에 charset=UTF-8이 누락된 경우 ISO-8859-1로 깨지는 현상을 방지하기 위해 byte[]로 수신 후 UTF-8 디코딩
+            ResponseEntity<byte[]> response = restTemplate.exchange(
                     uri,
                     HttpMethod.GET,
                     new HttpEntity<>(headers),
-                    String.class
+                    byte[].class
             );
 
-            String body = response.getBody() != null ? response.getBody() : "";
+            byte[] rawBytes = response.getBody();
+            String body = rawBytes != null ? new String(rawBytes, StandardCharsets.UTF_8) : "";
             String trimmed = body.trim();
 
             // 공공데이터 API가 에러일 때 HTML을 주는 경우가 있어 파싱 전에 방어
             if (trimmed.startsWith("<")) {
-                String preview = new String(body.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
-                preview = preview.replaceAll("\\s+", " ");
-                preview = preview.replaceAll("(serviceKey=)[^&\"\\s]+", "$1***");
+                String preview = trimmed.replaceAll("\\s+", " ")
+                        .replaceAll("(serviceKey=)[^&\"\\s]+", "$1***");
                 if (preview.length() > 300) preview = preview.substring(0, 300) + "...";
                 log.error("Public Data API returned HTML (likely error page). status={}, preview={}",
                         response.getStatusCode(), preview);
